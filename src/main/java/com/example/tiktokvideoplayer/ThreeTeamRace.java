@@ -25,7 +25,7 @@ public class ThreeTeamRace extends Application {
             stage.close();
             Platform.exit();
         });
-        stage.setTitle("Race!");
+        stage.setTitle("Options!");
         stage.setScene(scene);
         stage.show();
     }

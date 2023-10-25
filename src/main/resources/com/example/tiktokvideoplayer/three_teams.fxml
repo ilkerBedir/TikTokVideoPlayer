@@ -46,17 +46,17 @@
                <font>
                   <Font name="System Bold" size="20.0" />
                </font></Label>
-            <Label fx:id="team1_puan" alignment="BOTTOM_CENTER" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+            <Label fx:id="team1_puan" alignment="BOTTOM_CENTER" text="1" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="System Bold" size="40.0" />
                </font>
             </Label>
-            <Label fx:id="team2_puan" alignment="BOTTOM_CENTER" text="0" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+            <Label fx:id="team2_puan" alignment="BOTTOM_CENTER" text="1" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="System Bold" size="40.0" />
                </font>
             </Label>
-            <Label fx:id="team3_puan" alignment="BOTTOM_CENTER" text="0" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+            <Label fx:id="team3_puan" alignment="BOTTOM_CENTER" text="1" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="System Bold" size="40.0" />
                </font>

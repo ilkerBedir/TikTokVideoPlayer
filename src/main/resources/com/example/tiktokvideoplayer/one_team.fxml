@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiktokvideoplayer.OneTeamController">
+   <children>
+      <MediaView fx:id="video_media_view_1" fitHeight="400.0" fitWidth="550.0" layoutX="22.0" layoutY="65.0" />
+      <Label fx:id="label_like_1" layoutX="22.0" layoutY="23.0" prefHeight="34.0" prefWidth="227.0" text="Son Beğenen">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_comment_1" layoutX="274.0" layoutY="23.0" prefHeight="34.0" prefWidth="218.0" text="Son Yorum">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
+      <MediaView fx:id="ses_media_view_1" fitHeight="200.0" fitWidth="200.0" layoutX="274.0" layoutY="113.0" visible="false" />
+      <MediaView fx:id="belgesel_media_view_1" fitHeight="200.0" fitWidth="200.0" layoutX="347.0" layoutY="113.0" visible="false" />
+   </children>
+</AnchorPane>

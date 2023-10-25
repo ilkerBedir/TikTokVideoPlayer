@@ -314,6 +314,7 @@ public class ThreeTeamRaceScreenController implements Initializable {
     }
 
     private void startConsumer() {
+        currentTeam.set(0);
         Service<Void> service = new Service<>() {
             @Override
             protected Task<Void> createTask() {
@@ -343,18 +344,18 @@ public class ThreeTeamRaceScreenController implements Initializable {
                                 case "Gift", "GiftCombo": {
                                     ArrayList finalValue = value;
                                     String name = ((String) finalValue.get(4));
-                                    System.out.println("Gift : "+name);
+                                    int hediye_miktari = ((int) finalValue.get(2)) * ((int) finalValue.get(3));
+                                    System.out.println("Gift : "+name +" Gift Toplam Miktari : "+hediye_miktari);
                                     Optional<Gift> gift1 = team1_giftList().stream().filter(gift -> gift.getName().equals(name)).findAny();
                                     Optional<Gift> gift2 = team2_giftList().stream().filter(gift -> gift.getName().equals(name)).findAny();
                                     Optional<Gift> gift3 = team3_giftList().stream().filter(gift -> gift.getName().equals(name)).findAny();
                                     if (gift1.isPresent()) {
-                                        int i = ((int) finalValue.get(2)) * ((int) finalValue.get(3));
                                         int oldValue = Integer.parseInt(team1_puan.getText());
-                                        System.out.println("Yeni Takım FB");
                                         if (isMaxPoint(oldValue, team2_puan, team3_puan) && currentTeam.get()!=1) {
                                             currentTeam.set(1);
+                                            System.out.println("Yeni Takım FB");
                                             Platform.runLater(() -> {
-                                                team1_puan.setText(String.valueOf(oldValue + i));
+                                                team1_puan.setText(String.valueOf(oldValue + hediye_miktari));
                                                 team1_puan.setTextFill(Color.YELLOW);
                                                 team3_puan.setTextFill(Color.WHITE);
                                                 team2_puan.setTextFill(Color.WHITE);
@@ -386,17 +387,16 @@ public class ThreeTeamRaceScreenController implements Initializable {
                                             team1_timeline.play();
                                         } else {
                                             Platform.runLater(() -> {
-                                                team1_puan.setText(String.valueOf(oldValue + i));
+                                                team1_puan.setText(String.valueOf(oldValue + hediye_miktari));
                                             });
                                         }
                                     } else if (gift2.isPresent()) {
-                                        int i = ((int) finalValue.get(2)) * ((int) finalValue.get(3));
                                         int oldValue = Integer.parseInt(team2_puan.getText());
                                         if (isMaxPoint(oldValue, team1_puan, team3_puan) && currentTeam.get()!=2) {
                                             currentTeam.set(2);
                                             System.out.println("Yeni Takım BJK");
                                             Platform.runLater(() -> {
-                                                team2_puan.setText(String.valueOf(oldValue + i));
+                                                team2_puan.setText(String.valueOf(oldValue + hediye_miktari));
                                                 team2_puan.setTextFill(Color.YELLOW);
                                                 team1_puan.setTextFill(Color.WHITE);
                                                 team3_puan.setTextFill(Color.WHITE);
@@ -427,17 +427,16 @@ public class ThreeTeamRaceScreenController implements Initializable {
                                             team2_timeline.play();
                                         } else {
                                             Platform.runLater(() -> {
-                                                team2_puan.setText(String.valueOf(oldValue + i));
+                                                team2_puan.setText(String.valueOf(oldValue + hediye_miktari));
                                             });
                                         }
                                     } else if (gift3.isPresent()) {
-                                        int i = ((int) finalValue.get(2)) * ((int) finalValue.get(3));
                                         int oldValue = Integer.parseInt(team3_puan.getText());
                                         if (isMaxPoint(oldValue, team2_puan, team1_puan) && currentTeam.get()!=3) {
                                             currentTeam.set(3);
                                             System.out.println("Yeni Takım GS");
                                             Platform.runLater(() -> {
-                                                team3_puan.setText(String.valueOf(oldValue + i));
+                                                team3_puan.setText(String.valueOf(oldValue + hediye_miktari));
                                                 team3_puan.setTextFill(Color.YELLOW);
                                                 team1_puan.setTextFill(Color.WHITE);
                                                 team2_puan.setTextFill(Color.WHITE);
@@ -470,7 +469,7 @@ public class ThreeTeamRaceScreenController implements Initializable {
                                             team3_timeline.play();
                                         } else {
                                             Platform.runLater(() -> {
-                                                team3_puan.setText(String.valueOf(oldValue + i));
+                                                team3_puan.setText(String.valueOf(oldValue + hediye_miktari));
                                             });
                                         }
                                     } else {
@@ -492,7 +491,13 @@ public class ThreeTeamRaceScreenController implements Initializable {
 
 
     private boolean isMaxPoint(int value, Label label, Label label2) {
-        return value > Integer.parseInt(label.getText()) && value > Integer.parseInt(label2.getText());
+        boolean b = value > Integer.parseInt(label.getText());
+        boolean b1 = b && value > Integer.parseInt(label2.getText());
+        if (b && b1){
+            System.out.println("En büyük Değer");
+            return true;
+        }
+        return false;
     }
 }
 
