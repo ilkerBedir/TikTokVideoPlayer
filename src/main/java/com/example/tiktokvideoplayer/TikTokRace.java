@@ -13,12 +13,14 @@ import java.io.IOException;
 
 public class TikTokRace extends Application {
     private static final Logger LOGGER= LoggerFactory.getLogger(TikTokRace.class);
+    public static String port;
     public static void main(String[] args) {
         if (args.length<1){
             LOGGER.debug("Port Numarası Giriniz");
             throw new RuntimeException("Port Numarasını giriniz");
         }
         LOGGER.debug("Gift Server Başlatılıyor Port {}",args[0]);
+        port=args[0];
         GiftServer giftServer=new GiftServer(Integer.parseInt(args[0]));
         giftServer.start();
         launch(args);

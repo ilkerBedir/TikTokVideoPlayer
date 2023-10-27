@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.List;
 
+import static com.example.tiktokvideoplayer.TikTokRace.port;
+
 public class RunWSController {
     private static final Logger LOGGER= LoggerFactory.getLogger(RunWSController.class);
     private final String streamName;
@@ -16,8 +18,8 @@ public class RunWSController {
     }
 
     public void start() {
-        LOGGER.debug("Tiktok ws socket başlatılıyor : yayın ismi {}",streamName);
-        List<String> command = List.of("java", "-jar", "TikTokLiveWs/TikTokLiveWs-1.0-SNAPSHOT.jar", streamName);
+        LOGGER.debug("Tiktok ws socket başlatılıyor : yayın ismi {}, port {}",streamName,port);
+        List<String> command = List.of("java", "-jar", "TikTokLiveWs/TikTokLiveWs-1.0-SNAPSHOT.jar", streamName,port);
         ProcessBuilder processBuilder = new ProcessBuilder(command);
         processBuilder.redirectErrorStream(true);
         Process process = null;
