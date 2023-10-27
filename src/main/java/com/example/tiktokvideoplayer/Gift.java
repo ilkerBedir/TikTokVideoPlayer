@@ -3,6 +3,8 @@ package com.example.tiktokvideoplayer;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -12,12 +14,15 @@ import javax.imageio.ImageIO;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.awt.image.BufferedImage;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Gift {
+    private static final Logger LOGGER= LoggerFactory.getLogger(Gift.class);
     private int id;
     private String name;
     private int diamondCost;
@@ -54,8 +59,8 @@ public class Gift {
     }
     public static List<Gift> giftList(){
             try {
+                LOGGER.debug("Gift Listesi Parse Ediliyor");
                 File xmlFile = new File("gift.xml"); // XML dosyanızın adını ve yolunu belirtin
-
                 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder builder = factory.newDocumentBuilder();
                 Document doc = builder.parse(xmlFile);
@@ -80,30 +85,35 @@ public class Gift {
                 }
                 return gifts;
             } catch (Exception e) {
+                LOGGER.error(e.getMessage(),e);
                 throw new RuntimeException("gift dosyası parse edilemedi "+e.getMessage());
             }
     }
 
     public Image image(){
+        LOGGER.debug("Linkten Resim");
         String urlString = this.getLink();
         if(urlString.isEmpty())
         {
+            LOGGER.error("Resim Linki Boş");
             return null;
         }
         if (urlString.contains(".webp")){
             InputStream inputStream = null;
+            LOGGER.debug("Okunacak WebP image : {}",urlString);
             try {
                 inputStream = new URL(urlString).openStream();
             } catch (IOException e) {
+                LOGGER.error("Webp image Açılmadı",e);
             }
             try {
                 BufferedImage read = ImageIO.read(inputStream);
-                System.out.println(read.getHeight());
             } catch (IOException e) {
-
+                LOGGER.error("WebP image BufferedImage olmadı",e);
             }
             return new Image(urlString);
         } else if (urlString.contains(".png")) {
+            LOGGER.debug("PNG resim yükleniyor : {}",urlString);
             if (urlString.contains("http")){
                 return new Image(urlString);
             }else {
@@ -114,11 +124,13 @@ public class Gift {
                     SwingFXUtils.toFXImage(bufferedImage,writableImage);
                     return writableImage;
                 } catch (IOException e) {
+                    LOGGER.error(e.getMessage(),e);
                     throw new RuntimeException(e);
                 }
             }
 
         }else{
+            LOGGER.error("Resim Boş Geldi");
             return null;
         }
     }

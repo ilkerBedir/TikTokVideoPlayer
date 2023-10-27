@@ -6,9 +6,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class MediaPlayerUtils {
+    private static final Logger LOGGER= LoggerFactory.getLogger(MediaPlayerUtils.class);
     private int countImagePerTeam;
     private List<Gift> gifts;
 
@@ -29,6 +31,7 @@ public class MediaPlayerUtils {
     }
 
     public List<MediaPlayer> createVolumeFiles(String url) {
+        LOGGER.debug("create volume files");
         List<MediaPlayer> mediaPlayers = new ArrayList<>();
         File folder = new File(url);
         File[] files = folder.listFiles();
@@ -47,6 +50,7 @@ public class MediaPlayerUtils {
     }
 
     public MediaPlayer getVideo(String url) {
+        LOGGER.debug("getVideo");
         List<MediaPlayer> mediaPlayers = new ArrayList<>();
         File folder = new File(url);
         File[] files = folder.listFiles();
@@ -63,11 +67,12 @@ public class MediaPlayerUtils {
                 }
             }
         }
-        System.out.println("Video da hata : " + url);
+        LOGGER.error("Video da hata : {}", url);
         return null;
     }
 
     public List<Gift> teamGifts(List<String> giftNames) {
+        LOGGER.debug("teamGifts");
       List<Gift> giftList = gifts.stream()
               .filter(gift -> giftNames.contains(gift.getName()))
               .collect(Collectors.toList());
@@ -82,16 +87,18 @@ public class MediaPlayerUtils {
     }
 
     public List<ImageView> createGiftsHBOX(List<Gift> tmpGifts) {
+        LOGGER.debug("CreateGiftsHBOX");
         return tmpGifts.stream()
                 .map(gift -> createImageView(gift.image()))
                 .collect(Collectors.toList());
     }
 
     private ImageView createImageView(Image image) {
+        LOGGER.debug("createImageView");
         ImageView imageView = new ImageView();
         imageView.setImage(image);
-        imageView.setFitHeight(200 / (this.countImagePerTeam + 1));
-        imageView.setFitWidth(200 / (this.countImagePerTeam + 1));
+        imageView.setFitHeight((double) 200 / (this.countImagePerTeam + 1));
+        imageView.setFitWidth((double) 200 / (this.countImagePerTeam + 1));
         return imageView;
     }
 }

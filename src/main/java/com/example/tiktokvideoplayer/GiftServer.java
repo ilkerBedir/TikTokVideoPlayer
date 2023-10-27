@@ -3,6 +3,8 @@ package com.example.tiktokvideoplayer;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayInputStream;
 import java.io.ObjectInputStream;
@@ -13,6 +15,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 public class GiftServer extends WebSocketServer{
+    private static final Logger LOGGER= LoggerFactory.getLogger(GiftServer.class);
     public static BlockingQueue<ArrayList> arrayLists=new ArrayBlockingQueue<>(200);
     public GiftServer(int port){
         super(new InetSocketAddress(port));
@@ -21,19 +24,19 @@ public class GiftServer extends WebSocketServer{
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
         conn.send("Welcome to the server!"); //This method sends a message to the new client
         //broadcast("new connection: " + handshake.getResourceDescriptor()); //This method sends a message to all clients connected
-        System.out.println(conn.getRemoteSocketAddress().getAddress().getHostAddress() + " entered the room!");
+        LOGGER.debug(conn.getRemoteSocketAddress().getAddress().getHostAddress() + " entered the room!");
     }
 
     @Override
     public void onClose(WebSocket conn, int i, String s, boolean b) {
         //broadcast(conn + " has left the room!");
-        System.out.println(conn + " has left the room!");
+        LOGGER.debug(conn + " has left the room!");
     }
 
     @Override
     public void onMessage(WebSocket conn, String message) {
         //broadcast(message);
-        //System.out.println(conn + ": " + message);
+        //LOGGER.debug(conn + ": " + message);
     }
     @Override
     public void onMessage(WebSocket conn, ByteBuffer message) {
@@ -47,27 +50,25 @@ public class GiftServer extends WebSocketServer{
 
     @Override
     public void onError(WebSocket conn, Exception exception) {
-        exception.printStackTrace();
+        LOGGER.error(exception.getMessage(),exception);
     }
 
     @Override
     public void onStart() {
-        System.out.println("Server started!");
+        LOGGER.debug("Server started!");
         setConnectionLostTimeout(0);
-        setConnectionLostTimeout(100000);
     }
 
     public static ArrayList<?> deserializeByteArray(byte[] byteArray) {
         try {
+            LOGGER.debug("Mesaj Deserialize oluyor");
             ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArray);
             ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream);
-
             ArrayList<?> list = (ArrayList<?>) objectInputStream.readObject();
             objectInputStream.close();
-
             return list;
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(),e);
             return null;
         }
     }

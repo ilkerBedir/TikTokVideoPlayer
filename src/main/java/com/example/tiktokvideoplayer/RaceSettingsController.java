@@ -19,6 +19,8 @@ import javafx.scene.layout.HBox;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,6 +32,7 @@ import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
 public class RaceSettingsController implements Initializable {
+    private static final Logger LOGGER = LoggerFactory.getLogger(RaceSettingsController.class);
 
     @FXML
     TextField text_stream_name;
@@ -215,8 +218,6 @@ public class RaceSettingsController implements Initializable {
     @FXML
     private HBox hbox8;
     HashSet<HBox> giftBox = new HashSet<>();
-    private Stage yeniEkranStage;
-    private Scene yeniEkranScene;
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -225,6 +226,7 @@ public class RaceSettingsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        LOGGER.debug("RaceSetting initialize");
         combobox_team_count.getItems().addAll(1, 2, 3, 4, 6, 8);
         combobox_gift_count.getItems().addAll(1, 2, 3, 4);
         editGiftComboBox();
@@ -232,6 +234,7 @@ public class RaceSettingsController implements Initializable {
     }
 
     private void editGiftComboBox() {
+        LOGGER.debug("EditGiftComboBox");
         List<String> giftnames = Gift.giftList().stream().map(gift -> gift.getName()).distinct().collect(Collectors.toList());
         ObservableList<String> data = FXCollections.observableList(giftnames);
         FilteredList<String> filteredData = new FilteredList<>(data, p -> true);
@@ -269,24 +272,28 @@ public class RaceSettingsController implements Initializable {
         combo_gift32.getItems().addAll(filteredData);
     }
 
-    public void startRaceAction(ActionEvent actionEvent) throws IOException {
-        System.out.println("Yarışma Başladı");
+    public void startRaceAction(ActionEvent actionEvent) {
+        LOGGER.debug("Yarışma Başladı-startRaceAction");
         Integer selectedItem = combobox_team_count.getSelectionModel().getSelectedItem();
         if (selectedItem == 1) {
+            LOGGER.debug("Tek Ekranlı seçim yaptınız");
             String takim1Text = text_takim1.getText();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("one_team.fxml"));
-            root = loader.load();
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                LOGGER.error(e.getMessage(), e);
+            }
             OneTeamController oneTeamController = loader.getController();
             oneTeamController.display(takim1Text);
-            //stage = ((Stage) ((Node) actionEvent.getSource()).getScene().getWindow());
             stage = new Stage();
             stage.setTitle("Winning Screen");
             scene = new Scene(root);
             stage.setScene(scene);
             controller = oneTeamController;
             stage.show();
-            return;
         } else if (selectedItem == 2) {
+            LOGGER.debug("2 takımlı yarışmayı seçtiniz");
             String takim1Text = text_takim1.getText();
             String takim2Text = text_takim2.getText();
             Integer giftCount = combobox_gift_count.getSelectionModel().getSelectedItem();
@@ -296,22 +303,27 @@ public class RaceSettingsController implements Initializable {
             runWSController = new RunWSController(streamNameText);
             runWSController.start();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("two_teams.fxml"));
-            root = loader.load();
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                LOGGER.error(e.getMessage(), e);
+            }
             TwoTeamsRaceController twoTeamsRaceController = loader.getController();
             twoTeamsRaceController.display(takim1Text, takim2Text, textNeutralMusicText, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2), giftCount, time);
             //stage= ((Stage) ((Node) actionEvent.getSource()).getScene().getWindow());
             stage = new Stage();
             stage.setOnCloseRequest(event -> {
+                LOGGER.debug("Yarışma Kapatma isteği geldi");
                 twoTeamsRaceController.close();
                 runWSController.stop();
             });
-            stage.setTitle("Race2");
+            stage.setTitle("Race2Team");
             scene = new Scene(root);
             stage.setScene(scene);
             controller = twoTeamsRaceController;
             stage.show();
-            return;
         } else if (selectedItem == 3) {
+            LOGGER.debug("3 takımlı yarışma başlatılıyor");
             String takim1Text = text_takim1.getText();
             String takim2Text = text_takim2.getText();
             String takim3Text = text_takim3.getText();
@@ -322,20 +334,26 @@ public class RaceSettingsController implements Initializable {
             runWSController = new RunWSController(streamNameText);
             runWSController.start();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("three_teams.fxml"));
-            root = loader.load();
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                LOGGER.error(e.getMessage(), e);
+            }
             ThreeTeamsController threeTeamsController = loader.getController();
-            threeTeamsController.display(takim1Text, takim2Text, takim3Text, textNeutralMusicText, giftCount, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2), getComboBoxGifts(hbox3),time);
+            threeTeamsController.display(takim1Text, takim2Text, takim3Text, textNeutralMusicText, giftCount, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2), getComboBoxGifts(hbox3), time);
             stage = new Stage();
             stage.setOnCloseRequest(event -> {
+                LOGGER.debug("Yarışma Kapatma isteği geldi");
                 threeTeamsController.close();
                 runWSController.stop();
             });
-            stage.setTitle("Race3");
+            stage.setTitle("Race3Team");
             scene = new Scene(root);
             stage.setScene(scene);
             controller = threeTeamsController;
             stage.show();
         } else if (selectedItem == 4) {
+            LOGGER.debug("4 takımlı yarışma başlatılıyor");
             String takim1Text = text_takim1.getText();
             String takim2Text = text_takim2.getText();
             String takim3Text = text_takim3.getText();
@@ -347,37 +365,29 @@ public class RaceSettingsController implements Initializable {
             runWSController = new RunWSController(streamNameText);
             runWSController.start();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("four_teams.fxml"));
-            root = loader.load();
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                LOGGER.error(e.getMessage(), e);
+            }
             FourTeamsController fourTeamsController = loader.getController();
-            fourTeamsController.display(takim1Text, takim2Text, takim3Text, takim4Text, textNeutralMusicText, giftCount, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2), getComboBoxGifts(hbox3), getComboBoxGifts(hbox4),time);
+            fourTeamsController.display(takim1Text, takim2Text, takim3Text, takim4Text, textNeutralMusicText, giftCount, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2), getComboBoxGifts(hbox3), getComboBoxGifts(hbox4), time);
             stage = new Stage();
             stage.setOnCloseRequest(event -> {
+                LOGGER.debug("Yarışma Kapatma İsteği geldi");
                 fourTeamsController.close();
                 runWSController.stop();
             });
-            stage.setTitle("Race4");
+            stage.setTitle("Race4Team");
             scene = new Scene(root);
             stage.setScene(scene);
             controller = fourTeamsController;
             stage.show();
-            return;
         }
-
-        /*FXMLLoader loader = new FXMLLoader(getClass().getResource("three_teams-beta.fxml"));
-        AnchorPane yeniEkranRoot = null;
-        try {
-            yeniEkranRoot = loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        yeniEkranScene = new Scene(yeniEkranRoot);
-        yeniEkranStage = new Stage();
-        yeniEkranStage.setTitle("Race");
-        yeniEkranStage.setScene(yeniEkranScene);
-        yeniEkranStage.show();*/
     }
 
     private List<String> getComboBoxGifts(HBox tmpHbox) {
+        LOGGER.debug("Get ComboBox Gifts");
         List<String> giftList1 = new ArrayList<>();
         for (Node child : tmpHbox.getChildren()) {
             if (child instanceof ComboBox<?> && child.isVisible()) {
@@ -389,10 +399,9 @@ public class RaceSettingsController implements Initializable {
     }
 
     public void finishRaceAction(ActionEvent actionEvent) {
-        System.out.println("Yarışma Kapatılıyor");
+        LOGGER.debug("Yarışma Bitirme Butonuna Basıldı");
         if (controller != null) {
             runWSController.stop();
-            //stage.close();
             controller.close();
             controller.finishRace();
         }
@@ -400,29 +409,29 @@ public class RaceSettingsController implements Initializable {
     }
 
     public void fileselectorBackgroundImageAction(ActionEvent actionEvent) {
-        System.out.println("fileselectorBackgroundımageAction");
+        LOGGER.debug("fileselectorBackgroundımageAction");
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Resim Dosyaları", "*.png", "*.jpg"));
         File selectedFile = fileChooser.showOpenDialog(new Stage());
         if (selectedFile != null) {
-            System.out.println("Seçilen dosya: " + selectedFile.getAbsolutePath());
+            LOGGER.debug("Seçilen dosya: " + selectedFile.getAbsolutePath());
             text_background_image.setText(selectedFile.getAbsolutePath());
         }
     }
 
     public void fileselectorNeutralMusicAction(ActionEvent actionEvent) {
-        System.out.println("fileselectorBackgroundımageAction");
+        LOGGER.debug("fileselectorBackgroundımageAction");
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Müzik Dosyaları", "*.mp3", "*.mp4"));
         File selectedFile = fileChooser.showOpenDialog(new Stage());
         if (selectedFile != null) {
-            System.out.println("Seçilen dosya: " + selectedFile.getAbsolutePath());
+            LOGGER.debug("Seçilen dosya: " + selectedFile.getAbsolutePath());
             text_neutral_music.setText(selectedFile.getAbsolutePath());
         }
     }
 
     public void comboboxAction(ActionEvent actionEvent) {
-        System.out.println("fileselectorBackgroundımageAction");
+        LOGGER.debug("fileselectorBackgroundımageAction");
         Integer selectedItem = combobox_team_count.getSelectionModel().getSelectedItem();
         giftBox = new HashSet<>();
         switch (selectedItem) {
@@ -616,20 +625,20 @@ public class RaceSettingsController implements Initializable {
     }
 
     public void timerExtendAction(ActionEvent actionEvent) {
-        System.out.println("timerExtendAction");
+        LOGGER.debug("timerExtendAction");
         String timerExtendText = text_timer_extend.getText();
         controller.increaseTime(Integer.parseInt(timerExtendText));
     }
 
     public void teamDialogAction(ActionEvent actionEvent) {
-        System.out.println("teamDialogAction");
+        LOGGER.debug("teamDialogAction");
         Button button = (Button) actionEvent.getSource();
         String name = button.getText();
         DirectoryChooser directoryChooser = new DirectoryChooser();
         directoryChooser.setTitle("Klasör Seç");
         File selectedDirectory = directoryChooser.showDialog(null);
         if (selectedDirectory != null) {
-            System.out.println("Seçilen Klasör: " + selectedDirectory.getAbsolutePath());
+            LOGGER.debug("Seçilen Klasör: " + selectedDirectory.getAbsolutePath());
             switch (name) {
                 case "Takım1": {
                     text_takim1.setText(selectedDirectory.getAbsolutePath());
@@ -669,7 +678,7 @@ public class RaceSettingsController implements Initializable {
     }
 
     public void gift_comboboxAction(ActionEvent actionEvent) {
-        System.out.println("fileselectorBackgroundımageAction");
+        LOGGER.debug("fileselectorBackgroundımageAction");
         Integer selectedItem = combobox_gift_count.getSelectionModel().getSelectedItem();
         for (HBox box : giftBox) {
             int i = 0;

@@ -20,6 +20,8 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -27,6 +29,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class ThreeTeamsController implements ControllerInterface {
+    private static final Logger LOGGER= LoggerFactory.getLogger(ThreeTeamsController.class);
     @FXML
     private Label label_comment_race4;
     @FXML
@@ -96,6 +99,7 @@ public class ThreeTeamsController implements ControllerInterface {
     public void display(String team1Folder, String team2Folder, String team3Folder, String neutralMusicPath
             , int countGiftImage, List<String> team1GiftNames, List<String> team2GiftNames, List<String> team3GiftNames, int time
     ) {
+        LOGGER.debug("3 takımlı yarış display");
         this.NEUTRAL_MUSIC_URL = neutralMusicPath;
         this.COUNT_IMAGE_PER_TEAM = countGiftImage;
         editFolders(team1Folder, team2Folder, team3Folder);
@@ -115,24 +119,28 @@ public class ThreeTeamsController implements ControllerInterface {
     }
 
     private void createTimelineTeams(MediaPlayerUtils mediaPlayerUtils) {
+        LOGGER.debug("createTimelineTeams");
         team1Timeline = createTimelineTeams(mediaPlayerUtils.createVolumeFiles(this.COMMENTARY_URL_TEAM1));
         team2Timeline = createTimelineTeams(mediaPlayerUtils.createVolumeFiles(this.COMMENTARY_URL_TEAM2));
         team3Timeline = createTimelineTeams(mediaPlayerUtils.createVolumeFiles(this.COMMENTARY_URL_TEAM3));
     }
 
     private void createMusicPlayers(MediaPlayerUtils mediaPlayerUtils) {
+        LOGGER.debug("createMusicPlayers");
         team1MusicMediaPlayers = mediaPlayerUtils.createVolumeFiles(this.MARS_URL_TEAM1);
         team2MusicMediaPlayers = mediaPlayerUtils.createVolumeFiles(this.MARS_URL_TEAM2);
         team3MusicMediaPlayers = mediaPlayerUtils.createVolumeFiles(this.MARS_URL_TEAM3);
     }
 
     private void editMusicPlayers() {
+        LOGGER.debug("editMusicPlayers");
         editMusicPlayers(team1MusicMediaPlayers);
         editMusicPlayers(team2MusicMediaPlayers);
         editMusicPlayers(team3MusicMediaPlayers);
     }
 
     private void editMusicPlayers(List<MediaPlayer> musicPlayers) {
+        LOGGER.debug("editMusicPlayers");
         for (MediaPlayer musicPlayer : musicPlayers) {
             musicPlayer.setOnEndOfMedia(() -> {
                 if (currentTeamIndex >= musicPlayers.size() - 1) {
@@ -140,7 +148,7 @@ public class ThreeTeamsController implements ControllerInterface {
                 } else {
                     currentTeamIndex += 1;
                 }
-                System.out.println("Oynatılacak indexler : " + currentTeamIndex);
+                LOGGER.debug("Oynatılacak indexler : " + currentTeamIndex);
                 MediaPlayer mediaPlayer = musicPlayers.get(currentTeamIndex);
                 mediaPlayer.seek(Duration.ZERO);
                 sharing_music_race4.setMediaPlayer(mediaPlayer);
@@ -150,6 +158,7 @@ public class ThreeTeamsController implements ControllerInterface {
     }
 
     private void startNeutralMusic() {
+        LOGGER.debug("startNeutralMusic");
         Media neutralMusic = new Media(Paths.get(NEUTRAL_MUSIC_URL).toUri().toString());
         MediaPlayer mediaPlayer1 = new MediaPlayer(neutralMusic);
         mediaPlayer1.setStartTime(Duration.seconds(10));
@@ -160,6 +169,7 @@ public class ThreeTeamsController implements ControllerInterface {
     }
 
     private void editVideos(MediaPlayerUtils mediaPlayerUtils) {
+        LOGGER.debug("editVideos");
         video_team1.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1));
         video_team2.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2));
         video_team3.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3));
@@ -169,12 +179,14 @@ public class ThreeTeamsController implements ControllerInterface {
     }
 
     private void editHBoxes(MediaPlayerUtils mediaPlayerUtils) {
+        LOGGER.debug("editHBoxes");
         hbox_team1.getChildren().addAll(mediaPlayerUtils.createGiftsHBOX(team1Gifts));
         hbox_team2.getChildren().addAll(mediaPlayerUtils.createGiftsHBOX(team2Gifts));
         hbox_team3.getChildren().addAll(mediaPlayerUtils.createGiftsHBOX(team3Gifts));
     }
 
     private void editFolders(String team1Folder, String team2Folder, String team3Folder) {
+        LOGGER.debug("editFolders");
         this.COMMENTARY_URL_TEAM1 = team1Folder + "/belgesel";
         this.COMMENTARY_URL_TEAM2 = team2Folder + "/belgesel";
         this.COMMENTARY_URL_TEAM3 = team3Folder + "/belgesel";
@@ -191,7 +203,7 @@ public class ThreeTeamsController implements ControllerInterface {
 
     private Timeline createTimelineTeams(List<MediaPlayer> teamCommentaries) {
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(60), event -> {
-            System.out.println("Timeline");
+            LOGGER.debug("Takım Belgeseli başlıyor");
             if (sharing_commentary_race4.getMediaPlayer() != null) {
                 sharing_commentary_race4.getMediaPlayer().stop();
             }
@@ -223,7 +235,7 @@ public class ThreeTeamsController implements ControllerInterface {
                                 throw new RuntimeException();
                             }
                             String messageType = (String) value.get(0);
-                            System.out.println("MessageType : " + messageType);
+                            LOGGER.debug("MessageType : " + messageType);
                             switch (messageType) {
                                 case "Like": {
                                     ArrayList finalValue = value;
@@ -239,7 +251,7 @@ public class ThreeTeamsController implements ControllerInterface {
                                     ArrayList finalValue = value;
                                     String name = ((String) finalValue.get(4));
                                     int hediye_miktari = ((int) finalValue.get(2)) * ((int) finalValue.get(3));
-                                    System.out.println("Gift : " + name + " Gift Toplam Miktari : " + hediye_miktari);
+                                    LOGGER.debug("Gift : " + name + " Gift Toplam Miktari : " + hediye_miktari);
                                     Optional<Gift> gift1 = team1Gifts.stream().filter(gift -> gift.getName().equals(name)).findAny();
                                     Optional<Gift> gift2 = team2Gifts.stream().filter(gift -> gift.getName().equals(name)).findAny();
                                     Optional<Gift> gift3 = team3Gifts.stream().filter(gift -> gift.getName().equals(name)).findAny();
@@ -253,7 +265,7 @@ public class ThreeTeamsController implements ControllerInterface {
                                         if ((point1 <= point2 || point1 <= point3) &&
                                                 (point1 + hediye_miktari > point2
                                                         && point1 + hediye_miktari > point3)) {
-                                            System.out.println("Takım Değişti Team1");
+                                            LOGGER.debug("Takım Değişti Team1");
                                             currentTeamIndex = 0;
                                             sharing_music_race4.getMediaPlayer().stop();
                                             MediaPlayer mediaPlayer = team1MusicMediaPlayers.get(currentTeamIndex);
@@ -281,7 +293,7 @@ public class ThreeTeamsController implements ControllerInterface {
                                     } else if (gift2.isPresent()) {
                                         if ((point2 <= point1 || point2 <= point3) &&
                                                 (point2 + hediye_miktari > point1 && point2 + hediye_miktari > point3)) {//TODO yanlış 3 lüde patlıyor
-                                            System.out.println("Takım Değişti Team2");
+                                            LOGGER.debug("Takım Değişti Team2");
                                             currentTeamIndex = 0;
                                             sharing_music_race4.getMediaPlayer().stop();
                                             MediaPlayer mediaPlayer = team2MusicMediaPlayers.get(currentTeamIndex);
@@ -309,7 +321,7 @@ public class ThreeTeamsController implements ControllerInterface {
                                     } else if (gift3.isPresent()) {
                                         if ((point3 <= point1 || point3 <= point2) &&
                                                 (point3 + hediye_miktari > point1 && point3 + hediye_miktari > point2)) {
-                                            System.out.println("Takım Değişti Team3");
+                                            LOGGER.debug("Takım Değişti Team3");
                                             currentTeamIndex = 0;
                                             sharing_music_race4.getMediaPlayer().stop();
                                             MediaPlayer mediaPlayer = team3MusicMediaPlayers.get(currentTeamIndex);
@@ -335,7 +347,7 @@ public class ThreeTeamsController implements ControllerInterface {
                                             });
                                         }
                                     } else {
-                                        System.out.println("Farklı Gift");
+                                        LOGGER.debug("Farklı Gift");
                                     }
                                     break;
                                 }
@@ -353,7 +365,7 @@ public class ThreeTeamsController implements ControllerInterface {
     }
 
     public void close() {
-        System.out.println("Kapatma isteği");
+        LOGGER.debug("Kapatma isteği");
         threadFlag = false;
         team1Timeline.stop();
         team2Timeline.stop();
@@ -384,6 +396,7 @@ public class ThreeTeamsController implements ControllerInterface {
             timer_label.setText(TimeUtils.convertSecondsToClock(time));
             if (time == 0) {
                 timeline.stop();
+                finishRace();
             }
         });
 
@@ -398,6 +411,7 @@ public class ThreeTeamsController implements ControllerInterface {
 
     @Override
     public void finishRace() {
+        LOGGER.debug("finishRace");
         ObservableList<Node> children = grid_pane1.getChildren();
         List<Node> removedList = new ArrayList<>();
         VBox tmp = null;

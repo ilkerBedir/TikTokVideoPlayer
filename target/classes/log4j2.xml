@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" strict="true">
+  <Appenders>
+    <Console name="STDOUT" target="SYSTEM_OUT">
+      <!-- Location may be an issue when async logging is used! -->
+      <PatternLayout pattern="[%date{ISO8601}] [%-5level] %c{1.}:%L %msg%n"/>
+    </Console>
+    <RollingFile name="FILE" fileName="logs/tiktokrace.log" filePattern="logs/tiktokrace-%d{yyyy-MM-dd}.log">
+      <PatternLayout pattern="[%date{ISO8601}] [%-5level] %c{1.}:%L %msg%n"/>
+      <Policies>
+        <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+      </Policies>
+    </RollingFile>
+  </Appenders>
+
+
+  <Loggers>
+    <Root level="${env:TIKTOK_LOG_LEVEL:-DEBUG} ">
+      <AppenderRef ref="STDOUT"/>
+      <AppenderRef ref="FILE"/>
+    </Root>
+
+    <Logger name="io.netty" level="ERROR" additivity="false"/>
+  </Loggers>
+</Configuration>

@@ -18,6 +18,8 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -25,6 +27,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class TwoTeamsRaceController implements ControllerInterface{
+  private static final Logger LOGGER= LoggerFactory.getLogger(TwoTeamsRaceController.class);
   @FXML
   private Label label_like_team_2;
 
@@ -91,6 +94,7 @@ public class TwoTeamsRaceController implements ControllerInterface{
 
   public void display(String team1FolderName, String team2FolderName, String neutralMusicPath, List<String> team1GiftNames,
                       List<String> team2GiftNames, int countImage, int time) {
+    LOGGER.debug("2 takımlı ekran display");
     this.COMMENTARY_URL_TEAM1 = team1FolderName + "/belgesel";
     this.MARS_URL_TEAM1 = team1FolderName + "/mars";
     this.VIDEO_URL_TEAM1 = team1FolderName + "/video";
@@ -124,13 +128,14 @@ public class TwoTeamsRaceController implements ControllerInterface{
   }
 
   private void editMusicPlayers() {
+    LOGGER.debug("editMusicPlayers");
     editMusicPlayers(team1MusicMediaPlayers);
     editMusicPlayers(team2MusicMediaPlayers);
   }
 
   private Timeline createTimelineTeams(List<MediaPlayer> teamCommentaries) {
     Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(60), event -> {
-      System.out.println("Timeline");
+      LOGGER.debug("takım belgeseli başlatılıyor");
       if (sharing_commentary_media_view_race_2.getMediaPlayer() != null) {
         sharing_commentary_media_view_race_2.getMediaPlayer().stop();
       }
@@ -148,6 +153,7 @@ public class TwoTeamsRaceController implements ControllerInterface{
   }
 
   private void startNeutralMusic() {
+    LOGGER.debug("startNeutralMusic");
     Media neutralMusic = new Media(Paths.get(NEUTRAL_MUSIC_URL).toUri().toString());
     MediaPlayer mediaPlayer1 = new MediaPlayer(neutralMusic);
     mediaPlayer1.setStartTime(Duration.seconds(10));
@@ -159,6 +165,7 @@ public class TwoTeamsRaceController implements ControllerInterface{
 
 
   private void editMusicPlayers(List<MediaPlayer> musicPlayers) {
+    LOGGER.debug("editMusicPlayers");
     for (MediaPlayer musicPlayer : musicPlayers) {
       musicPlayer.setOnEndOfMedia(() -> {
         if (currentTeamIndex >= musicPlayers.size() - 1) {
@@ -166,7 +173,7 @@ public class TwoTeamsRaceController implements ControllerInterface{
         } else {
           currentTeamIndex += 1;
         }
-        System.out.println("Oynatılacak indexler : " + currentTeamIndex);
+        LOGGER.debug("Oynatılacak indexler : {}" , currentTeamIndex);
         MediaPlayer mediaPlayer = musicPlayers.get(currentTeamIndex);
         mediaPlayer.seek(Duration.ZERO);
         sharing_music_media_view_race_2.setMediaPlayer(mediaPlayer);
@@ -191,7 +198,7 @@ public class TwoTeamsRaceController implements ControllerInterface{
                 throw new RuntimeException();
               }
               String messageType = (String) value.get(0);
-              System.out.println("MessageType : " + messageType);
+              LOGGER.debug("MessageType : " + messageType);
               switch (messageType) {
                 case "Like": {
                   ArrayList finalValue = value;
@@ -207,7 +214,7 @@ public class TwoTeamsRaceController implements ControllerInterface{
                   ArrayList finalValue = value;
                   String name = ((String) finalValue.get(4));
                   int hediye_miktari = ((int) finalValue.get(2)) * ((int) finalValue.get(3));
-                  System.out.println("Gift : " + name + " Gift Toplam Miktari : " + hediye_miktari);
+                  LOGGER.debug("Gift : " + name + " Gift Toplam Miktari : " + hediye_miktari);
                   Optional<Gift> gift1 = team1Gifts.stream().filter(gift -> gift.getName().equals(name)).findAny();
                   Optional<Gift> gift2 = team2Gifts.stream().filter(gift -> gift.getName().equals(name)).findAny();
                   String labelPoint1 = label_team_point1_race2.getText();
@@ -216,7 +223,7 @@ public class TwoTeamsRaceController implements ControllerInterface{
                   int point2 = Integer.parseInt(labelPoint2);
                   if (gift1.isPresent()) {
                     if (point1 <= point2 && point1 + hediye_miktari > point2) {
-                      System.out.println("Takım Değişti Team1");
+                      LOGGER.debug("Takım Değişti Team1");
                       currentTeamIndex = 0;
                       sharing_music_media_view_race_2.getMediaPlayer().stop();
                       MediaPlayer mediaPlayer = team1MusicMediaPlayers.get(currentTeamIndex);
@@ -243,7 +250,7 @@ public class TwoTeamsRaceController implements ControllerInterface{
                     }
                   } else if (gift2.isPresent()) {
                     if (point2 <= point1 && point2 + hediye_miktari > point1) {
-                      System.out.println("Takım Değişti Team2");
+                      LOGGER.debug("Takım Değişti Team2");
                       currentTeamIndex = 0;
                       sharing_music_media_view_race_2.getMediaPlayer().stop();
                       MediaPlayer mediaPlayer = team2MusicMediaPlayers.get(currentTeamIndex);
@@ -269,7 +276,7 @@ public class TwoTeamsRaceController implements ControllerInterface{
                       });
                     }
                   } else {
-                    System.out.println("Farklı Gift");
+                    LOGGER.debug("Farklı Gift");
                   }
                   break;
                 }
@@ -287,7 +294,7 @@ public class TwoTeamsRaceController implements ControllerInterface{
   }
 
   public void close() {
-    System.out.println("Kapatma isteği");
+    LOGGER.debug("Kapatma isteği");
     threadFlag=false;
     team1Timeline.stop();
     team2Timeline.stop();
@@ -316,6 +323,7 @@ public class TwoTeamsRaceController implements ControllerInterface{
       timer_label.setText(TimeUtils.convertSecondsToClock(time));
       if (time == 0) {
         timeline.stop();
+        finishRace();
       }
     });
 
@@ -323,11 +331,13 @@ public class TwoTeamsRaceController implements ControllerInterface{
     timeline.play();
   }
   public void increaseTime(int time){
+    LOGGER.debug("Süre uzatıldı");
     this.time=time+this.time;
   }
 
   @Override
   public void finishRace() {
+    LOGGER.debug("finishRace");
     List<Node> removedList = new ArrayList<>(hbox1.getChildren());
     hbox1.getChildren().removeAll(removedList);
     hbox1.getChildren().add(winning_video_view);
