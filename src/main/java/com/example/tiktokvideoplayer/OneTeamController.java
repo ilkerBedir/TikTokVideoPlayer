@@ -16,7 +16,7 @@ import javafx.util.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OneTeamController {
+public class OneTeamController implements ControllerInterface{
   private String COMMENTARY_URL;
   private String VIDEO_URL;
   private String MARS_URL;
@@ -125,4 +125,18 @@ public class OneTeamController {
     service.start();
   }
 
+  @Override
+  public void close() {
+
+  }
+
+  @Override
+  public void increaseTime(int time) {
+
+  }
+
+  @Override
+  public void finishRace() {
+
+  }
 }

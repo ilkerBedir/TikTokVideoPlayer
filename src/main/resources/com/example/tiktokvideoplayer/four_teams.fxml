@@ -12,8 +12,7 @@
 <?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="676.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="676.0" prefWidth="950.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiktokvideoplayer.FourTeamsController">
    <children>
       <GridPane layoutX="14.0" layoutY="14.0" prefHeight="656.0" prefWidth="930.0">
         <columnConstraints>
@@ -37,12 +36,12 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2">
                <children>
-                  <Label fx:id="label_comment_race4" prefHeight="31.0" prefWidth="372.0" text="Son Yorum">
+                  <Label fx:id="label_comment_race4" prefHeight="31.0" prefWidth="372.0" text="Son Yorum" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="label_like_race4" prefHeight="31.0" prefWidth="371.0" text="Son Beğenen">
+                  <Label fx:id="label_like_race4" prefHeight="31.0" prefWidth="371.0" text="Son Beğenen" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -54,9 +53,9 @@
             </VBox>
             <BorderPane prefHeight="60.0" prefWidth="111.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
                <center>
-                  <Label alignment="CENTER" cache="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="TAKIMI ÖNDE OLAN MARŞI ÇALAR" BorderPane.alignment="CENTER">
+                  <Label alignment="CENTER" cache="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="TAKIMI ÖNDE OLAN MARŞI ÇALAR" textFill="BLUE" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="System Bold" size="27.0" />
+                        <Font name="System Bold" size="30.0" />
                      </font>
                   </Label>
                </center>
@@ -64,9 +63,9 @@
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2" GridPane.rowSpan="7">
                <children>
                   <HBox fx:id="hbox_team1" alignment="BOTTOM_CENTER" prefHeight="70.0" prefWidth="234.0" />
-                  <Label fx:id="point_team1" alignment="BOTTOM_CENTER" prefHeight="53.0" prefWidth="234.0" text="0">
+                  <Label fx:id="point_team1" alignment="BOTTOM_CENTER" prefHeight="53.0" prefWidth="234.0" text="0" textFill="#f5f5f5">
                      <font>
-                        <Font name="System Bold" size="36.0" />
+                        <Font name="System Bold" size="53.0" />
                      </font>
                   </Label>
                   <MediaView fx:id="video_team1" fitHeight="420.0" fitWidth="230.0" preserveRatio="false" />
@@ -75,9 +74,9 @@
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="7">
                <children>
                   <HBox fx:id="hbox_team2" alignment="BOTTOM_CENTER" prefHeight="70.0" prefWidth="234.0" />
-                  <Label fx:id="point_team2" alignment="BOTTOM_CENTER" prefHeight="53.0" prefWidth="234.0" text="0">
+                  <Label fx:id="point_team2" alignment="BOTTOM_CENTER" prefHeight="53.0" prefWidth="234.0" text="0" textFill="#f5f5f5">
                      <font>
-                        <Font name="System Bold" size="36.0" />
+                        <Font name="System Bold" size="53.0" />
                      </font>
                   </Label>
                   <MediaView fx:id="video_team2" fitHeight="420.0" fitWidth="230.0" preserveRatio="false" />
@@ -86,9 +85,9 @@
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="7">
                <children>
                   <HBox fx:id="hbox_team3" alignment="BOTTOM_CENTER" prefHeight="70.0" prefWidth="234.0" />
-                  <Label fx:id="point_team3" alignment="BOTTOM_CENTER" prefHeight="53.0" prefWidth="234.0" text="0">
+                  <Label fx:id="point_team3" alignment="BOTTOM_CENTER" prefHeight="53.0" prefWidth="234.0" text="0" textFill="#f5f5f5">
                      <font>
-                        <Font name="System Bold" size="36.0" />
+                        <Font name="System Bold" size="53.0" />
                      </font>
                   </Label>
                   <MediaView fx:id="video_team3" fitHeight="420.0" fitWidth="230.0" preserveRatio="false" />
@@ -97,17 +96,22 @@
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="7">
                <children>
                   <HBox fx:id="hbox_team4" alignment="BOTTOM_CENTER" prefHeight="70.0" prefWidth="234.0" />
-                  <Label fx:id="point_team4" alignment="BOTTOM_CENTER" prefHeight="53.0" prefWidth="234.0" text="0">
+                  <Label fx:id="point_team4" alignment="BOTTOM_CENTER" prefHeight="53.0" prefWidth="234.0" text="0" textFill="#f5f5f5">
                      <font>
-                        <Font name="System Bold" size="36.0" />
+                        <Font name="System Bold" size="53.0" />
                      </font>
                   </Label>
                   <MediaView fx:id="video_team4" fitHeight="420.0" fitWidth="230.0" preserveRatio="false" />
                </children>
             </VBox>
+            <Label fx:id="timer_label" prefHeight="51.0" prefWidth="422.0" textFill="#f80000" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
          </children>
       </GridPane>
-      <MediaView fx:id="sharing_music_race4" />
-      <MediaView fx:id="sharing_commentart_race4" />
+      <MediaView fx:id="sharing_music_race4" visible="false" />
+      <MediaView fx:id="sharing_commentary_race4" visible="false" />
    </children>
 </AnchorPane>

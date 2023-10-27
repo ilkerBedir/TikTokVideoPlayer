@@ -1,6 +1,7 @@
 package com.example.tiktokvideoplayer;
 
 import com.example.tiktokvideoplayer.utils.MediaPlayerUtils;
+import com.example.tiktokvideoplayer.utils.TimeUtils;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -8,11 +9,14 @@ import javafx.application.Platform;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import java.nio.file.Paths;
@@ -20,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class TwoTeamsRaceController {
+public class TwoTeamsRaceController implements ControllerInterface{
   @FXML
   private Label label_like_team_2;
 
@@ -48,6 +52,9 @@ public class TwoTeamsRaceController {
 
   @FXML
   private HBox hbox_gifts_team_race2_2;
+  @FXML
+  private Label timer_label;
+
   private String NEUTRAL_MUSIC_URL;
   private String COMMENTARY_URL_TEAM1;
   private String VIDEO_URL_TEAM1;
@@ -66,18 +73,32 @@ public class TwoTeamsRaceController {
   private Timeline team2Timeline;
   private int currentTeamIndex = 0;
   private int commentaryCurrentIndex = 0;
-  private List<Gift> gifts = Gift.giftList();
   private List<Gift> team1Gifts;
   private List<Gift> team2Gifts;
+  private boolean threadFlag=true;
+  private int time;
+
+  @FXML
+  private VBox vbox1;
+  @FXML
+  private VBox vbox2;
+  @FXML
+  private MediaView winning_video_view;
+  private String WINNING_VIDEO_TEAM1;
+  private String WINNING_VIDEO_TEAM2;
+  @FXML
+  private HBox hbox1;
 
   public void display(String team1FolderName, String team2FolderName, String neutralMusicPath, List<String> team1GiftNames,
-                      List<String> team2GiftNames, int countImage) {
-    this.COMMENTARY_URL_TEAM1 = team1FolderName + "\\belgesel";
-    this.MARS_URL_TEAM1 = team1FolderName + "\\mars";
-    this.VIDEO_URL_TEAM1 = team1FolderName + "\\video";
-    this.COMMENTARY_URL_TEAM2 = team2FolderName + "\\belgesel";
-    this.MARS_URL_TEAM2 = team2FolderName + "\\mars";
-    this.VIDEO_URL_TEAM2 = team2FolderName + "\\video";
+                      List<String> team2GiftNames, int countImage, int time) {
+    this.COMMENTARY_URL_TEAM1 = team1FolderName + "/belgesel";
+    this.MARS_URL_TEAM1 = team1FolderName + "/mars";
+    this.VIDEO_URL_TEAM1 = team1FolderName + "/video";
+    this.COMMENTARY_URL_TEAM2 = team2FolderName + "/belgesel";
+    this.MARS_URL_TEAM2 = team2FolderName + "/mars";
+    this.VIDEO_URL_TEAM2 = team2FolderName + "/video";
+    this.WINNING_VIDEO_TEAM1 = team1FolderName + "/winning_video";
+    this.WINNING_VIDEO_TEAM2 = team2FolderName + "/winning_video";
     this.NEUTRAL_MUSIC_URL = neutralMusicPath;
     this.COUNT_IMAGE_PER_TEAM = countImage;
     MediaPlayerUtils mediaPlayerUtils = new MediaPlayerUtils(countImage);
@@ -98,6 +119,8 @@ public class TwoTeamsRaceController {
     video_media_player_race2_2.setMediaPlayer(team2VideoMediaPlayer);
     startNeutralMusic();
     startConsumer();
+    this.time=time;
+    createTimer();
   }
 
   private void editMusicPlayers() {
@@ -146,6 +169,8 @@ public class TwoTeamsRaceController {
         System.out.println("Oynatılacak indexler : " + currentTeamIndex);
         MediaPlayer mediaPlayer = musicPlayers.get(currentTeamIndex);
         mediaPlayer.seek(Duration.ZERO);
+        sharing_music_media_view_race_2.setMediaPlayer(mediaPlayer);
+        sharing_music_media_view_race_2.getMediaPlayer().play();
       });
     }
   }
@@ -158,7 +183,7 @@ public class TwoTeamsRaceController {
         Task task = new Task<Void>() {
           @Override
           public Void call() {
-            while (true) {
+            while (threadFlag) {
               ArrayList value = null;
               try {
                 value = GiftServer.arrayLists.take();
@@ -202,7 +227,15 @@ public class TwoTeamsRaceController {
                         sharing_commentary_media_view_race_2.getMediaPlayer().stop();
                       }
                       commentaryCurrentIndex = 0;
+                      if (team2Timeline!=null && team2Timeline.getStatus().equals(Animation.Status.RUNNING)){
+                        team2Timeline.stop();
+                      }
                       team1Timeline.play();
+                      Platform.runLater(() -> {
+                        label_team_point1_race2.setText(String.valueOf(point1 + hediye_miktari));
+                        label_team_point1_race2.setTextFill(Color.YELLOW);
+                        label_team_point2_race2.setTextFill(Color.WHITE);
+                      });
                     } else {
                       Platform.runLater(() -> {
                         label_team_point1_race2.setText(String.valueOf(point1 + hediye_miktari));
@@ -221,7 +254,15 @@ public class TwoTeamsRaceController {
                         sharing_commentary_media_view_race_2.getMediaPlayer().stop();
                       }
                       commentaryCurrentIndex = 0;
+                      if (team1Timeline!=null && team1Timeline.getStatus().equals(Animation.Status.RUNNING)){
+                        team1Timeline.stop();
+                      }
                       team2Timeline.play();
+                      Platform.runLater(() -> {
+                        label_team_point2_race2.setText(String.valueOf(point2 + hediye_miktari));
+                        label_team_point2_race2.setTextFill(Color.YELLOW);
+                        label_team_point1_race2.setTextFill(Color.WHITE);
+                      });
                     } else {
                       Platform.runLater(() -> {
                         label_team_point2_race2.setText(String.valueOf(point2 + hediye_miktari));
@@ -236,6 +277,7 @@ public class TwoTeamsRaceController {
                   break;
               }
             }
+            return null;
           }
         };
         return task;
@@ -244,4 +286,70 @@ public class TwoTeamsRaceController {
     service.start();
   }
 
+  public void close() {
+    System.out.println("Kapatma isteği");
+    threadFlag=false;
+    team1Timeline.stop();
+    team2Timeline.stop();
+    if (sharing_commentary_media_view_race_2.getMediaPlayer() != null) {
+      sharing_commentary_media_view_race_2.getMediaPlayer().stop();
+    }
+    if (sharing_music_media_view_race_2.getMediaPlayer() != null) {
+      sharing_music_media_view_race_2.getMediaPlayer().stop();
+    }
+    if (video_media_player_race2_1.getMediaPlayer() != null) {
+      video_media_player_race2_1.getMediaPlayer().stop();
+    }
+    if (video_media_player_race2_2.getMediaPlayer() != null) {
+      video_media_player_race2_2.getMediaPlayer().stop();
+    }
+    if (winning_video_view.getMediaPlayer()!=null){
+      winning_video_view.getMediaPlayer().stop();
+    }
+  }
+
+  private void createTimer(){
+    Timeline timeline = new Timeline();
+    timeline.setCycleCount(Timeline.INDEFINITE);
+    KeyFrame keyFrame = new KeyFrame(Duration.seconds(1), event -> {
+      time--;
+      timer_label.setText(TimeUtils.convertSecondsToClock(time));
+      if (time == 0) {
+        timeline.stop();
+      }
+    });
+
+    timeline.getKeyFrames().add(keyFrame);
+    timeline.play();
+  }
+  public void increaseTime(int time){
+    this.time=time+this.time;
+  }
+
+  @Override
+  public void finishRace() {
+    List<Node> removedList = new ArrayList<>(hbox1.getChildren());
+    hbox1.getChildren().removeAll(removedList);
+    hbox1.getChildren().add(winning_video_view);
+    team1Timeline.stop();
+    team2Timeline.stop();
+    vbox1.setVisible(false);
+    vbox2.setVisible(false);
+    winning_video_view.setPreserveRatio(false);
+    winning_video_view.setFitWidth(2*vbox1.getWidth());
+    winning_video_view.setFitHeight(vbox1.getHeight());
+    int team1point = Integer.parseInt(label_team_point1_race2.getText());
+    int team2point = Integer.parseInt(label_team_point2_race2.getText());
+    MediaPlayerUtils mediaPlayerUtils = new MediaPlayerUtils();
+    MediaPlayer video;
+    if (team1point>team2point){
+       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM1);
+    }else {
+       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM2);
+    }
+    video.setVolume(100);
+    winning_video_view.setMediaPlayer(video);
+    winning_video_view.setVisible(true);
+    winning_video_view.getMediaPlayer().play();
+  }
 }
