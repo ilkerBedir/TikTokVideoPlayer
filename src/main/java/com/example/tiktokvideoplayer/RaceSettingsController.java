@@ -401,9 +401,10 @@ public class RaceSettingsController implements Initializable {
     public void finishRaceAction(ActionEvent actionEvent) {
         LOGGER.debug("Yarışma Bitirme Butonuna Basıldı");
         if (controller != null) {
-            runWSController.stop();
+            //runWSController.stop();
             controller.close();
             controller.finishRace();
+            controller=null;
         }
 
     }

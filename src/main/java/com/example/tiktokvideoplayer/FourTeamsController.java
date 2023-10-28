@@ -124,8 +124,12 @@ public class FourTeamsController implements ControllerInterface {
     startNeutralMusic();
     createTimelineTeams(mediaPlayerUtils);
     startConsumer();
-    this.time=time;
-    createTimer();
+    if (time>0){
+      this.time=time;
+      createTimer();
+    }else{
+      this.time=Integer.MAX_VALUE;
+    }
   }
 
   private void createTimelineTeams(MediaPlayerUtils mediaPlayerUtils) {
@@ -446,6 +450,9 @@ public class FourTeamsController implements ControllerInterface {
     if (video_team4.getMediaPlayer() != null) {
       video_team4.getMediaPlayer().stop();
     }
+    if (winning_team_video.getMediaPlayer()!=null){
+     winning_team_video.getMediaPlayer().stop();
+    }
   }
   private void createTimer(){
     Timeline timeline = new Timeline();
@@ -486,9 +493,17 @@ public class FourTeamsController implements ControllerInterface {
     team2Timeline.stop();
     team3Timeline.stop();
     team4Timeline.stop();
+    if (sharing_commentary_race4.getMediaPlayer()!=null) {
+      sharing_commentary_race4.getMediaPlayer().stop();
+    }
+    if (sharing_music_race4.getMediaPlayer()!=null) {
+      sharing_music_race4.getMediaPlayer().stop();
+    }
     winning_team_video.setPreserveRatio(false);
-    winning_team_video.setFitWidth(tmp.getWidth() * 4);
-    winning_team_video.setFitHeight(tmp.getHeight());
+    if (tmp!=null){
+      winning_team_video.setFitWidth(tmp.getWidth() * 4);
+      winning_team_video.setFitHeight(tmp.getHeight());
+    }
     int team1point = Integer.parseInt(point_team1.getText());
     int team2point = Integer.parseInt(point_team2.getText());
     int team3point = Integer.parseInt(point_team3.getText());

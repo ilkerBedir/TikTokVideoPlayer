@@ -123,8 +123,13 @@ public class TwoTeamsRaceController implements ControllerInterface{
     video_media_player_race2_2.setMediaPlayer(team2VideoMediaPlayer);
     startNeutralMusic();
     startConsumer();
-    this.time=time;
-    createTimer();
+    if (this.time>0){
+      this.time=time;
+      createTimer();
+    }else {
+      this.time=Integer.MAX_VALUE;
+    }
+
   }
 
   private void editMusicPlayers() {
@@ -356,6 +361,12 @@ public class TwoTeamsRaceController implements ControllerInterface{
        video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM1);
     }else {
        video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM2);
+    }
+    if (sharing_music_media_view_race_2.getMediaPlayer()!=null){
+      sharing_music_media_view_race_2.getMediaPlayer().stop();
+    }
+    if (sharing_commentary_media_view_race_2.getMediaPlayer()!=null){
+      sharing_commentary_media_view_race_2.getMediaPlayer().stop();
     }
     video.setVolume(100);
     winning_video_view.setMediaPlayer(video);

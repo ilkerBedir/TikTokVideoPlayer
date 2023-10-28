@@ -12,7 +12,7 @@
 <?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="676.0" prefWidth="950.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiktokvideoplayer.FourTeamsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="676.0" prefWidth="950.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiktokvideoplayer.FourTeamsController">
    <children>
       <GridPane fx:id="grid_pane1" layoutX="14.0" layoutY="14.0" prefHeight="656.0" prefWidth="930.0">
         <columnConstraints>
@@ -51,7 +51,7 @@
                   <Insets left="10.0" />
                </padding>
             </VBox>
-            <BorderPane prefHeight="60.0" prefWidth="111.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+            <BorderPane prefHeight="60.0" prefWidth="111.0" GridPane.columnSpan="4" GridPane.rowIndex="1">
                <center>
                   <Label alignment="CENTER" cache="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="TAKIMI ÖNDE OLAN MARŞI ÇALAR" textFill="BLUE" BorderPane.alignment="CENTER">
                      <font>
@@ -104,7 +104,7 @@
                   <MediaView fx:id="video_team4" fitHeight="420.0" fitWidth="230.0" preserveRatio="false" />
                </children>
             </VBox>
-            <Label fx:id="timer_label" prefHeight="51.0" prefWidth="422.0" textFill="#f80000" GridPane.columnIndex="3">
+            <Label fx:id="timer_label" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="450.0" textFill="#f80000" GridPane.columnIndex="3">
                <font>
                   <Font name="System Bold" size="41.0" />
                </font>
