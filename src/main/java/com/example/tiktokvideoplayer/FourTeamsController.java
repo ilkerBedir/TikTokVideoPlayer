@@ -14,6 +14,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -102,11 +103,14 @@ public class FourTeamsController implements ControllerInterface {
   private String WINNING_VIDEO_TEAM2;
   private String WINNING_VIDEO_TEAM3;
   private String WINNING_VIDEO_TEAM4;
+  @FXML
+  private StackPane stackpane1;
+  private int extendedTime;
 
 
   public void display(String team1Folder,String team2Folder,String team3Folder,String team4Folder,String neutralMusicPath
                       ,int countGiftImage,List<String> team1GiftNames,List<String> team2GiftNames,List<String> team3GiftNames
-                      ,List<String> team4GiftNames,int time
+                      ,List<String> team4GiftNames,int time,int extendedTime
   ) {
     LOGGER.debug("4 takımlı yarış display");
     this.NEUTRAL_MUSIC_URL=neutralMusicPath;
@@ -124,6 +128,8 @@ public class FourTeamsController implements ControllerInterface {
     startNeutralMusic();
     createTimelineTeams(mediaPlayerUtils);
     startConsumer();
+    this.extendedTime=extendedTime;
+    timer_label.toFront();
     if (time>0){
       this.time=time;
       createTimer();
@@ -288,6 +294,7 @@ public class FourTeamsController implements ControllerInterface {
                             (point1 + hediye_miktari > point4 && point1 + hediye_miktari > point2
                                     && point1 + hediye_miktari > point3)) {
                       LOGGER.debug("Takım Değişti Team1");
+                      increaseTime();
                       currentTeamIndex = 0;
                       sharing_music_race4.getMediaPlayer().stop();
                       MediaPlayer mediaPlayer = team1MusicMediaPlayers.get(currentTeamIndex);
@@ -319,6 +326,7 @@ public class FourTeamsController implements ControllerInterface {
                             (point2 + hediye_miktari > point1 && point2 + hediye_miktari > point3
                                     && point2 + hediye_miktari > point4)) {
                       LOGGER.debug("Takım Değişti Team2");
+                      increaseTime();
                       currentTeamIndex = 0;
                       sharing_music_race4.getMediaPlayer().stop();
                       MediaPlayer mediaPlayer = team2MusicMediaPlayers.get(currentTeamIndex);
@@ -350,6 +358,7 @@ public class FourTeamsController implements ControllerInterface {
                             (point3 + hediye_miktari > point1 && point3 + hediye_miktari > point2
                                     && point3 + hediye_miktari > point4)) {
                       LOGGER.debug("Takım Değişti Team3");
+                      increaseTime();
                       currentTeamIndex = 0;
                       sharing_music_race4.getMediaPlayer().stop();
                       MediaPlayer mediaPlayer = team3MusicMediaPlayers.get(currentTeamIndex);
@@ -381,6 +390,7 @@ public class FourTeamsController implements ControllerInterface {
                             (point4 + hediye_miktari > point1 && point4 + hediye_miktari > point3
                                     && point4 + hediye_miktari > point2)) {
                       LOGGER.debug("Takım Değişti Team4");
+                      increaseTime();
                       currentTeamIndex = 0;
                       sharing_music_race4.getMediaPlayer().stop();
                       MediaPlayer mediaPlayer = team4MusicMediaPlayers.get(currentTeamIndex);
@@ -474,20 +484,23 @@ public class FourTeamsController implements ControllerInterface {
   public void increaseTime(int time) {
     this.time=time+this.time;
   }
-
+  public void increaseTime(){
+    if (time>0 && time<60){
+      LOGGER.debug("Süre uzatıldı");
+      this.time=extendedTime+this.time;
+    }
+  }
   @Override
   public void finishRace() {
     LOGGER.debug("finishRace");
-    ObservableList<Node> children = grid_pane1.getChildren();
-    List<Node> removedList = new ArrayList<>();
-    VBox tmp = null;
-    for (Node child : children) {
-      if (child instanceof VBox && ((VBox) child).getChildren().size()==3) {
-        removedList.add(child);
-        tmp = (VBox) child;
-      }
+    if (this.time<0){
+      return;
     }
-    children.removeAll(removedList);
+    this.time=-1;
+    ObservableList<Node> children = stackpane1.getChildren();
+    double width = stackpane1.getWidth();
+    double height = stackpane1.getHeight();
+    children.removeAll(children);
     timer_label.setVisible(false);
     team1Timeline.stop();
     team2Timeline.stop();
@@ -500,10 +513,8 @@ public class FourTeamsController implements ControllerInterface {
       sharing_music_race4.getMediaPlayer().stop();
     }
     winning_team_video.setPreserveRatio(false);
-    if (tmp!=null){
-      winning_team_video.setFitWidth(tmp.getWidth() * 4);
-      winning_team_video.setFitHeight(tmp.getHeight());
-    }
+    winning_team_video.setFitWidth(width);
+    winning_team_video.setFitHeight(height);
     int team1point = Integer.parseInt(point_team1.getText());
     int team2point = Integer.parseInt(point_team2.getText());
     int team3point = Integer.parseInt(point_team3.getText());

@@ -1,6 +1,7 @@
 package com.example.tiktokvideoplayer;
 
 import com.example.tiktokvideoplayer.utils.RunWSController;
+import com.example.tiktokvideoplayer.utils.XMLUtils;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -230,7 +231,7 @@ public class RaceSettingsController implements Initializable {
         combobox_team_count.getItems().addAll(1, 2, 3, 4, 6, 8);
         combobox_gift_count.getItems().addAll(1, 2, 3, 4);
         editGiftComboBox();
-
+        setLastSettings();
     }
 
     private void editGiftComboBox() {
@@ -274,6 +275,7 @@ public class RaceSettingsController implements Initializable {
 
     public void startRaceAction(ActionEvent actionEvent) {
         LOGGER.debug("Yarışma Başladı-startRaceAction");
+        saveLastSettings();
         Integer selectedItem = combobox_team_count.getSelectionModel().getSelectedItem();
         if (selectedItem == 1) {
             LOGGER.debug("Tek Ekranlı seçim yaptınız");
@@ -300,6 +302,7 @@ public class RaceSettingsController implements Initializable {
             String textNeutralMusicText = text_neutral_music.getText();
             String streamNameText = text_stream_name.getText();
             int time = Integer.parseInt(text_timer.getText());
+            int extendedTime = Integer.parseInt(text_timer_extend.getText());
             runWSController = new RunWSController(streamNameText);
             runWSController.start();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("two_teams.fxml"));
@@ -309,7 +312,7 @@ public class RaceSettingsController implements Initializable {
                 LOGGER.error(e.getMessage(), e);
             }
             TwoTeamsRaceController twoTeamsRaceController = loader.getController();
-            twoTeamsRaceController.display(takim1Text, takim2Text, textNeutralMusicText, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2), giftCount, time);
+            twoTeamsRaceController.display(takim1Text, takim2Text, textNeutralMusicText, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2), giftCount, time,extendedTime);
             //stage= ((Stage) ((Node) actionEvent.getSource()).getScene().getWindow());
             stage = new Stage();
             stage.setOnCloseRequest(event -> {
@@ -331,6 +334,8 @@ public class RaceSettingsController implements Initializable {
             String textNeutralMusicText = text_neutral_music.getText();
             String streamNameText = text_stream_name.getText();
             int time = Integer.parseInt(text_timer.getText());
+            int extendedTime = Integer.parseInt(text_timer_extend.getText());
+
             runWSController = new RunWSController(streamNameText);
             runWSController.start();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("three_teams.fxml"));
@@ -340,7 +345,8 @@ public class RaceSettingsController implements Initializable {
                 LOGGER.error(e.getMessage(), e);
             }
             ThreeTeamsController threeTeamsController = loader.getController();
-            threeTeamsController.display(takim1Text, takim2Text, takim3Text, textNeutralMusicText, giftCount, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2), getComboBoxGifts(hbox3), time);
+            threeTeamsController.display(takim1Text, takim2Text, takim3Text, textNeutralMusicText, giftCount, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2),
+                    getComboBoxGifts(hbox3), time,extendedTime);
             stage = new Stage();
             stage.setOnCloseRequest(event -> {
                 LOGGER.debug("Yarışma Kapatma isteği geldi");
@@ -362,6 +368,7 @@ public class RaceSettingsController implements Initializable {
             String textNeutralMusicText = text_neutral_music.getText();
             String streamNameText = text_stream_name.getText();
             int time = Integer.parseInt(text_timer.getText());
+            int extendedTime = Integer.parseInt(text_timer_extend.getText());
             runWSController = new RunWSController(streamNameText);
             runWSController.start();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("four_teams.fxml"));
@@ -371,7 +378,7 @@ public class RaceSettingsController implements Initializable {
                 LOGGER.error(e.getMessage(), e);
             }
             FourTeamsController fourTeamsController = loader.getController();
-            fourTeamsController.display(takim1Text, takim2Text, takim3Text, takim4Text, textNeutralMusicText, giftCount, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2), getComboBoxGifts(hbox3), getComboBoxGifts(hbox4), time);
+            fourTeamsController.display(takim1Text, takim2Text, takim3Text, takim4Text, textNeutralMusicText, giftCount, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2), getComboBoxGifts(hbox3), getComboBoxGifts(hbox4), time,extendedTime);
             stage = new Stage();
             stage.setOnCloseRequest(event -> {
                 LOGGER.debug("Yarışma Kapatma İsteği geldi");
@@ -383,7 +390,184 @@ public class RaceSettingsController implements Initializable {
             stage.setScene(scene);
             controller = fourTeamsController;
             stage.show();
+        } else if (selectedItem == 6) {
+            LOGGER.debug("6 takımlı yarışma başlatılıyor");
+            String takim1Text = text_takim1.getText();
+            String takim2Text = text_takim2.getText();
+            String takim3Text = text_takim3.getText();
+            String takim4Text = text_takim4.getText();
+            String takim5Text = text_takim5.getText();
+            String takim6Text = text_takim6.getText();
+            Integer giftCount = combobox_gift_count.getSelectionModel().getSelectedItem();
+            String textNeutralMusicText = text_neutral_music.getText();
+            String streamNameText = text_stream_name.getText();
+            int time = Integer.parseInt(text_timer.getText());
+            int extendedTime = Integer.parseInt(text_timer_extend.getText());
+            runWSController = new RunWSController(streamNameText);
+            runWSController.start();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("six_teams.fxml"));
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                LOGGER.error(e.getMessage(), e);
+            }
+            SixTeamsController sixTeamsController = loader.getController();
+            sixTeamsController.display(takim1Text, takim2Text, takim3Text, takim4Text,takim5Text,takim6Text, textNeutralMusicText, giftCount, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2), getComboBoxGifts(hbox3), getComboBoxGifts(hbox4),getComboBoxGifts(hbox5),getComboBoxGifts(hbox6), time,extendedTime);
+            stage = new Stage();
+            stage.setOnCloseRequest(event -> {
+                LOGGER.debug("Yarışma Kapatma İsteği geldi");
+                sixTeamsController.close();
+                runWSController.stop();
+            });
+            stage.setTitle("Race6Team");
+            scene = new Scene(root);
+            stage.setScene(scene);
+            controller = sixTeamsController;
+            stage.show();
+        }else if (selectedItem == 8) {
+            LOGGER.debug("8 takımlı yarışma başlatılıyor");
+            String takim1Text = text_takim1.getText();
+            String takim2Text = text_takim2.getText();
+            String takim3Text = text_takim3.getText();
+            String takim4Text = text_takim4.getText();
+            String takim5Text = text_takim5.getText();
+            String takim6Text = text_takim6.getText();
+            String takim7Text = text_takim7.getText();
+            String takim8Text = text_takim8.getText();
+            Integer giftCount = combobox_gift_count.getSelectionModel().getSelectedItem();
+            String textNeutralMusicText = text_neutral_music.getText();
+            String streamNameText = text_stream_name.getText();
+            int time = Integer.parseInt(text_timer.getText());
+            int extendedTime = Integer.parseInt(text_timer_extend.getText());
+            runWSController = new RunWSController(streamNameText);
+            runWSController.start();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("eight_teams.fxml"));
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                LOGGER.error(e.getMessage(), e);
+            }
+            EightTeamsController eightTeamsController = loader.getController();
+            eightTeamsController.display(takim1Text, takim2Text, takim3Text, takim4Text,takim5Text,takim6Text,takim7Text,takim8Text, textNeutralMusicText, giftCount, getComboBoxGifts(hbox1), getComboBoxGifts(hbox2), getComboBoxGifts(hbox3), getComboBoxGifts(hbox4),getComboBoxGifts(hbox5),getComboBoxGifts(hbox6),getComboBoxGifts(hbox7),getComboBoxGifts(hbox8), time,extendedTime);
+            stage = new Stage();
+            stage.setOnCloseRequest(event -> {
+                LOGGER.debug("Yarışma Kapatma İsteği geldi");
+                eightTeamsController.close();
+                runWSController.stop();
+            });
+            stage.setTitle("Race8Team");
+            scene = new Scene(root);
+            stage.setScene(scene);
+            controller = eightTeamsController;
+            stage.show();
         }
+    }
+    private void setLastSettings(){
+        XMLUtils xmlUtils = new XMLUtils();
+        List<Setting> lastSettings = xmlUtils.getLastSettings();
+        if (lastSettings.size()>0){
+            text_takim1.setText(lastSettings.get(0).getValue());
+            text_takim2.setText(lastSettings.get(1).getValue());
+            text_takim3.setText(lastSettings.get(2).getValue());
+            text_takim4.setText(lastSettings.get(3).getValue());
+            text_takim5.setText(lastSettings.get(4).getValue());
+            text_takim6.setText(lastSettings.get(5).getValue());
+            text_takim7.setText(lastSettings.get(6).getValue());
+            text_takim8.setText(lastSettings.get(7).getValue());
+            text_stream_name.setText(lastSettings.get(8).getValue());
+            text_timer.setText(lastSettings.get(9).getValue());
+            text_timer_extend.setText(lastSettings.get(10).getValue());
+            text_neutral_music.setText(lastSettings.get(11).getValue());
+            combobox_team_count.getSelectionModel().select(Integer.parseInt(lastSettings.get(12).getValue()));
+            combobox_gift_count.getSelectionModel().select(Integer.parseInt(lastSettings.get(13).getValue()));
+            combo_gift1.getSelectionModel().select(lastSettings.get(14).getValue());
+            combo_gift2.getSelectionModel().select(lastSettings.get(15).getValue());
+            combo_gift3.getSelectionModel().select(lastSettings.get(16).getValue());
+            combo_gift4.getSelectionModel().select(lastSettings.get(17).getValue());
+            combo_gift5.getSelectionModel().select(lastSettings.get(18).getValue());
+            combo_gift6.getSelectionModel().select(lastSettings.get(19).getValue());
+            combo_gift7.getSelectionModel().select(lastSettings.get(20).getValue());
+            combo_gift8.getSelectionModel().select(lastSettings.get(21).getValue());
+            combo_gift9.getSelectionModel().select(lastSettings.get(22).getValue());
+            combo_gift10.getSelectionModel().select(lastSettings.get(23).getValue());
+            combo_gift11.getSelectionModel().select(lastSettings.get(24).getValue());
+            combo_gift12.getSelectionModel().select(lastSettings.get(25).getValue());
+            combo_gift13.getSelectionModel().select(lastSettings.get(26).getValue());
+            combo_gift14.getSelectionModel().select(lastSettings.get(27).getValue());
+            combo_gift15.getSelectionModel().select(lastSettings.get(28).getValue());
+            combo_gift16.getSelectionModel().select(lastSettings.get(29).getValue());
+            combo_gift17.getSelectionModel().select(lastSettings.get(30).getValue());
+            combo_gift18.getSelectionModel().select(lastSettings.get(31).getValue());
+            combo_gift19.getSelectionModel().select(lastSettings.get(32).getValue());
+            combo_gift20.getSelectionModel().select(lastSettings.get(33).getValue());
+            combo_gift21.getSelectionModel().select(lastSettings.get(34).getValue());
+            combo_gift22.getSelectionModel().select(lastSettings.get(35).getValue());
+            combo_gift23.getSelectionModel().select(lastSettings.get(36).getValue());
+            combo_gift24.getSelectionModel().select(lastSettings.get(37).getValue());
+            combo_gift25.getSelectionModel().select(lastSettings.get(38).getValue());
+            combo_gift26.getSelectionModel().select(lastSettings.get(39).getValue());
+            combo_gift27.getSelectionModel().select(lastSettings.get(40).getValue());
+            combo_gift28.getSelectionModel().select(lastSettings.get(41).getValue());
+            combo_gift29.getSelectionModel().select(lastSettings.get(42).getValue());
+            combo_gift30.getSelectionModel().select(lastSettings.get(43).getValue());
+            combo_gift31.getSelectionModel().select(lastSettings.get(44).getValue());
+            combo_gift32.getSelectionModel().select(lastSettings.get(45).getValue());
+
+
+        }else{
+            LOGGER.debug("Son kayıt alınamadı");
+        }
+    }
+    private void saveLastSettings() {
+        List<Setting> settingList=new ArrayList<>();
+        XMLUtils xmlUtils = new XMLUtils();
+        settingList.add(new Setting("text_takim1",text_takim1.getText()));
+        settingList.add(new Setting("text_takim2",text_takim2.getText()));
+        settingList.add(new Setting("text_takim3",text_takim3.getText()));
+        settingList.add(new Setting("text_takim4",text_takim4.getText()));
+        settingList.add(new Setting("text_takim5",text_takim5.getText()));
+        settingList.add(new Setting("text_takim6",text_takim6.getText()));
+        settingList.add(new Setting("text_takim7",text_takim7.getText()));
+        settingList.add(new Setting("text_takim8",text_takim8.getText()));
+        settingList.add(new Setting("stream_name",text_stream_name.getText()));
+        settingList.add(new Setting("text_timer",text_timer.getText()));
+        settingList.add(new Setting("text_timer_extend",text_timer_extend.getText()));
+        settingList.add(new Setting("neutral_song",text_neutral_music.getText()));
+        settingList.add(new Setting("team_count",String.valueOf(combobox_team_count.getSelectionModel().getSelectedIndex())));
+        settingList.add(new Setting("gift_count",String.valueOf(combobox_gift_count.getSelectionModel().getSelectedIndex())));
+        settingList.add(new Setting("gift1", ((String) combo_gift1.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift2", ((String) combo_gift2.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift3", ((String) combo_gift3.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift4", ((String) combo_gift4.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift5", ((String) combo_gift5.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift6", ((String) combo_gift6.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift7", ((String) combo_gift7.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift8", ((String) combo_gift8.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift9", ((String) combo_gift9.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift10", ((String) combo_gift10.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift11", ((String) combo_gift11.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift12", ((String) combo_gift12.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift13", ((String) combo_gift13.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift14", ((String) combo_gift14.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift15", ((String) combo_gift15.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift16", ((String) combo_gift16.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift17", ((String) combo_gift17.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift18", ((String) combo_gift18.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift19", ((String) combo_gift19.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift20", ((String) combo_gift20.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift21", ((String) combo_gift21.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift22", ((String) combo_gift22.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift23", ((String) combo_gift23.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift24", ((String) combo_gift24.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift25", ((String) combo_gift25.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift26", ((String) combo_gift26.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift27", ((String) combo_gift27.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift28", ((String) combo_gift28.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift29", ((String) combo_gift29.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift30", ((String) combo_gift30.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift31", ((String) combo_gift31.getSelectionModel().getSelectedItem())));
+        settingList.add(new Setting("gift32", ((String) combo_gift32.getSelectionModel().getSelectedItem())));
+        xmlUtils.saveLastSetting(settingList);
     }
 
     private List<String> getComboBoxGifts(HBox tmpHbox) {

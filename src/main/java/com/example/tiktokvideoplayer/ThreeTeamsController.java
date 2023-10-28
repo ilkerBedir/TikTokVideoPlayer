@@ -14,6 +14,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -95,9 +96,13 @@ public class ThreeTeamsController implements ControllerInterface {
     private String WINNING_VIDEO_TEAM1;
     private String WINNING_VIDEO_TEAM2;
     private String WINNING_VIDEO_TEAM3;
+    @FXML
+    private StackPane stackpane1;
+    private int extendedTime;
 
     public void display(String team1Folder, String team2Folder, String team3Folder, String neutralMusicPath
-            , int countGiftImage, List<String> team1GiftNames, List<String> team2GiftNames, List<String> team3GiftNames, int time
+            , int countGiftImage, List<String> team1GiftNames, List<String> team2GiftNames, List<String> team3GiftNames
+            , int time, int extendedTime
     ) {
         LOGGER.debug("3 takımlı yarış display");
         this.NEUTRAL_MUSIC_URL = neutralMusicPath;
@@ -114,6 +119,8 @@ public class ThreeTeamsController implements ControllerInterface {
         startNeutralMusic();
         createTimelineTeams(mediaPlayerUtils);
         startConsumer();
+        timer_label.toFront();
+        this.extendedTime=extendedTime;
         if (time>0){
             this.time = time;
             createTimer();
@@ -270,6 +277,7 @@ public class ThreeTeamsController implements ControllerInterface {
                                                 (point1 + hediye_miktari > point2
                                                         && point1 + hediye_miktari > point3)) {
                                             LOGGER.debug("Takım Değişti Team1");
+                                            increaseTime();
                                             currentTeamIndex = 0;
                                             sharing_music_race4.getMediaPlayer().stop();
                                             MediaPlayer mediaPlayer = team1MusicMediaPlayers.get(currentTeamIndex);
@@ -298,6 +306,7 @@ public class ThreeTeamsController implements ControllerInterface {
                                         if ((point2 <= point1 || point2 <= point3) &&
                                                 (point2 + hediye_miktari > point1 && point2 + hediye_miktari > point3)) {//TODO yanlış 3 lüde patlıyor
                                             LOGGER.debug("Takım Değişti Team2");
+                                            increaseTime();
                                             currentTeamIndex = 0;
                                             sharing_music_race4.getMediaPlayer().stop();
                                             MediaPlayer mediaPlayer = team2MusicMediaPlayers.get(currentTeamIndex);
@@ -326,6 +335,7 @@ public class ThreeTeamsController implements ControllerInterface {
                                         if ((point3 <= point1 || point3 <= point2) &&
                                                 (point3 + hediye_miktari > point1 && point3 + hediye_miktari > point2)) {
                                             LOGGER.debug("Takım Değişti Team3");
+                                            increaseTime();
                                             currentTeamIndex = 0;
                                             sharing_music_race4.getMediaPlayer().stop();
                                             MediaPlayer mediaPlayer = team3MusicMediaPlayers.get(currentTeamIndex);
@@ -415,29 +425,39 @@ public class ThreeTeamsController implements ControllerInterface {
     public void increaseTime(int time) {
         this.time = time + this.time;
     }
-
+    public void increaseTime(){
+        if (time>0 && time<60){
+            LOGGER.debug("Süre uzatıldı");
+            this.time=extendedTime+this.time;
+        }
+    }
     @Override
     public void finishRace() {
         LOGGER.debug("finishRace");
-        ObservableList<Node> children = grid_pane1.getChildren();
-        List<Node> removedList = new ArrayList<>();
+        if (this.time<0){
+            return;
+        }
+        this.time=-1;
+        ObservableList<Node> children = stackpane1.getChildren();
+        double width = stackpane1.getWidth();
+        double height = stackpane1.getHeight();
+        /*List<Node> removedList = new ArrayList<>();
         VBox tmp = null;
         for (Node child : children) {
             if (child instanceof VBox && ((VBox) child).getChildren().size()==3) {
                 removedList.add(child);
                 tmp = (VBox) child;
             }
-        }
-        children.removeAll(removedList);
+        }*/
+        children.removeAll(children);
         timer_label.setVisible(false);
         team1Timeline.stop();
         team2Timeline.stop();
         team3Timeline.stop();
         winning_team_video.setPreserveRatio(false);
-        if (tmp!=null){
-            winning_team_video.setFitWidth(tmp.getWidth() * 3);
-            winning_team_video.setFitHeight(tmp.getHeight());
-        }
+        winning_team_video.setFitWidth(width);
+        winning_team_video.setFitHeight(height);
+        stackpane1.getChildren().add(winning_team_video);
         if (sharing_commentary_race4.getMediaPlayer()!=null){
             sharing_commentary_race4.getMediaPlayer().stop();
         }
