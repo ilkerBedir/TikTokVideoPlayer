@@ -10,10 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class MediaPlayerUtils {
@@ -73,9 +70,11 @@ public class MediaPlayerUtils {
 
     public List<Gift> teamGifts(List<String> giftNames) {
         LOGGER.debug("teamGifts");
-      List<Gift> giftList = gifts.stream()
-              .filter(gift -> giftNames.contains(gift.getName()))
-              .collect(Collectors.toList());
+        List<Gift> giftList = gifts.stream()
+                .filter(gift -> giftNames.contains(gift.getName()))
+                .sorted(Comparator.comparing(gift -> giftNames.indexOf(gift.getName())))
+                .collect(Collectors.toList());
+
       List<Gift> tmp = new ArrayList<>();
       Set<String> giftSet=new HashSet<>();
       for (Gift gift : giftList) {

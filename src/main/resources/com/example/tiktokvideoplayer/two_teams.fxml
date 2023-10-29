@@ -9,7 +9,7 @@
 <?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="709.0" prefWidth="596.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiktokvideoplayer.TwoTeamsRaceController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="578.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiktokvideoplayer.TwoTeamsRaceController">
    <children>
       <MediaView fx:id="sharing_commentary_media_view_race_2" layoutX="-231.0" layoutY="290.0" visible="false" />
       <MediaView fx:id="sharing_music_media_view_race_2" layoutX="-247.0" layoutY="27.0" visible="false" />
@@ -30,19 +30,19 @@
             <Insets left="20.0" top="10.0" />
          </padding>
       </VBox>
-      <StackPane layoutX="13.0" layoutY="86.0" prefHeight="609.0" prefWidth="570.0">
+      <StackPane layoutX="-1.0" layoutY="75.0" prefHeight="609.0" prefWidth="580.0">
          <children>
             <Label fx:id="timer_label" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="87.0" prefWidth="238.0" textFill="RED" StackPane.alignment="BOTTOM_CENTER">
                <font>
                   <Font name="System Bold" size="60.0" />
                </font>
                <StackPane.margin>
-                  <Insets bottom="70.0" />
+                  <Insets bottom="5.0" />
                </StackPane.margin>
             </Label>
-            <HBox fx:id="hbox1" prefHeight="578.0" prefWidth="570.0" spacing="10.0">
+            <HBox fx:id="hbox1" prefHeight="578.0" prefWidth="570.0">
                <children>
-                  <VBox fx:id="vbox1" prefHeight="532.0" prefWidth="280.0" spacing="10.0">
+                  <VBox fx:id="vbox1" prefHeight="532.0" prefWidth="280.0" style="-fx-background-color: gray; -fx-border-color: darkblue; -fx-border-width: 5;">
                      <children>
                         <HBox fx:id="hbox_gifts_team_race2" alignment="BOTTOM_CENTER" prefHeight="66.0" prefWidth="280.0" spacing="10.0" />
                         <Label fx:id="label_team_point1_race2" alignment="CENTER" prefHeight="42.0" prefWidth="279.0" text="0" textFill="WHITE">
@@ -50,10 +50,10 @@
                               <Font name="System Bold" size="54.0" />
                            </font>
                         </Label>
-                        <MediaView fx:id="video_media_player_race2_1" fitHeight="400.0" fitWidth="280.0" preserveRatio="false" />
+                        <MediaView fx:id="video_media_player_race2_1" fitHeight="463.0" fitWidth="280.0" preserveRatio="false" />
                      </children>
                   </VBox>
-                  <VBox fx:id="vbox2" prefHeight="406.0" prefWidth="274.0" spacing="10.0">
+                  <VBox fx:id="vbox2" prefHeight="406.0" prefWidth="274.0" style="-fx-background-color: gray; -fx-border-color: darkblue; -fx-border-width: 5;">
                      <children>
                         <HBox fx:id="hbox_gifts_team_race2_2" alignment="BOTTOM_CENTER" prefHeight="68.0" prefWidth="280.0" spacing="10.0" />
                         <Label fx:id="label_team_point2_race2" alignment="CENTER" prefHeight="42.0" prefWidth="279.0" text="0" textFill="WHITE">
@@ -61,7 +61,7 @@
                               <Font name="System Bold" size="54.0" />
                            </font>
                         </Label>
-                        <MediaView fx:id="video_media_player_race2_2" fitHeight="400.0" fitWidth="280.0" preserveRatio="false" />
+                        <MediaView fx:id="video_media_player_race2_2" fitHeight="463.0" fitWidth="280.0" preserveRatio="false" />
                      </children>
                   </VBox>
                </children>

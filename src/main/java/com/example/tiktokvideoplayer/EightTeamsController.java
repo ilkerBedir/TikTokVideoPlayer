@@ -10,15 +10,15 @@ import javafx.collections.ObservableList;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.*;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.util.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -257,70 +257,22 @@ public class EightTeamsController implements ControllerInterface {
 
     private void editVideos(MediaPlayerUtils mediaPlayerUtils) {
         LOGGER.debug("editVideos");
-        MediaPlayer video1 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1);
-        video1.setOnError(()->{
-            LOGGER.error("Videoda Hata");
-            video1.stop();
-            video1.dispose();
-            video_team1.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1));
-        });
-        video_team1.setMediaPlayer(video1);
-        MediaPlayer video2 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2);
-        video2.setOnError(()->{
-            LOGGER.error("Videoda Hata");
-            video2.stop();
-            video2.dispose();
-            video_team2.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2));
-        });
-        video_team2.setMediaPlayer(video2);
-        MediaPlayer video3 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3);
-        video3.setOnError(()->{
-            LOGGER.error("Videoda Hata");
-            video3.stop();
-            video3.dispose();
-            video_team3.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3));
-        });
-        video_team3.setMediaPlayer(video3);
-        MediaPlayer video4 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4);
-        video4.setOnError(()->{
-            LOGGER.error("Videoda Hata");
-            video4.stop();
-            video4.dispose();
-            video_team4.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4));
-        });
-        video_team4.setMediaPlayer(video4);
-        MediaPlayer video5 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM5);
-        video5.setOnError(()->{
-            LOGGER.error("Videoda Hata");
-            video5.stop();
-            video5.dispose();
-            video_team5.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM5));
-        });
-        video_team5.setMediaPlayer(video5);
-        MediaPlayer video6 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM6);
-        video6.setOnError(()->{
-            LOGGER.error("Videoda Hata");
-            video6.stop();
-            video6.dispose();
-            video_team6.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM6));
-        });
-        video_team6.setMediaPlayer(video6);
-        MediaPlayer video7 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM7);
-        video7.setOnError(()->{
-            LOGGER.error("Videoda Hata");
-            video7.stop();
-            video7.dispose();
-            video_team7.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM7));
-        });
-        video_team7.setMediaPlayer(video7);
-        MediaPlayer video8 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM8);
-        video8.setOnError(()->{
-            LOGGER.error("Videoda Hata");
-            video8.stop();
-            video8.dispose();
-            video_team8.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM8));
-        });
-        video_team8.setMediaPlayer(video8);
+        video_team1.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1));
+        video_team2.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2));
+        video_team3.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3));
+        video_team4.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4));
+        video_team5.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM5));
+        video_team6.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM6));
+        video_team7.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM7));
+        video_team8.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM8));
+        video_team1.getMediaPlayer().setOnError(()->setOnErrorVideo1(mediaPlayerUtils));
+        video_team2.getMediaPlayer().setOnError(()->setOnErrorVideo2(mediaPlayerUtils));
+        video_team3.getMediaPlayer().setOnError(()->setOnErrorVideo3(mediaPlayerUtils));
+        video_team4.getMediaPlayer().setOnError(()->setOnErrorVideo4(mediaPlayerUtils));
+        video_team5.getMediaPlayer().setOnError(()->setOnErrorVideo5(mediaPlayerUtils));
+        video_team6.getMediaPlayer().setOnError(()->setOnErrorVideo6(mediaPlayerUtils));
+        video_team7.getMediaPlayer().setOnError(()->setOnErrorVideo7(mediaPlayerUtils));
+        video_team8.getMediaPlayer().setOnError(()->setOnErrorVideo8(mediaPlayerUtils));
         video_team1.getMediaPlayer().play();
         video_team2.getMediaPlayer().play();
         video_team3.getMediaPlayer().play();
@@ -330,7 +282,72 @@ public class EightTeamsController implements ControllerInterface {
         video_team7.getMediaPlayer().play();
         video_team8.getMediaPlayer().play();
     }
-
+    private void setOnErrorVideo1(MediaPlayerUtils mediaPlayerUtils){
+        LOGGER.error("1Videoda hata");
+        video_team1.getMediaPlayer().stop();
+        video_team1.getMediaPlayer().dispose();
+        MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1);
+        video.setOnError(()-> {
+            setOnErrorVideo1(mediaPlayerUtils);
+        });
+        video_team1.setMediaPlayer(video);
+    }
+    private void setOnErrorVideo2(MediaPlayerUtils mediaPlayerUtils){
+        LOGGER.error("2Videoda hata");
+        video_team2.getMediaPlayer().stop();
+        video_team2.getMediaPlayer().dispose();
+        MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2);
+        video.setOnError(()->setOnErrorVideo2(mediaPlayerUtils));
+        video_team2.setMediaPlayer(video);
+    }
+    private void setOnErrorVideo3(MediaPlayerUtils mediaPlayerUtils){
+        LOGGER.error("3Videoda hata");
+        video_team3.getMediaPlayer().stop();
+        video_team3.getMediaPlayer().dispose();
+        MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3);
+        video.setOnError(()->setOnErrorVideo3(mediaPlayerUtils));
+        video_team3.setMediaPlayer(video);
+    }
+    private void setOnErrorVideo4(MediaPlayerUtils mediaPlayerUtils){
+        LOGGER.error("4Videoda hata");
+        video_team4.getMediaPlayer().stop();
+        video_team4.getMediaPlayer().dispose();
+        MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4);
+        video.setOnError(()->setOnErrorVideo4(mediaPlayerUtils));
+        video_team4.setMediaPlayer(video);
+    }
+    private void setOnErrorVideo5(MediaPlayerUtils mediaPlayerUtils){
+        LOGGER.error("5Videoda hata");
+        video_team5.getMediaPlayer().stop();
+        video_team5.getMediaPlayer().dispose();
+        MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM5);
+        video.setOnError(()->setOnErrorVideo5(mediaPlayerUtils));
+        video_team5.setMediaPlayer(video);
+    }
+    private void setOnErrorVideo6(MediaPlayerUtils mediaPlayerUtils){
+        LOGGER.error("6Videoda hata");
+        video_team6.getMediaPlayer().stop();
+        video_team6.getMediaPlayer().dispose();
+        MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM6);
+        video.setOnError(()->setOnErrorVideo6(mediaPlayerUtils));
+        video_team6.setMediaPlayer(video);
+    }
+    private void setOnErrorVideo7(MediaPlayerUtils mediaPlayerUtils){
+        LOGGER.error("7Videoda hata");
+        video_team7.getMediaPlayer().stop();
+        video_team7.getMediaPlayer().dispose();
+        MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM7);
+        video.setOnError(()->setOnErrorVideo7(mediaPlayerUtils));
+        video_team7.setMediaPlayer(video);
+    }
+    private void setOnErrorVideo8(MediaPlayerUtils mediaPlayerUtils){
+        LOGGER.error("8Videoda hata");
+        video_team8.getMediaPlayer().stop();
+        video_team8.getMediaPlayer().dispose();
+        MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM8);
+        video.setOnError(()->setOnErrorVideo8(mediaPlayerUtils));
+        video_team8.setMediaPlayer(video);
+    }
     private void editHBoxes(MediaPlayerUtils mediaPlayerUtils) {
         LOGGER.debug("editHBoxes");
         hbox_team1.getChildren().addAll(mediaPlayerUtils.createGiftsHBOX(team1Gifts));
@@ -478,14 +495,22 @@ public class EightTeamsController implements ControllerInterface {
                                             team1Timeline.play();
                                             Platform.runLater(() -> {
                                                 point_team1.setText(String.valueOf(point1 + hediye_miktari));
-                                                point_team1.setTextFill(Color.YELLOW);
+                                                point_team1.setTextFill(Color.DARKGREEN);
+                                                point_team1.setBackground(whiteBackground());
                                                 point_team4.setTextFill(Color.WHITE);
+                                                point_team4.setBackground(grayBackground());
                                                 point_team2.setTextFill(Color.WHITE);
+                                                point_team2.setBackground(grayBackground());
                                                 point_team3.setTextFill(Color.WHITE);
+                                                point_team3.setBackground(grayBackground());
                                                 point_team6.setTextFill(Color.WHITE);
+                                                point_team6.setBackground(grayBackground());
                                                 point_team5.setTextFill(Color.WHITE);
+                                                point_team5.setBackground(grayBackground());
                                                 point_team7.setTextFill(Color.WHITE);
+                                                point_team7.setBackground(grayBackground());
                                                 point_team8.setTextFill(Color.WHITE);
+                                                point_team8.setBackground(grayBackground());
                                             });
                                         } else {
                                             Platform.runLater(() -> {
@@ -516,14 +541,22 @@ public class EightTeamsController implements ControllerInterface {
                                             team7Timeline.stop();
                                             Platform.runLater(() -> {
                                                 point_team2.setText(String.valueOf(point2 + hediye_miktari));
-                                                point_team2.setTextFill(Color.YELLOW);
+                                                point_team2.setTextFill(Color.DARKGREEN);
+                                                point_team2.setBackground(whiteBackground());
                                                 point_team4.setTextFill(Color.WHITE);
+                                                point_team4.setBackground(grayBackground());
                                                 point_team1.setTextFill(Color.WHITE);
+                                                point_team1.setBackground(grayBackground());
                                                 point_team3.setTextFill(Color.WHITE);
+                                                point_team3.setBackground(grayBackground());
                                                 point_team6.setTextFill(Color.WHITE);
+                                                point_team6.setBackground(grayBackground());
                                                 point_team5.setTextFill(Color.WHITE);
+                                                point_team5.setBackground(grayBackground());
                                                 point_team7.setTextFill(Color.WHITE);
+                                                point_team7.setBackground(grayBackground());
                                                 point_team8.setTextFill(Color.WHITE);
+                                                point_team8.setBackground(grayBackground());
                                             });
                                         } else {
                                             Platform.runLater(() -> {
@@ -558,14 +591,22 @@ public class EightTeamsController implements ControllerInterface {
                                             team8Timeline.stop();
                                             Platform.runLater(() -> {
                                                 point_team3.setText(String.valueOf(point3 + hediye_miktari));
-                                                point_team3.setTextFill(Color.YELLOW);
+                                                point_team3.setTextFill(Color.DARKGREEN);
+                                                point_team3.setBackground(whiteBackground());
                                                 point_team4.setTextFill(Color.WHITE);
+                                                point_team4.setBackground(grayBackground());
                                                 point_team1.setTextFill(Color.WHITE);
+                                                point_team1.setBackground(grayBackground());
                                                 point_team2.setTextFill(Color.WHITE);
+                                                point_team2.setBackground(grayBackground());
                                                 point_team5.setTextFill(Color.WHITE);
+                                                point_team5.setBackground(grayBackground());
                                                 point_team6.setTextFill(Color.WHITE);
+                                                point_team6.setBackground(grayBackground());
                                                 point_team7.setTextFill(Color.WHITE);
+                                                point_team7.setBackground(grayBackground());
                                                 point_team8.setTextFill(Color.WHITE);
+                                                point_team8.setBackground(grayBackground());
                                             });
                                         } else {
                                             Platform.runLater(() -> {
@@ -598,14 +639,22 @@ public class EightTeamsController implements ControllerInterface {
                                             team8Timeline.stop();
                                             Platform.runLater(() -> {
                                                 point_team4.setText(String.valueOf(point4 + hediye_miktari));
-                                                point_team4.setTextFill(Color.YELLOW);
+                                                point_team4.setTextFill(Color.DARKGREEN);
+                                                point_team4.setBackground(whiteBackground());
                                                 point_team1.setTextFill(Color.WHITE);
+                                                point_team1.setBackground(grayBackground());
                                                 point_team2.setTextFill(Color.WHITE);
+                                                point_team2.setBackground(grayBackground());
                                                 point_team3.setTextFill(Color.WHITE);
+                                                point_team3.setBackground(grayBackground());
                                                 point_team5.setTextFill(Color.WHITE);
+                                                point_team5.setBackground(grayBackground());
                                                 point_team6.setTextFill(Color.WHITE);
+                                                point_team6.setBackground(grayBackground());
                                                 point_team7.setTextFill(Color.WHITE);
+                                                point_team7.setBackground(grayBackground());
                                                 point_team8.setTextFill(Color.WHITE);
+                                                point_team8.setBackground(grayBackground());
                                             });
                                         } else {
                                             Platform.runLater(() -> {
@@ -635,19 +684,27 @@ public class EightTeamsController implements ControllerInterface {
                                             team7Timeline.stop();
                                             team8Timeline.stop();
                                             Platform.runLater(() -> {
-                                                point_team4.setText(String.valueOf(point5 + hediye_miktari));
+                                                point_team5.setText(String.valueOf(point5 + hediye_miktari));
                                                 point_team4.setTextFill(Color.WHITE);
+                                                point_team4.setBackground(grayBackground());
                                                 point_team1.setTextFill(Color.WHITE);
+                                                point_team1.setBackground(grayBackground());
                                                 point_team2.setTextFill(Color.WHITE);
+                                                point_team2.setBackground(grayBackground());
                                                 point_team3.setTextFill(Color.WHITE);
-                                                point_team5.setTextFill(Color.YELLOW);
+                                                point_team3.setBackground(grayBackground());
+                                                point_team5.setTextFill(Color.DARKGREEN);
+                                                point_team5.setBackground(whiteBackground());
                                                 point_team6.setTextFill(Color.WHITE);
+                                                point_team6.setBackground(grayBackground());
                                                 point_team7.setTextFill(Color.WHITE);
+                                                point_team7.setBackground(grayBackground());
                                                 point_team8.setTextFill(Color.WHITE);
+                                                point_team8.setBackground(grayBackground());
                                             });
                                         } else {
                                             Platform.runLater(() -> {
-                                                point_team4.setText(String.valueOf(point5 + hediye_miktari));
+                                                point_team5.setText(String.valueOf(point5 + hediye_miktari));
                                             });
                                         }
                                     } else if (gift6.isPresent()) {
@@ -673,15 +730,23 @@ public class EightTeamsController implements ControllerInterface {
                                             team8Timeline.stop();
                                             team7Timeline.stop();
                                             Platform.runLater(() -> {
-                                                point_team4.setText(String.valueOf(point4 + hediye_miktari));
+                                                point_team6.setText(String.valueOf(point6 + hediye_miktari));
                                                 point_team4.setTextFill(Color.WHITE);
+                                                point_team4.setBackground(grayBackground());
                                                 point_team1.setTextFill(Color.WHITE);
+                                                point_team1.setBackground(grayBackground());
                                                 point_team2.setTextFill(Color.WHITE);
+                                                point_team2.setBackground(grayBackground());
                                                 point_team3.setTextFill(Color.WHITE);
+                                                point_team3.setBackground(grayBackground());
                                                 point_team5.setTextFill(Color.WHITE);
-                                                point_team6.setTextFill(Color.YELLOW);
+                                                point_team5.setBackground(grayBackground());
+                                                point_team6.setTextFill(Color.DARKGREEN);
+                                                point_team6.setBackground(whiteBackground());
                                                 point_team7.setTextFill(Color.WHITE);
+                                                point_team7.setBackground(grayBackground());
                                                 point_team8.setTextFill(Color.WHITE);
+                                                point_team8.setBackground(grayBackground());
                                             });
                                         } else {
                                             Platform.runLater(() -> {
@@ -711,15 +776,23 @@ public class EightTeamsController implements ControllerInterface {
                                             team8Timeline.stop();
                                             team7Timeline.play();
                                             Platform.runLater(() -> {
-                                                point_team4.setText(String.valueOf(point4 + hediye_miktari));
+                                                point_team7.setText(String.valueOf(point7 + hediye_miktari));
                                                 point_team4.setTextFill(Color.WHITE);
+                                                point_team4.setBackground(grayBackground());
                                                 point_team1.setTextFill(Color.WHITE);
+                                                point_team1.setBackground(grayBackground());
                                                 point_team2.setTextFill(Color.WHITE);
+                                                point_team2.setBackground(grayBackground());
                                                 point_team3.setTextFill(Color.WHITE);
+                                                point_team3.setBackground(grayBackground());
                                                 point_team5.setTextFill(Color.WHITE);
+                                                point_team5.setBackground(grayBackground());
                                                 point_team6.setTextFill(Color.WHITE);
-                                                point_team7.setTextFill(Color.YELLOW);
+                                                point_team6.setBackground(grayBackground());
+                                                point_team7.setTextFill(Color.DARKGREEN);
+                                                point_team7.setBackground(whiteBackground());
                                                 point_team8.setTextFill(Color.WHITE);
+                                                point_team8.setBackground(grayBackground());
                                             });
                                         } else {
                                             Platform.runLater(() -> {
@@ -749,15 +822,23 @@ public class EightTeamsController implements ControllerInterface {
                                             team8Timeline.play();
                                             team7Timeline.stop();
                                             Platform.runLater(() -> {
-                                                point_team4.setText(String.valueOf(point4 + hediye_miktari));
+                                                point_team8.setText(String.valueOf(point8 + hediye_miktari));
                                                 point_team4.setTextFill(Color.WHITE);
+                                                point_team4.setBackground(grayBackground());
                                                 point_team1.setTextFill(Color.WHITE);
+                                                point_team1.setBackground(grayBackground());
                                                 point_team2.setTextFill(Color.WHITE);
+                                                point_team2.setBackground(grayBackground());
                                                 point_team3.setTextFill(Color.WHITE);
+                                                point_team3.setBackground(grayBackground());
                                                 point_team5.setTextFill(Color.WHITE);
+                                                point_team5.setBackground(grayBackground());
                                                 point_team6.setTextFill(Color.WHITE);
+                                                point_team6.setBackground(grayBackground());
                                                 point_team7.setTextFill(Color.WHITE);
-                                                point_team8.setTextFill(Color.YELLOW);
+                                                point_team7.setBackground(grayBackground());
+                                                point_team8.setTextFill(Color.DARKGREEN);
+                                                point_team8.setBackground(whiteBackground());
                                             });
                                         } else {
                                             Platform.runLater(() -> {
@@ -781,7 +862,14 @@ public class EightTeamsController implements ControllerInterface {
         };
         service.start();
     }
-
+    private Background whiteBackground(){
+        BackgroundFill backgroundFill = new BackgroundFill(Paint.valueOf("#ffffff"), CornerRadii.EMPTY, Insets.EMPTY);
+        return new Background(backgroundFill);
+    }
+    private Background grayBackground(){
+        BackgroundFill backgroundFill = new BackgroundFill(Paint.valueOf("#A9A9A9"), CornerRadii.EMPTY, Insets.EMPTY);
+        return new Background(backgroundFill);
+    }
     public void close() {
         LOGGER.debug("Kapatma isteği");
         this.time=-1;

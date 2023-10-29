@@ -9,14 +9,15 @@ import javafx.application.Platform;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.util.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -132,7 +133,22 @@ public class TwoTeamsRaceController implements ControllerInterface{
     }else {
       this.time=Integer.MAX_VALUE;
     }
+    editVideoPlayers();
+  }
 
+  private void editVideoPlayers() {
+    video_media_player_race2_1.getMediaPlayer().setOnError(()->{
+      LOGGER.debug("VideoDa Hata");
+      video_media_player_race2_1.getMediaPlayer().stop();
+      video_media_player_race2_1.getMediaPlayer().dispose();
+      video_media_player_race2_1.setMediaPlayer(new MediaPlayerUtils().getVideo(this.VIDEO_URL_TEAM1));
+    });
+    video_media_player_race2_2.getMediaPlayer().setOnError(()->{
+      LOGGER.debug("VideoDa Hata");
+      video_media_player_race2_2.getMediaPlayer().stop();
+      video_media_player_race2_2.getMediaPlayer().dispose();
+      video_media_player_race2_2.setMediaPlayer(new MediaPlayerUtils().getVideo(this.VIDEO_URL_TEAM2));
+    });
   }
 
   private void editMusicPlayers() {
@@ -249,8 +265,10 @@ public class TwoTeamsRaceController implements ControllerInterface{
                       team1Timeline.play();
                       Platform.runLater(() -> {
                         label_team_point1_race2.setText(String.valueOf(point1 + hediye_miktari));
-                        label_team_point1_race2.setTextFill(Color.YELLOW);
+                        label_team_point1_race2.setTextFill(Color.DARKGREEN);
+                        label_team_point1_race2.setBackground(whiteBackground());
                         label_team_point2_race2.setTextFill(Color.WHITE);
+                        label_team_point2_race2.setBackground(grayBackground());
                       });
                     } else {
                       Platform.runLater(() -> {
@@ -277,8 +295,10 @@ public class TwoTeamsRaceController implements ControllerInterface{
                       team2Timeline.play();
                       Platform.runLater(() -> {
                         label_team_point2_race2.setText(String.valueOf(point2 + hediye_miktari));
-                        label_team_point2_race2.setTextFill(Color.YELLOW);
+                        label_team_point2_race2.setTextFill(Color.DARKGREEN);
+                        label_team_point2_race2.setBackground(whiteBackground());
                         label_team_point1_race2.setTextFill(Color.WHITE);
+                        label_team_point1_race2.setBackground(grayBackground());
                       });
                     } else {
                       Platform.runLater(() -> {
@@ -302,7 +322,14 @@ public class TwoTeamsRaceController implements ControllerInterface{
     };
     service.start();
   }
-
+  private Background whiteBackground(){
+    BackgroundFill backgroundFill = new BackgroundFill(Paint.valueOf("#ffffff"), CornerRadii.EMPTY, Insets.EMPTY);
+    return new Background(backgroundFill);
+  }
+  private Background grayBackground(){
+    BackgroundFill backgroundFill = new BackgroundFill(Paint.valueOf("#A9A9A9"), CornerRadii.EMPTY, Insets.EMPTY);
+    return new Background(backgroundFill);
+  }
   public void close() {
     LOGGER.debug("Kapatma isteği");
     this.time=-1;
