@@ -305,6 +305,7 @@ public class TwoTeamsRaceController implements ControllerInterface{
 
   public void close() {
     LOGGER.debug("Kapatma isteği");
+    this.time=-1;
     threadFlag=false;
     team1Timeline.stop();
     team2Timeline.stop();

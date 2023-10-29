@@ -12,7 +12,7 @@
 <?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="950.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiktokvideoplayer.EightTeamsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="950.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiktokvideoplayer.EightTeamsController">
    <children>
       <GridPane fx:id="grid_pane1" layoutX="14.0" layoutY="14.0" prefHeight="850.0" prefWidth="930.0">
         <columnConstraints>
@@ -136,7 +136,7 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <Label fx:id="timer_label" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="450.0" textFill="#f80000" StackPane.alignment="BOTTOM_CENTER">
+                  <Label fx:id="timer_label" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="450.0" textFill="#f80000" StackPane.alignment="BOTTOM_CENTER">
                      <font>
                         <Font name="System Bold" size="60.0" />
                      </font>

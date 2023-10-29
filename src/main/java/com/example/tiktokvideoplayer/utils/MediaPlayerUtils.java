@@ -59,7 +59,7 @@ public class MediaPlayerUtils {
                 if (file.isFile()) {
                     Media media = new Media(file.toURI().toString());
                     MediaPlayer mediaPlayer = new MediaPlayer(media);
-                    mediaPlayer.setCycleCount(999999);
+                    mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
                     mediaPlayer.setAutoPlay(true);
                     mediaPlayer.setVolume(0);
                     mediaPlayers.add(mediaPlayer);

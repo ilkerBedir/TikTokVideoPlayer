@@ -257,14 +257,70 @@ public class EightTeamsController implements ControllerInterface {
 
     private void editVideos(MediaPlayerUtils mediaPlayerUtils) {
         LOGGER.debug("editVideos");
-        video_team1.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1));
-        video_team2.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2));
-        video_team3.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3));
-        video_team4.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4));
-        video_team5.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM5));
-        video_team6.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM6));
-        video_team7.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM7));
-        video_team8.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM8));
+        MediaPlayer video1 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1);
+        video1.setOnError(()->{
+            LOGGER.error("Videoda Hata");
+            video1.stop();
+            video1.dispose();
+            video_team1.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1));
+        });
+        video_team1.setMediaPlayer(video1);
+        MediaPlayer video2 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2);
+        video2.setOnError(()->{
+            LOGGER.error("Videoda Hata");
+            video2.stop();
+            video2.dispose();
+            video_team2.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2));
+        });
+        video_team2.setMediaPlayer(video2);
+        MediaPlayer video3 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3);
+        video3.setOnError(()->{
+            LOGGER.error("Videoda Hata");
+            video3.stop();
+            video3.dispose();
+            video_team3.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3));
+        });
+        video_team3.setMediaPlayer(video3);
+        MediaPlayer video4 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4);
+        video4.setOnError(()->{
+            LOGGER.error("Videoda Hata");
+            video4.stop();
+            video4.dispose();
+            video_team4.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4));
+        });
+        video_team4.setMediaPlayer(video4);
+        MediaPlayer video5 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM5);
+        video5.setOnError(()->{
+            LOGGER.error("Videoda Hata");
+            video5.stop();
+            video5.dispose();
+            video_team5.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM5));
+        });
+        video_team5.setMediaPlayer(video5);
+        MediaPlayer video6 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM6);
+        video6.setOnError(()->{
+            LOGGER.error("Videoda Hata");
+            video6.stop();
+            video6.dispose();
+            video_team6.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM6));
+        });
+        video_team6.setMediaPlayer(video6);
+        MediaPlayer video7 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM7);
+        video7.setOnError(()->{
+            LOGGER.error("Videoda Hata");
+            video7.stop();
+            video7.dispose();
+            video_team7.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM7));
+        });
+        video_team7.setMediaPlayer(video7);
+        MediaPlayer video8 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM8);
+        video8.setOnError(()->{
+            LOGGER.error("Videoda Hata");
+            video8.stop();
+            video8.dispose();
+            video_team8.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM8));
+        });
+        video_team8.setMediaPlayer(video8);
         video_team1.getMediaPlayer().play();
         video_team2.getMediaPlayer().play();
         video_team3.getMediaPlayer().play();
@@ -728,6 +784,7 @@ public class EightTeamsController implements ControllerInterface {
 
     public void close() {
         LOGGER.debug("Kapatma isteği");
+        this.time=-1;
         threadFlag = false;
         team1Timeline.stop();
         team2Timeline.stop();

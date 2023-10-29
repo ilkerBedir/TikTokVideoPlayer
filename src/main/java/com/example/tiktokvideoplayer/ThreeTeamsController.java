@@ -181,9 +181,30 @@ public class ThreeTeamsController implements ControllerInterface {
 
     private void editVideos(MediaPlayerUtils mediaPlayerUtils) {
         LOGGER.debug("editVideos");
-        video_team1.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1));
-        video_team2.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2));
-        video_team3.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3));
+        MediaPlayer video1 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1);
+        video1.setOnError(()->{
+            LOGGER.error("Videoda Hata");
+            video1.stop();
+            video1.dispose();
+            video_team1.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1));
+        });
+        video_team1.setMediaPlayer(video1);
+        MediaPlayer video2 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2);
+        video2.setOnError(()->{
+            LOGGER.error("Videoda Hata");
+            video2.stop();
+            video2.dispose();
+            video_team2.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2));
+        });
+        video_team2.setMediaPlayer(video2);
+        MediaPlayer video3 = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3);
+        video3.setOnError(()->{
+            LOGGER.error("Videoda Hata");
+            video3.stop();
+            video3.dispose();
+            video_team3.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3));
+        });
+        video_team3.setMediaPlayer(video3);
         video_team1.getMediaPlayer().play();
         video_team2.getMediaPlayer().play();
         video_team3.getMediaPlayer().play();
@@ -380,6 +401,7 @@ public class ThreeTeamsController implements ControllerInterface {
 
     public void close() {
         LOGGER.debug("Kapatma isteği");
+        this.time=-1;
         threadFlag = false;
         team1Timeline.stop();
         team2Timeline.stop();
