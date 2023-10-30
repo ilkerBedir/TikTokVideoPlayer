@@ -63,7 +63,7 @@
                      <children>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <VBox fx:id="vbox1" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="390.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-color: blue; -fx-border-width: 2;">
+                              <VBox fx:id="vbox1" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="390.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-color: black; -fx-border-width: 2;">
                                  <children>
                                     <HBox fx:id="hbox_team1" alignment="BOTTOM_CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="52.0" prefWidth="234.0" />
                                     <Label fx:id="point_team1" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="310.0" text="0" textFill="WHITE">
@@ -74,7 +74,7 @@
                                     <MediaView fx:id="video_team1" fitHeight="282.0" fitWidth="275.0" preserveRatio="false" />
                                  </children>
                               </VBox>
-                              <VBox fx:id="vbox2" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="390.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-color: blue; -fx-border-width: 2;">
+                              <VBox fx:id="vbox2" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="390.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-color: black; -fx-border-width: 2;">
                                  <children>
                                     <HBox fx:id="hbox_team2" alignment="BOTTOM_CENTER" prefHeight="52.0" prefWidth="234.0" />
                                     <Label fx:id="point_team2" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="307.0" text="0" textFill="WHITE">
@@ -85,7 +85,7 @@
                                     <MediaView fx:id="video_team2" fitHeight="282.0" fitWidth="275.0" preserveRatio="false" />
                                  </children>
                               </VBox>
-                              <VBox fx:id="vbox3" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="390.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-color: blue; -fx-border-width: 2;">
+                              <VBox fx:id="vbox3" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="390.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-color: black; -fx-border-width: 2;">
                                  <children>
                                     <HBox fx:id="hbox_team3" alignment="BOTTOM_CENTER" prefHeight="52.0" prefWidth="234.0" />
                                     <Label fx:id="point_team3" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="310.0" text="0" textFill="WHITE">
@@ -100,7 +100,7 @@
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <VBox fx:id="vbox4" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="390.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-color: blue; -fx-border-width: 2;">
+                              <VBox fx:id="vbox4" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="390.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-color: black; -fx-border-width: 2;">
                                  <children>
                                     <HBox fx:id="hbox_team4" alignment="BOTTOM_CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="52.0" prefWidth="234.0" />
                                     <Label fx:id="point_team4" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="310.0" text="0" textFill="WHITE">
@@ -111,7 +111,7 @@
                                     <MediaView fx:id="video_team4" fitHeight="282.0" fitWidth="275.0" preserveRatio="false" />
                                  </children>
                               </VBox>
-                              <VBox fx:id="vbox5" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="390.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-color: blue; -fx-border-width: 2;">
+                              <VBox fx:id="vbox5" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="390.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-color: black; -fx-border-width: 2;">
                                  <children>
                                     <HBox fx:id="hbox_team5" alignment="BOTTOM_CENTER" minHeight="-Infinity" prefHeight="52.0" prefWidth="234.0" />
                                     <Label fx:id="point_team5" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="307.0" text="0" textFill="WHITE">
@@ -122,7 +122,7 @@
                                     <MediaView fx:id="video_team5" fitHeight="282.0" fitWidth="275.0" preserveRatio="false" />
                                  </children>
                               </VBox>
-                              <VBox fx:id="vbox6" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="390.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-color: blue; -fx-border-width: 2;">
+                              <VBox fx:id="vbox6" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="390.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-color: black; -fx-border-width: 2;">
                                  <children>
                                     <HBox fx:id="hbox_team6" alignment="BOTTOM_CENTER" minHeight="-Infinity" prefHeight="52.0" prefWidth="234.0" />
                                     <Label fx:id="point_team6" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="310.0" text="0" textFill="WHITE">

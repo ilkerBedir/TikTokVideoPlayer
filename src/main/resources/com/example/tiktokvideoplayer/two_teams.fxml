@@ -42,7 +42,7 @@
             </Label>
             <HBox fx:id="hbox1" prefHeight="578.0" prefWidth="570.0">
                <children>
-                  <VBox fx:id="vbox1" prefHeight="532.0" prefWidth="280.0" style="-fx-background-color: gray; -fx-border-color: darkblue; -fx-border-width: 5;">
+                  <VBox fx:id="vbox1" prefHeight="532.0" prefWidth="280.0" style="-fx-background-color: gray; -fx-border-color: black; -fx-border-width: 5;">
                      <children>
                         <HBox fx:id="hbox_gifts_team_race2" alignment="BOTTOM_CENTER" prefHeight="66.0" prefWidth="280.0" spacing="10.0" />
                         <Label fx:id="label_team_point1_race2" alignment="CENTER" prefHeight="42.0" prefWidth="279.0" text="0" textFill="WHITE">
@@ -53,7 +53,7 @@
                         <MediaView fx:id="video_media_player_race2_1" fitHeight="463.0" fitWidth="280.0" preserveRatio="false" />
                      </children>
                   </VBox>
-                  <VBox fx:id="vbox2" prefHeight="406.0" prefWidth="274.0" style="-fx-background-color: gray; -fx-border-color: darkblue; -fx-border-width: 5;">
+                  <VBox fx:id="vbox2" prefHeight="406.0" prefWidth="274.0" style="-fx-background-color: gray; -fx-border-color: black; -fx-border-width: 5;">
                      <children>
                         <HBox fx:id="hbox_gifts_team_race2_2" alignment="BOTTOM_CENTER" prefHeight="68.0" prefWidth="280.0" spacing="10.0" />
                         <Label fx:id="label_team_point2_race2" alignment="CENTER" prefHeight="42.0" prefWidth="279.0" text="0" textFill="WHITE">
