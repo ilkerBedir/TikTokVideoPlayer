@@ -33,7 +33,7 @@
           <RowConstraints minHeight="10.0" prefHeight="6.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <StackPane fx:id="stackpane1" maxHeight="1.7976931348623157E308" minWidth="-Infinity" prefHeight="618.0" prefWidth="840.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="9" GridPane.vgrow="ALWAYS">
+            <StackPane fx:id="stackpane1" minWidth="-Infinity" prefHeight="618.0" prefWidth="840.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="9" GridPane.vgrow="ALWAYS">
                <children>
                   <Label fx:id="timer_label" alignment="CENTER" prefHeight="62.0" prefWidth="266.0" textFill="RED" StackPane.alignment="BOTTOM_CENTER">
                      <font>
