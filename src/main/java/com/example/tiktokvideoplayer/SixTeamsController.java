@@ -231,43 +231,12 @@ public class SixTeamsController implements ControllerInterface {
     video_team4.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4));
     video_team5.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM5));
     video_team6.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM6));
-    video_team1.getMediaPlayer().setOnError(()->{
-      LOGGER.error("1Videoda hata");
-      video_team1.getMediaPlayer().stop();
-      video_team1.getMediaPlayer().dispose();
-      video_team1.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1));
-    });
-    video_team2.getMediaPlayer().setOnError(()->{
-      LOGGER.error("2Videoda hata");
-      video_team2.getMediaPlayer().stop();
-      video_team2.getMediaPlayer().dispose();
-      video_team2.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2));
-    });
-    video_team3.getMediaPlayer().setOnError(()->{
-      LOGGER.error("3Videoda hata");
-      video_team3.getMediaPlayer().stop();
-      video_team3.getMediaPlayer().dispose();
-      video_team3.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3));
-    });
-    video_team4.getMediaPlayer().setOnError(()->{
-      LOGGER.error("4Videoda hata");
-      video_team4.getMediaPlayer().stop();
-      video_team4.getMediaPlayer().dispose();
-      video_team4.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4));
-    });
-    video_team5.getMediaPlayer().setOnError(()->{
-      LOGGER.error("5Videoda hata");
-      video_team5.getMediaPlayer().stop();
-      video_team5.getMediaPlayer().dispose();
-      video_team5.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM5));
-    });
-    video_team6.getMediaPlayer().setOnError(()->{
-      LOGGER.error("6Videoda hata");
-      video_team6.getMediaPlayer().stop();
-      video_team6.getMediaPlayer().dispose();
-      video_team6.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM6));
-    });
-
+    video_team1.getMediaPlayer().setOnError(()->setOnErrorVideo1(mediaPlayerUtils));
+    video_team2.getMediaPlayer().setOnError(()->setOnErrorVideo2(mediaPlayerUtils));
+    video_team3.getMediaPlayer().setOnError(()->setOnErrorVideo3(mediaPlayerUtils));
+    video_team4.getMediaPlayer().setOnError(()->setOnErrorVideo4(mediaPlayerUtils));
+    video_team5.getMediaPlayer().setOnError(()->setOnErrorVideo5(mediaPlayerUtils));
+    video_team6.getMediaPlayer().setOnError(()->setOnErrorVideo6(mediaPlayerUtils));
     video_team1.getMediaPlayer().play();
     video_team2.getMediaPlayer().play();
     video_team3.getMediaPlayer().play();
@@ -312,6 +281,66 @@ public class SixTeamsController implements ControllerInterface {
     this.WINNING_VIDEO_TEAM4 = team4Folder + "/winning_video";
     this.WINNING_VIDEO_TEAM5 = team5Folder + "/winning_video";
     this.WINNING_VIDEO_TEAM6 = team6Folder + "/winning_video";
+  }
+  private void setOnErrorVideo1(MediaPlayerUtils mediaPlayerUtils){
+    LOGGER.error("1Videoda hata");
+    video_team1.getMediaPlayer().stop();
+    video_team1.getMediaPlayer().dispose();
+    MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1);
+    video.setOnError(()-> {
+      setOnErrorVideo1(mediaPlayerUtils);
+    });
+    video_team1.setMediaPlayer(video);
+  }
+  private void setOnErrorVideo2(MediaPlayerUtils mediaPlayerUtils){
+    LOGGER.error("2Videoda hata");
+    video_team2.getMediaPlayer().stop();
+    video_team2.getMediaPlayer().dispose();
+    MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2);
+    video.setOnError(()-> {
+      setOnErrorVideo2(mediaPlayerUtils);
+    });
+    video_team2.setMediaPlayer(video);
+  }
+  private void setOnErrorVideo3(MediaPlayerUtils mediaPlayerUtils){
+    LOGGER.error("3Videoda hata");
+    video_team3.getMediaPlayer().stop();
+    video_team3.getMediaPlayer().dispose();
+    MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3);
+    video.setOnError(()-> {
+      setOnErrorVideo3(mediaPlayerUtils);
+    });
+    video_team3.setMediaPlayer(video);
+  }
+  private void setOnErrorVideo4(MediaPlayerUtils mediaPlayerUtils){
+    LOGGER.error("4Videoda hata");
+    video_team4.getMediaPlayer().stop();
+    video_team4.getMediaPlayer().dispose();
+    MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4);
+    video.setOnError(()-> {
+      setOnErrorVideo4(mediaPlayerUtils);
+    });
+    video_team4.setMediaPlayer(video);
+  }
+  private void setOnErrorVideo5(MediaPlayerUtils mediaPlayerUtils){
+    LOGGER.error("5Videoda hata");
+    video_team5.getMediaPlayer().stop();
+    video_team5.getMediaPlayer().dispose();
+    MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM5);
+    video.setOnError(()-> {
+      setOnErrorVideo5(mediaPlayerUtils);
+    });
+    video_team5.setMediaPlayer(video);
+  }
+  private void setOnErrorVideo6(MediaPlayerUtils mediaPlayerUtils){
+    LOGGER.error("6Videoda hata");
+    video_team6.getMediaPlayer().stop();
+    video_team6.getMediaPlayer().dispose();
+    MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM6);
+    video.setOnError(()-> {
+      setOnErrorVideo6(mediaPlayerUtils);
+    });
+    video_team6.setMediaPlayer(video);
   }
   private Timeline createTimelineTeams(List<MediaPlayer> teamCommentaries) {
     Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(60), event -> {

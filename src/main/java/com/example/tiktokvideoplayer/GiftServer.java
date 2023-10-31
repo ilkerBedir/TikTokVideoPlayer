@@ -56,7 +56,7 @@ public class GiftServer extends WebSocketServer{
     @Override
     public void onStart() {
         LOGGER.debug("Server started!");
-        setConnectionLostTimeout(0);
+        setConnectionLostTimeout(100);
     }
 
     public static ArrayList<?> deserializeByteArray(byte[] byteArray) {

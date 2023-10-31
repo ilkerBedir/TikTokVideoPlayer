@@ -123,6 +123,8 @@ public class TwoTeamsRaceController implements ControllerInterface{
     team2VideoMediaPlayer = mediaPlayerUtils.getVideo(VIDEO_URL_TEAM2);
     video_media_player_race2_1.setMediaPlayer(team1VideoMediaPlayer);
     video_media_player_race2_2.setMediaPlayer(team2VideoMediaPlayer);
+    video_media_player_race2_1.getMediaPlayer().setOnError(()->setOnErrorVideo1(mediaPlayerUtils));
+    video_media_player_race2_2.getMediaPlayer().setOnError(()->setOnErrorVideo2(mediaPlayerUtils));
     startNeutralMusic();
     startConsumer();
     this.extendedTime=extendedTime;
@@ -156,7 +158,26 @@ public class TwoTeamsRaceController implements ControllerInterface{
     editMusicPlayers(team1MusicMediaPlayers);
     editMusicPlayers(team2MusicMediaPlayers);
   }
-
+  private void setOnErrorVideo1(MediaPlayerUtils mediaPlayerUtils){
+    LOGGER.error("1Videoda hata");
+    video_media_player_race2_1.getMediaPlayer().stop();
+    video_media_player_race2_1.getMediaPlayer().dispose();
+    MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1);
+    video.setOnError(()-> {
+      setOnErrorVideo1(mediaPlayerUtils);
+    });
+    video_media_player_race2_1.setMediaPlayer(video);
+  }
+  private void setOnErrorVideo2(MediaPlayerUtils mediaPlayerUtils){
+    LOGGER.error("2Videoda hata");
+    video_media_player_race2_2.getMediaPlayer().stop();
+    video_media_player_race2_2.getMediaPlayer().dispose();
+    MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2);
+    video.setOnError(()-> {
+      setOnErrorVideo2(mediaPlayerUtils);
+    });
+    video_media_player_race2_2.setMediaPlayer(video);
+  }
   private Timeline createTimelineTeams(List<MediaPlayer> teamCommentaries) {
     Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(60), event -> {
       LOGGER.debug("takım belgeseli başlatılıyor");

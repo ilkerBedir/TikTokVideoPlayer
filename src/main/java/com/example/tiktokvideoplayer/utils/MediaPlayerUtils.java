@@ -96,8 +96,8 @@ public class MediaPlayerUtils {
         LOGGER.debug("createImageView");
         ImageView imageView = new ImageView();
         imageView.setImage(image);
-        imageView.setFitHeight((double) 200 / (this.countImagePerTeam + 1));
-        imageView.setFitWidth((double) 200 / (this.countImagePerTeam + 1));
+        imageView.setFitHeight((double) 100 / (4));
+        imageView.setFitWidth((double) 92 / (4));
         return imageView;
     }
 }

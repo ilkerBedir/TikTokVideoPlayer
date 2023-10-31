@@ -1,8 +1,59 @@
-[2023-10-30T17:59:35,984] [DEBUG] o.e.GiftWSClient:19 opened connection
-[2023-10-30T17:59:35,991] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
-[2023-10-30T18:01:24,380] [DEBUG] o.e.GiftWSClient:19 opened connection
-[2023-10-30T18:01:24,383] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
-[2023-10-30T18:02:24,120] [DEBUG] o.e.GiftWSClient:19 opened connection
-[2023-10-30T18:02:24,161] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
-[2023-10-30T18:02:33,884] [DEBUG] o.e.GiftWSClient:19 opened connection
-[2023-10-30T18:02:33,892] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T17:11:57,896] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T17:11:57,906] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T17:12:56,112] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T17:12:56,119] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T17:14:23,345] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T17:14:23,349] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T17:30:20,318] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T17:30:20,321] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T17:33:28,133] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T17:33:28,136] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T17:34:15,420] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T17:34:15,424] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T17:34:55,432] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T17:34:55,436] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T17:35:00,583] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T17:35:00,589] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T18:27:31,140] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T18:27:31,143] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T18:44:10,092] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T18:44:10,095] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T18:44:23,633] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T18:44:23,637] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T18:47:24,724] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T18:47:24,727] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T18:56:31,835] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T18:56:31,838] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:00:15,494] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:00:15,503] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:36:25,868] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:36:25,871] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:38:21,193] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:38:21,197] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:40:25,490] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:40:25,494] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:40:59,103] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:40:59,106] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:41:33,654] [DEBUG] o.e.GiftWSClient:30 Connection closed by remote peer Code: 1006 Reason: 
+[2023-10-31T19:41:38,702] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:41:38,705] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:42:57,975] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:42:57,979] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:43:39,843] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:43:39,846] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:44:26,030] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:44:26,033] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:45:32,919] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:45:32,922] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:46:50,029] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:46:50,034] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:47:10,096] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:47:10,100] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:47:48,403] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:47:48,407] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:48:01,216] [DEBUG] o.e.GiftWSClient:30 Connection closed by remote peer Code: 1006 Reason: 
+[2023-10-31T19:48:27,147] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:48:27,152] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
+[2023-10-31T19:48:37,294] [DEBUG] o.e.GiftWSClient:30 Connection closed by remote peer Code: 1006 Reason: 
+[2023-10-31T19:49:54,119] [DEBUG] o.e.GiftWSClient:19 opened connection
+[2023-10-31T19:49:54,122] [DEBUG] o.e.GiftWSClient:24 received: Welcome to the server!
