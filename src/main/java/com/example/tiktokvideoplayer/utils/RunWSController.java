@@ -19,7 +19,7 @@ public class RunWSController {
 
     public void start() {
         LOGGER.debug("Tiktok ws socket başlatılıyor : yayın ismi {}, port {}",streamName,port);
-        List<String> command = List.of("java", "-jar", "TikTokLiveWs/TikTokLiveWs-1.0-SNAPSHOT.jar", streamName,port);
+        List<String> command = List.of("TikTokLiveWs/TikTokLiveDeneme.exe", streamName,port);
         ProcessBuilder processBuilder = new ProcessBuilder(command);
         processBuilder.redirectErrorStream(true);
         Process process = null;

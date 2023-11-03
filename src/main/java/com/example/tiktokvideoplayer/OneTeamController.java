@@ -13,10 +13,9 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.util.Duration;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class OneTeamController implements ControllerInterface{
+public class OneTeamController implements ControllerInterface {
   private String COMMENTARY_URL;
   private String VIDEO_URL;
   private String MARS_URL;
@@ -32,13 +31,13 @@ public class OneTeamController implements ControllerInterface{
   MediaView belgesel_media_view_1;
   private List<MediaPlayer> commentaryMedias;
   private List<MediaPlayer> marsMedias;
-  private int currentMusicIndex=0;
-  private int currentCommentaryIndex=0;
+  private int currentMusicIndex = 0;
+  private int currentCommentaryIndex = 0;
 
-  public void display(String folderName){
-    this.COMMENTARY_URL=folderName+"\\belgesel";
-    this.MARS_URL=folderName+"\\mars";
-    this.VIDEO_URL=folderName+"\\video";
+  public void display(String folderName) {
+    this.COMMENTARY_URL = folderName + "\\belgesel";
+    this.MARS_URL = folderName + "\\mars";
+    this.VIDEO_URL = folderName + "\\video";
     MediaPlayerUtils fileUtils = new MediaPlayerUtils();
     commentaryMedias = fileUtils.createVolumeFiles(COMMENTARY_URL);
     marsMedias = fileUtils.createVolumeFiles(MARS_URL);
@@ -50,6 +49,7 @@ public class OneTeamController implements ControllerInterface{
     commentaryTimeline();
     startConsumer();
   }
+
   private void musicMediaPlayer() {
     for (MediaPlayer team1MusicPlayer : marsMedias) {
       team1MusicPlayer.setOnEndOfMedia(() -> {
@@ -68,6 +68,7 @@ public class OneTeamController implements ControllerInterface{
     ses_media_view_1.setMediaPlayer(marsMedias.get(0));
     ses_media_view_1.getMediaPlayer().play();
   }
+
   private void commentaryTimeline() {
     Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(60), event -> {
       System.out.println("Timeline");
@@ -86,6 +87,7 @@ public class OneTeamController implements ControllerInterface{
     timeline.setCycleCount(Animation.INDEFINITE);
     timeline.play();
   }
+
   private void startConsumer() {
     Service<Void> service = new Service<>() {
       @Override
@@ -94,23 +96,23 @@ public class OneTeamController implements ControllerInterface{
           @Override
           public Void call() {
             while (true) {
-              ArrayList value = null;
+              String[] value = null;
               try {
                 value = GiftServer.arrayLists.take();
               } catch (InterruptedException e) {
                 throw new RuntimeException();
               }
-              String messageType = (String) value.get(0);
-              System.out.println("MessageType : "+messageType);
+              String messageType = (String) value[0];
+              System.out.println("MessageType : " + messageType);
               switch (messageType) {
                 case "Like": {
-                  ArrayList finalValue = value;
-                  Platform.runLater(() -> label_like_1.setText("Son Beğenen : " + ((String) finalValue.get(1))));
+                  String[] finalValue = value;
+                  Platform.runLater(() -> label_like_1.setText("Son Beğenen : " + finalValue[1]));
                   break;
                 }
                 case "Comment": {
-                  ArrayList finalValue = value;
-                  Platform.runLater(() -> label_comment_1.setText("Son Yorum Yapan : " + ((String) finalValue.get(1))));
+                  String[] finalValue = value;
+                  Platform.runLater(() -> label_comment_1.setText("Son Yorum Yapan : " + finalValue[1]));
                   break;
                 }
                 default:

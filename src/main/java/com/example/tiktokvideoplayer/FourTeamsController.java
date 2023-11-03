@@ -23,13 +23,15 @@ import javafx.util.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.net.URI;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class FourTeamsController implements ControllerInterface {
-  private static final Logger LOGGER= LoggerFactory.getLogger(FourTeamsController.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(FourTeamsController.class);
   @FXML
   private Label label_comment_race4;
   @FXML
@@ -92,7 +94,7 @@ public class FourTeamsController implements ControllerInterface {
   private List<Gift> team2Gifts;
   private List<Gift> team3Gifts;
   private List<Gift> team4Gifts;
-  private boolean threadFlag=true;
+  private boolean threadFlag = true;
   private int time;
   @FXML
   private MediaView winning_team_video;
@@ -105,21 +107,22 @@ public class FourTeamsController implements ControllerInterface {
   @FXML
   private StackPane stackpane1;
   private int extendedTime;
+  private int interval;
 
 
-  public void display(String team1Folder,String team2Folder,String team3Folder,String team4Folder,String neutralMusicPath
-                      ,int countGiftImage,List<String> team1GiftNames,List<String> team2GiftNames,List<String> team3GiftNames
-                      ,List<String> team4GiftNames,int time,int extendedTime
+  public void display(String team1Folder, String team2Folder, String team3Folder, String team4Folder, String neutralMusicPath
+      , int countGiftImage, List<String> team1GiftNames, List<String> team2GiftNames, List<String> team3GiftNames
+      , List<String> team4GiftNames, int time, int extendedTime
   ) {
     LOGGER.debug("4 takımlı yarış display");
-    this.NEUTRAL_MUSIC_URL=neutralMusicPath;
-    this.COUNT_IMAGE_PER_TEAM=countGiftImage;
-    editFolders(team1Folder,team2Folder,team3Folder,team4Folder);
+    this.NEUTRAL_MUSIC_URL = neutralMusicPath;
+    this.COUNT_IMAGE_PER_TEAM = countGiftImage;
+    editFolders(team1Folder, team2Folder, team3Folder, team4Folder);
     MediaPlayerUtils mediaPlayerUtils = new MediaPlayerUtils(this.COUNT_IMAGE_PER_TEAM);
-    team1Gifts=mediaPlayerUtils.teamGifts(team1GiftNames);
-    team2Gifts=mediaPlayerUtils.teamGifts(team2GiftNames);
-    team3Gifts=mediaPlayerUtils.teamGifts(team3GiftNames);
-    team4Gifts=mediaPlayerUtils.teamGifts(team4GiftNames);
+    team1Gifts = mediaPlayerUtils.teamGifts(team1GiftNames);
+    team2Gifts = mediaPlayerUtils.teamGifts(team2GiftNames);
+    team3Gifts = mediaPlayerUtils.teamGifts(team3GiftNames);
+    team4Gifts = mediaPlayerUtils.teamGifts(team4GiftNames);
     editHBoxes(mediaPlayerUtils);
     editVideos(mediaPlayerUtils);
     createMusicPlayers(mediaPlayerUtils);
@@ -127,22 +130,22 @@ public class FourTeamsController implements ControllerInterface {
     startNeutralMusic();
     createTimelineTeams(mediaPlayerUtils);
     startConsumer();
-    this.extendedTime=extendedTime;
+    this.extendedTime = extendedTime;
     timer_label.toFront();
-    if (time>0){
-      this.time=time;
+    if (time > 0) {
+      this.time = time;
       createTimer();
-    }else{
-      this.time=Integer.MAX_VALUE;
+    } else {
+      this.time = Integer.MAX_VALUE;
     }
   }
 
   private void createTimelineTeams(MediaPlayerUtils mediaPlayerUtils) {
     LOGGER.debug("createTimelineTeams");
-    team1Timeline=createTimelineTeams(mediaPlayerUtils.createVolumeFiles(this.COMMENTARY_URL_TEAM1));
-    team2Timeline=createTimelineTeams(mediaPlayerUtils.createVolumeFiles(this.COMMENTARY_URL_TEAM2));
-    team3Timeline=createTimelineTeams(mediaPlayerUtils.createVolumeFiles(this.COMMENTARY_URL_TEAM3));
-    team4Timeline=createTimelineTeams(mediaPlayerUtils.createVolumeFiles(this.COMMENTARY_URL_TEAM4));
+    team1Timeline = createTimelineTeams(mediaPlayerUtils.createVolumeFiles(this.COMMENTARY_URL_TEAM1));
+    team2Timeline = createTimelineTeams(mediaPlayerUtils.createVolumeFiles(this.COMMENTARY_URL_TEAM2));
+    team3Timeline = createTimelineTeams(mediaPlayerUtils.createVolumeFiles(this.COMMENTARY_URL_TEAM3));
+    team4Timeline = createTimelineTeams(mediaPlayerUtils.createVolumeFiles(this.COMMENTARY_URL_TEAM4));
   }
 
   private void createMusicPlayers(MediaPlayerUtils mediaPlayerUtils) {
@@ -178,7 +181,8 @@ public class FourTeamsController implements ControllerInterface {
       });
     }
   }
-  private void startNeutralMusic(){
+
+  private void startNeutralMusic() {
     LOGGER.debug("startNeutralMusic");
     Media neutralMusic = new Media(Paths.get(NEUTRAL_MUSIC_URL).toUri().toString());
     MediaPlayer mediaPlayer1 = new MediaPlayer(neutralMusic);
@@ -188,21 +192,23 @@ public class FourTeamsController implements ControllerInterface {
     sharing_music_race4.setMediaPlayer(mediaPlayer1);
     mediaPlayer1.setAutoPlay(true);
   }
-  private void editVideos(MediaPlayerUtils mediaPlayerUtils){
+
+  private void editVideos(MediaPlayerUtils mediaPlayerUtils) {
     LOGGER.debug("editVideos");
     video_team1.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1));
     video_team2.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2));
     video_team3.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3));
     video_team4.setMediaPlayer(mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4));
-    video_team1.getMediaPlayer().setOnError(()->setOnErrorVideo1(mediaPlayerUtils));
-    video_team2.getMediaPlayer().setOnError(()->setOnErrorVideo2(mediaPlayerUtils));
-    video_team3.getMediaPlayer().setOnError(()->setOnErrorVideo3(mediaPlayerUtils));
-    video_team4.getMediaPlayer().setOnError(()->setOnErrorVideo4(mediaPlayerUtils));
+    video_team1.getMediaPlayer().setOnError(() -> setOnErrorVideo1(mediaPlayerUtils));
+    video_team2.getMediaPlayer().setOnError(() -> setOnErrorVideo2(mediaPlayerUtils));
+    video_team3.getMediaPlayer().setOnError(() -> setOnErrorVideo3(mediaPlayerUtils));
+    video_team4.getMediaPlayer().setOnError(() -> setOnErrorVideo4(mediaPlayerUtils));
     video_team1.getMediaPlayer().play();
     video_team2.getMediaPlayer().play();
     video_team3.getMediaPlayer().play();
     video_team4.getMediaPlayer().play();
   }
+
   private void editHBoxes(MediaPlayerUtils mediaPlayerUtils) {
     LOGGER.debug("editHBoxes");
     hbox_team1.getChildren().addAll(mediaPlayerUtils.createGiftsHBOX(team1Gifts));
@@ -210,46 +216,51 @@ public class FourTeamsController implements ControllerInterface {
     hbox_team3.getChildren().addAll(mediaPlayerUtils.createGiftsHBOX(team3Gifts));
     hbox_team4.getChildren().addAll(mediaPlayerUtils.createGiftsHBOX(team4Gifts));
   }
-  private void setOnErrorVideo1(MediaPlayerUtils mediaPlayerUtils){
+
+  private void setOnErrorVideo1(MediaPlayerUtils mediaPlayerUtils) {
     LOGGER.error("1Videoda hata");
     video_team1.getMediaPlayer().stop();
     video_team1.getMediaPlayer().dispose();
     MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM1);
-    video.setOnError(()-> {
+    video.setOnError(() -> {
       setOnErrorVideo1(mediaPlayerUtils);
     });
     video_team1.setMediaPlayer(video);
   }
-  private void setOnErrorVideo2(MediaPlayerUtils mediaPlayerUtils){
+
+  private void setOnErrorVideo2(MediaPlayerUtils mediaPlayerUtils) {
     LOGGER.error("2Videoda hata");
     video_team2.getMediaPlayer().stop();
     video_team2.getMediaPlayer().dispose();
     MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2);
-    video.setOnError(()-> {
+    video.setOnError(() -> {
       setOnErrorVideo2(mediaPlayerUtils);
     });
     video_team2.setMediaPlayer(video);
   }
-  private void setOnErrorVideo3(MediaPlayerUtils mediaPlayerUtils){
+
+  private void setOnErrorVideo3(MediaPlayerUtils mediaPlayerUtils) {
     LOGGER.error("3Videoda hata");
     video_team3.getMediaPlayer().stop();
     video_team3.getMediaPlayer().dispose();
     MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3);
-    video.setOnError(()-> {
+    video.setOnError(() -> {
       setOnErrorVideo3(mediaPlayerUtils);
     });
     video_team3.setMediaPlayer(video);
   }
-  private void setOnErrorVideo4(MediaPlayerUtils mediaPlayerUtils){
+
+  private void setOnErrorVideo4(MediaPlayerUtils mediaPlayerUtils) {
     LOGGER.error("4Videoda hata");
     video_team4.getMediaPlayer().stop();
     video_team4.getMediaPlayer().dispose();
     MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4);
-    video.setOnError(()-> {
+    video.setOnError(() -> {
       setOnErrorVideo4(mediaPlayerUtils);
     });
     video_team4.setMediaPlayer(video);
   }
+
   private void editFolders(String team1Folder, String team2Folder, String team3Folder, String team4Folder) {
     LOGGER.debug("editFolders");
     this.COMMENTARY_URL_TEAM1 = team1Folder + "/belgesel";
@@ -269,8 +280,9 @@ public class FourTeamsController implements ControllerInterface {
     this.WINNING_VIDEO_TEAM3 = team3Folder + "/winning_video";
     this.WINNING_VIDEO_TEAM4 = team4Folder + "/winning_video";
   }
+
   private Timeline createTimelineTeams(List<MediaPlayer> teamCommentaries) {
-    Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(60), event -> {
+    Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(interval), event -> {
       LOGGER.debug("Takım Belgeseli başlıyor");
       if (sharing_commentary_race4.getMediaPlayer() != null) {
         sharing_commentary_race4.getMediaPlayer().stop();
@@ -287,6 +299,7 @@ public class FourTeamsController implements ControllerInterface {
     timeline.setCycleCount(Animation.INDEFINITE);
     return timeline;
   }
+
   private void startConsumer() {
     Service<Void> service = new Service<>() {
       @Override
@@ -295,29 +308,34 @@ public class FourTeamsController implements ControllerInterface {
           @Override
           public Void call() {
             while (threadFlag) {
-              ArrayList value = null;
+              String[] value = null;
               try {
                 value = GiftServer.arrayLists.take();
               } catch (InterruptedException e) {
                 throw new RuntimeException();
               }
-              String messageType = (String) value.get(0);
+              String messageType= value[0];
               LOGGER.debug("MessageType : " + messageType);
               switch (messageType) {
+                case "CLOSE": {
+                  LOGGER.debug("ArrayListe close mesajı geldi");
+                  threadFlag = false;
+                  break;
+                }
                 case "Like": {
-                  ArrayList finalValue = value;
-                  Platform.runLater(() -> label_like_race4.setText("Son Beğenen : " + ((String) finalValue.get(1))));
+                  String[] finalValue = value;
+                  Platform.runLater(() -> label_like_race4.setText("Son Beğenen : " + finalValue[1]));
                   break;
                 }
                 case "Comment": {
-                  ArrayList finalValue = value;
-                  Platform.runLater(() -> label_comment_race4.setText("Son Yorum Yapan : " + ((String) finalValue.get(1))));
+                  String[] finalValue = value;
+                  Platform.runLater(() -> label_comment_race4.setText("Son Yorum Yapan : " + finalValue[1]));
                   break;
                 }
                 case "Gift", "GiftCombo": {
-                  ArrayList finalValue = value;
-                  String name = ((String) finalValue.get(4));
-                  int hediye_miktari = ((int) finalValue.get(2)) * ((int) finalValue.get(3));
+                  String[] finalValue = value;
+                  String name = finalValue[1];
+                  int hediye_miktari = Integer.parseInt(finalValue[2]);
                   LOGGER.debug("Gift : " + name + " Gift Toplam Miktari : " + hediye_miktari);
                   Optional<Gift> gift1 = team1Gifts.stream().filter(gift -> gift.getName().equals(name)).findAny();
                   Optional<Gift> gift2 = team2Gifts.stream().filter(gift -> gift.getName().equals(name)).findAny();
@@ -332,9 +350,9 @@ public class FourTeamsController implements ControllerInterface {
                   int point3 = Integer.parseInt(labelPoint3);
                   int point4 = Integer.parseInt(labelPoint4);
                   if (gift1.isPresent()) {
-                    if ((point1 <= point2 || point1 <= point3 || point1<=point4) &&
-                            (point1 + hediye_miktari > point4 && point1 + hediye_miktari > point2
-                                    && point1 + hediye_miktari > point3)) {
+                    if ((point1 <= point2 || point1 <= point3 || point1 <= point4) &&
+                        (point1 + hediye_miktari > point4 && point1 + hediye_miktari > point2
+                            && point1 + hediye_miktari > point3)) {
                       LOGGER.debug("Takım Değişti Team1");
                       increaseTime();
                       currentTeamIndex = 0;
@@ -342,6 +360,9 @@ public class FourTeamsController implements ControllerInterface {
                       MediaPlayer mediaPlayer = team1MusicMediaPlayers.get(currentTeamIndex);
                       mediaPlayer.seek(Duration.ZERO);
                       sharing_music_race4.setMediaPlayer(mediaPlayer);
+                      sharing_music_race4.getMediaPlayer().setOnError(()->{
+                        setOnErrorMusic(team1MusicMediaPlayers);
+                      });
                       sharing_music_race4.getMediaPlayer().play();
                       if (sharing_commentary_race4.getMediaPlayer() != null) {
                         sharing_commentary_race4.getMediaPlayer().stop();
@@ -368,9 +389,9 @@ public class FourTeamsController implements ControllerInterface {
                       });
                     }
                   } else if (gift2.isPresent()) {
-                    if ((point2 <= point1 || point2 <= point3 || point2<=point4) &&
-                            (point2 + hediye_miktari > point1 && point2 + hediye_miktari > point3
-                                    && point2 + hediye_miktari > point4)) {
+                    if ((point2 <= point1 || point2 <= point3 || point2 <= point4) &&
+                        (point2 + hediye_miktari > point1 && point2 + hediye_miktari > point3
+                            && point2 + hediye_miktari > point4)) {
                       LOGGER.debug("Takım Değişti Team2");
                       increaseTime();
                       currentTeamIndex = 0;
@@ -378,6 +399,9 @@ public class FourTeamsController implements ControllerInterface {
                       MediaPlayer mediaPlayer = team2MusicMediaPlayers.get(currentTeamIndex);
                       mediaPlayer.seek(Duration.ZERO);
                       sharing_music_race4.setMediaPlayer(mediaPlayer);
+                      sharing_music_race4.getMediaPlayer().setOnError(()->{
+                        setOnErrorMusic(team2MusicMediaPlayers);
+                      });
                       sharing_music_race4.getMediaPlayer().play();
                       if (sharing_commentary_race4.getMediaPlayer() != null) {
                         sharing_commentary_race4.getMediaPlayer().stop();
@@ -403,10 +427,10 @@ public class FourTeamsController implements ControllerInterface {
                         point_team2.setText(String.valueOf(point2 + hediye_miktari));
                       });
                     }
-                  }else if (gift3.isPresent()) {
-                    if ((point3 <= point1 || point3 <= point2 || point3<=point4) &&
-                            (point3 + hediye_miktari > point1 && point3 + hediye_miktari > point2
-                                    && point3 + hediye_miktari > point4)) {
+                  } else if (gift3.isPresent()) {
+                    if ((point3 <= point1 || point3 <= point2 || point3 <= point4) &&
+                        (point3 + hediye_miktari > point1 && point3 + hediye_miktari > point2
+                            && point3 + hediye_miktari > point4)) {
                       LOGGER.debug("Takım Değişti Team3");
                       increaseTime();
                       currentTeamIndex = 0;
@@ -414,6 +438,9 @@ public class FourTeamsController implements ControllerInterface {
                       MediaPlayer mediaPlayer = team3MusicMediaPlayers.get(currentTeamIndex);
                       mediaPlayer.seek(Duration.ZERO);
                       sharing_music_race4.setMediaPlayer(mediaPlayer);
+                      sharing_music_race4.getMediaPlayer().setOnError(()->{
+                        setOnErrorMusic(team3MusicMediaPlayers);
+                      });
                       sharing_music_race4.getMediaPlayer().play();
                       if (sharing_commentary_race4.getMediaPlayer() != null) {
                         sharing_commentary_race4.getMediaPlayer().stop();
@@ -434,15 +461,15 @@ public class FourTeamsController implements ControllerInterface {
                         point_team2.setTextFill(Color.WHITE);
                         point_team2.setBackground(grayBackground());
                       });
-                    }else {
+                    } else {
                       Platform.runLater(() -> {
                         point_team3.setText(String.valueOf(point3 + hediye_miktari));
                       });
                     }
-                  }else if (gift4.isPresent()) {
-                    if ((point4 <= point1 || point4 <= point3 || point4<=point2) &&
-                            (point4 + hediye_miktari > point1 && point4 + hediye_miktari > point3
-                                    && point4 + hediye_miktari > point2)) {
+                  } else if (gift4.isPresent()) {
+                    if ((point4 <= point1 || point4 <= point3 || point4 <= point2) &&
+                        (point4 + hediye_miktari > point1 && point4 + hediye_miktari > point3
+                            && point4 + hediye_miktari > point2)) {
                       LOGGER.debug("Takım Değişti Team4");
                       increaseTime();
                       currentTeamIndex = 0;
@@ -450,6 +477,9 @@ public class FourTeamsController implements ControllerInterface {
                       MediaPlayer mediaPlayer = team4MusicMediaPlayers.get(currentTeamIndex);
                       mediaPlayer.seek(Duration.ZERO);
                       sharing_music_race4.setMediaPlayer(mediaPlayer);
+                      sharing_music_race4.getMediaPlayer().setOnError(()->{
+                        setOnErrorMusic(team4MusicMediaPlayers);
+                      });
                       sharing_music_race4.getMediaPlayer().play();
                       if (sharing_commentary_race4.getMediaPlayer() != null) {
                         sharing_commentary_race4.getMediaPlayer().stop();
@@ -475,8 +505,7 @@ public class FourTeamsController implements ControllerInterface {
                         point_team4.setText(String.valueOf(point4 + hediye_miktari));
                       });
                     }
-                  }
-                  else {
+                  } else {
                     LOGGER.debug("Farklı Gift");
                   }
                   break;
@@ -485,6 +514,7 @@ public class FourTeamsController implements ControllerInterface {
                   break;
               }
             }
+            LOGGER.debug("While Döngüsünden cikis yapildi");
             return null;
           }
         };
@@ -493,18 +523,39 @@ public class FourTeamsController implements ControllerInterface {
     };
     service.start();
   }
-  private Background whiteBackground(){
+
+  private void setOnErrorMusic(List<MediaPlayer> mediaPlayers) {
+    LOGGER.error("Ses Videosunda hata");
+    sharing_music_race4.getMediaPlayer().stop();
+    sharing_music_race4.getMediaPlayer().dispose();
+    String source = mediaPlayers.get(currentTeamIndex).getMedia().getSource();
+    URI uri = URI.create(source);
+    Path path = Paths.get(uri);
+    Path parent = path.getParent();
+    mediaPlayers=new MediaPlayerUtils().createVolumeFiles(parent.toUri().toString());
+    MediaPlayer mediaPlayer2 = mediaPlayers.get(currentTeamIndex);
+    mediaPlayer2.seek(Duration.ZERO);
+    sharing_music_race4.setMediaPlayer(mediaPlayer2);
+    List<MediaPlayer> finalMediaPlayers = mediaPlayers;
+    sharing_music_race4.getMediaPlayer().setOnError(() -> setOnErrorMusic(finalMediaPlayers));
+    sharing_music_race4.getMediaPlayer().play();
+  }
+
+  private Background whiteBackground() {
     BackgroundFill backgroundFill = new BackgroundFill(Paint.valueOf("#ffffff"), CornerRadii.EMPTY, Insets.EMPTY);
     return new Background(backgroundFill);
   }
-  private Background grayBackground(){
-    BackgroundFill backgroundFill = new BackgroundFill(Paint.valueOf("#A9A9A9"), CornerRadii.EMPTY, Insets.EMPTY);
+
+  private Background grayBackground() {
+    BackgroundFill backgroundFill = new BackgroundFill(Paint.valueOf("#808080"), CornerRadii.EMPTY, Insets.EMPTY);
     return new Background(backgroundFill);
   }
+
   public void close() {
     LOGGER.debug("Kapatma isteği");
-    threadFlag=false;
-    this.time=-1;
+    threadFlag = false;
+    this.time = -1;
+    GiftServer.addCloseMessageBlockingQueue();
     team1Timeline.stop();
     team2Timeline.stop();
     team3Timeline.stop();
@@ -527,11 +578,12 @@ public class FourTeamsController implements ControllerInterface {
     if (video_team4.getMediaPlayer() != null) {
       video_team4.getMediaPlayer().stop();
     }
-    if (winning_team_video.getMediaPlayer()!=null){
-     winning_team_video.getMediaPlayer().stop();
+    if (winning_team_video.getMediaPlayer() != null) {
+      winning_team_video.getMediaPlayer().stop();
     }
   }
-  private void createTimer(){
+
+  private void createTimer() {
     Timeline timeline = new Timeline();
     timeline.setCycleCount(Timeline.INDEFINITE);
 
@@ -547,23 +599,26 @@ public class FourTeamsController implements ControllerInterface {
     timeline.getKeyFrames().add(keyFrame);
     timeline.play();
   }
+
   @Override
   public void increaseTime(int time) {
-    this.time=time+this.time;
+    this.time = time + this.time;
   }
-  public void increaseTime(){
-    if (time>0 && time<60){
+
+  public void increaseTime() {
+    if (time > 0 && time < 60) {
       LOGGER.debug("Süre uzatıldı");
-      this.time=extendedTime+this.time;
+      this.time = extendedTime + this.time;
     }
   }
+
   @Override
   public void finishRace() {
     LOGGER.debug("finishRace");
-    if (this.time<0){
+    if (this.time < 0) {
       return;
     }
-    this.time=-1;
+    this.time = -1;
     ObservableList<Node> children = stackpane1.getChildren();
     double width = stackpane1.getWidth();
     double height = stackpane1.getHeight();
@@ -573,10 +628,10 @@ public class FourTeamsController implements ControllerInterface {
     team2Timeline.stop();
     team3Timeline.stop();
     team4Timeline.stop();
-    if (sharing_commentary_race4.getMediaPlayer()!=null) {
+    if (sharing_commentary_race4.getMediaPlayer() != null) {
       sharing_commentary_race4.getMediaPlayer().stop();
     }
-    if (sharing_music_race4.getMediaPlayer()!=null) {
+    if (sharing_music_race4.getMediaPlayer() != null) {
       sharing_music_race4.getMediaPlayer().stop();
     }
     winning_team_video.setPreserveRatio(false);
@@ -588,19 +643,42 @@ public class FourTeamsController implements ControllerInterface {
     int team4point = Integer.parseInt(point_team4.getText());
     MediaPlayerUtils mediaPlayerUtils = new MediaPlayerUtils();
     MediaPlayer video;
-    if (team1point > team2point && team1point > team3point && team1point>team4point) {
+    String uri;
+    if (team1point > team2point && team1point > team3point && team1point > team4point) {
       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM1);
-    } else if (team2point > team1point && team2point > team3point && team2point>team4point) {
+      uri=this.WINNING_VIDEO_TEAM1;
+    } else if (team2point > team1point && team2point > team3point && team2point > team4point) {
       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM2);
-    } else if (team3point>team4point && team3point>team2point && team3point > team1point){
+      uri=this.WINNING_VIDEO_TEAM2;
+    } else if (team3point > team4point && team3point > team2point && team3point > team1point) {
       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM3);
-    }else {
-      video=mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM4);
+      uri=this.WINNING_VIDEO_TEAM3;
+    } else {
+      video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM4);
+      uri=this.WINNING_VIDEO_TEAM4;
     }
+    video.setOnError(()->setOnErrorWinningVideo(mediaPlayerUtils,uri));
     video.setVolume(100);
     winning_team_video.setMediaPlayer(video);
-    grid_pane1.add(winning_team_video,0,2,4,7);
+    grid_pane1.add(winning_team_video, 0, 2, 4, 7);
     winning_team_video.setVisible(true);
     winning_team_video.getMediaPlayer().play();
+  }
+  private void setOnErrorWinningVideo(MediaPlayerUtils mediaPlayerUtils,String videoUri){
+    LOGGER.error("Kazanan Takım Videosunda hata");
+    winning_team_video.getMediaPlayer().stop();
+    winning_team_video.getMediaPlayer().dispose();
+    MediaPlayer video = mediaPlayerUtils.getVideo(videoUri);
+    video.setVolume(100);
+    winning_team_video.setMediaPlayer(video);
+    winning_team_video.getMediaPlayer().setOnError(()->{
+      setOnErrorWinningVideo(mediaPlayerUtils,videoUri);
+    });
+    winning_team_video.setVisible(true);
+    winning_team_video.getMediaPlayer().play();
+  }
+
+  public void setInterval(int interval) {
+    this.interval=interval;
   }
 }

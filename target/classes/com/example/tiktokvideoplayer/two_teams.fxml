@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="373.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tiktokvideoplayer.TwoTeamsRaceController">
+   <children>
+      <MediaView fx:id="sharing_commentary_media_view_race_2" layoutX="-231.0" layoutY="290.0" visible="false" />
+      <MediaView fx:id="sharing_music_media_view_race_2" layoutX="-247.0" layoutY="27.0" visible="false" />
+      <VBox layoutX="-1.0" prefHeight="50.0" prefWidth="350.0">
+         <children>
+            <Label fx:id="label_like_team_2" prefHeight="35.0" prefWidth="586.0" text="Son Beğenen" textFill="#ece3e3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_comment_team_2" prefHeight="35.0" prefWidth="586.0" text="Son Yorum Yapan" textFill="#ece3e3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="20.0" top="10.0" />
+         </padding>
+      </VBox>
+      <StackPane layoutX="5.0" layoutY="55.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="360.0">
+         <children>
+            <Label fx:id="timer_label" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="87.0" prefWidth="238.0" textFill="RED" StackPane.alignment="BOTTOM_CENTER">
+               <font>
+                  <Font name="System Bold" size="60.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets bottom="5.0" />
+               </StackPane.margin>
+            </Label>
+            <HBox fx:id="hbox1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="360.0">
+               <children>
+                  <VBox fx:id="vbox1" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="465.0" prefWidth="180.0" style="-fx-background-color: gray; -fx-border-color: black; -fx-border-width: 1;">
+                     <children>
+                        <HBox fx:id="hbox_gifts_team_race2" alignment="BOTTOM_CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="180.0" spacing="10.0" />
+                        <Label fx:id="label_team_point1_race2" alignment="CENTER" minHeight="-Infinity" prefHeight="35.0" prefWidth="180.0" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <MediaView fx:id="video_media_player_race2_1" fitHeight="400.0" fitWidth="180.0" preserveRatio="false" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vbox2" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="465.0" prefWidth="180.0" style="-fx-background-color: gray; -fx-border-color: black; -fx-border-width: 1;">
+                     <children>
+                        <HBox fx:id="hbox_gifts_team_race2_2" alignment="BOTTOM_CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="180.0" spacing="10.0" />
+                        <Label fx:id="label_team_point2_race2" alignment="CENTER" minHeight="-Infinity" prefHeight="35.0" prefWidth="180.0" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <MediaView fx:id="video_media_player_race2_2" fitHeight="400.0" fitWidth="180.0" preserveRatio="false" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+      <MediaView fx:id="winning_video_view" />
+   </children>
+</AnchorPane>

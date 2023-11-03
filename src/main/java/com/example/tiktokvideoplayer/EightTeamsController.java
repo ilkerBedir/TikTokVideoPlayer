@@ -23,6 +23,8 @@ import javafx.util.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.net.URI;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
@@ -157,6 +159,7 @@ public class EightTeamsController implements ControllerInterface {
     @FXML
     private StackPane stackpane1;
     private int extendedTime;
+    private int interval;
 
 
     public void display(String team1Folder, String team2Folder, String team3Folder, String team4Folder, String team5Folder, String team6Folder, String team7Folder, String team8Folder, String neutralMusicPath, int countGiftImage, List<String> team1GiftNames, List<String> team2GiftNames, List<String> team3GiftNames, List<String> team4GiftNames, List<String> team5GiftNames, List<String> team6GiftNames, List<String> team7GiftNames, List<String> team8GiftNames, int time, int extendedTime) {
@@ -397,7 +400,7 @@ public class EightTeamsController implements ControllerInterface {
     }
 
     private Timeline createTimelineTeams(List<MediaPlayer> teamCommentaries) {
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(60), event -> {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(interval), event -> {
             LOGGER.debug("Takım Belgeseli başlıyor");
             if (sharing_commentary_race4.getMediaPlayer() != null) {
                 sharing_commentary_race4.getMediaPlayer().stop();
@@ -423,29 +426,34 @@ public class EightTeamsController implements ControllerInterface {
                     @Override
                     public Void call() {
                         while (threadFlag) {
-                            ArrayList value = null;
+                            String[] value = null;
                             try {
                                 value = GiftServer.arrayLists.take();
                             } catch (InterruptedException e) {
                                 throw new RuntimeException();
                             }
-                            String messageType = (String) value.get(0);
+                            String messageType = value[0];
                             LOGGER.debug("MessageType : " + messageType);
                             switch (messageType) {
+                                case "CLOSE":{
+                                    LOGGER.debug("ArrayListe close mesajı geldi");
+                                    threadFlag=false;
+                                    break;
+                                }
                                 case "Like": {
-                                    ArrayList finalValue = value;
-                                    Platform.runLater(() -> label_like_race4.setText("Son Beğenen : " + ((String) finalValue.get(1))));
+                                    String[] finalValue = value;
+                                    Platform.runLater(() -> label_like_race4.setText("Son Beğenen : " + ((String) finalValue[1])));
                                     break;
                                 }
                                 case "Comment": {
-                                    ArrayList finalValue = value;
-                                    Platform.runLater(() -> label_comment_race4.setText("Son Yorum Yapan : " + ((String) finalValue.get(1))));
+                                    String[] finalValue = value;
+                                    Platform.runLater(() -> label_comment_race4.setText("Son Yorum Yapan : " + ((String) finalValue[1])));
                                     break;
                                 }
                                 case "Gift", "GiftCombo": {
-                                    ArrayList finalValue = value;
-                                    String name = ((String) finalValue.get(4));
-                                    int hediye_miktari = ((int) finalValue.get(2)) * ((int) finalValue.get(3));
+                                    String[] finalValue = value;
+                                    String name =  finalValue[1];
+                                    int hediye_miktari =Integer.parseInt(finalValue[2]);
                                     LOGGER.debug("Gift : " + name + " Gift Toplam Miktari : " + hediye_miktari);
                                     Optional<Gift> gift1 = team1Gifts.stream().filter(gift -> gift.getName().equals(name)).findAny();
                                     Optional<Gift> gift2 = team2Gifts.stream().filter(gift -> gift.getName().equals(name)).findAny();
@@ -480,6 +488,7 @@ public class EightTeamsController implements ControllerInterface {
                                             MediaPlayer mediaPlayer = team1MusicMediaPlayers.get(currentTeamIndex);
                                             mediaPlayer.seek(Duration.ZERO);
                                             sharing_music_race4.setMediaPlayer(mediaPlayer);
+                                            sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team1MusicMediaPlayers));
                                             sharing_music_race4.getMediaPlayer().play();
                                             if (sharing_commentary_race4.getMediaPlayer() != null) {
                                                 sharing_commentary_race4.getMediaPlayer().stop();
@@ -526,6 +535,7 @@ public class EightTeamsController implements ControllerInterface {
                                             MediaPlayer mediaPlayer = team2MusicMediaPlayers.get(currentTeamIndex);
                                             mediaPlayer.seek(Duration.ZERO);
                                             sharing_music_race4.setMediaPlayer(mediaPlayer);
+                                            sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team2MusicMediaPlayers));
                                             sharing_music_race4.getMediaPlayer().play();
                                             if (sharing_commentary_race4.getMediaPlayer() != null) {
                                                 sharing_commentary_race4.getMediaPlayer().stop();
@@ -576,6 +586,7 @@ public class EightTeamsController implements ControllerInterface {
                                             MediaPlayer mediaPlayer = team3MusicMediaPlayers.get(currentTeamIndex);
                                             mediaPlayer.seek(Duration.ZERO);
                                             sharing_music_race4.setMediaPlayer(mediaPlayer);
+                                            sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team3MusicMediaPlayers));
                                             sharing_music_race4.getMediaPlayer().play();
                                             if (sharing_commentary_race4.getMediaPlayer() != null) {
                                                 sharing_commentary_race4.getMediaPlayer().stop();
@@ -624,6 +635,7 @@ public class EightTeamsController implements ControllerInterface {
                                             MediaPlayer mediaPlayer = team4MusicMediaPlayers.get(currentTeamIndex);
                                             mediaPlayer.seek(Duration.ZERO);
                                             sharing_music_race4.setMediaPlayer(mediaPlayer);
+                                            sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team4MusicMediaPlayers));
                                             sharing_music_race4.getMediaPlayer().play();
                                             if (sharing_commentary_race4.getMediaPlayer() != null) {
                                                 sharing_commentary_race4.getMediaPlayer().stop();
@@ -667,9 +679,10 @@ public class EightTeamsController implements ControllerInterface {
                                             increaseTime();
                                             currentTeamIndex = 0;
                                             sharing_music_race4.getMediaPlayer().stop();
-                                            MediaPlayer mediaPlayer = team4MusicMediaPlayers.get(currentTeamIndex);
+                                            MediaPlayer mediaPlayer = team5MusicMediaPlayers.get(currentTeamIndex);
                                             mediaPlayer.seek(Duration.ZERO);
                                             sharing_music_race4.setMediaPlayer(mediaPlayer);
+                                            sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team5MusicMediaPlayers));
                                             sharing_music_race4.getMediaPlayer().play();
                                             if (sharing_commentary_race4.getMediaPlayer() != null) {
                                                 sharing_commentary_race4.getMediaPlayer().stop();
@@ -713,9 +726,10 @@ public class EightTeamsController implements ControllerInterface {
                                             increaseTime();
                                             currentTeamIndex = 0;
                                             sharing_music_race4.getMediaPlayer().stop();
-                                            MediaPlayer mediaPlayer = team4MusicMediaPlayers.get(currentTeamIndex);
+                                            MediaPlayer mediaPlayer = team6MusicMediaPlayers.get(currentTeamIndex);
                                             mediaPlayer.seek(Duration.ZERO);
                                             sharing_music_race4.setMediaPlayer(mediaPlayer);
+                                            sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team6MusicMediaPlayers));
                                             sharing_music_race4.getMediaPlayer().play();
                                             if (sharing_commentary_race4.getMediaPlayer() != null) {
                                                 sharing_commentary_race4.getMediaPlayer().stop();
@@ -759,9 +773,10 @@ public class EightTeamsController implements ControllerInterface {
                                             increaseTime();
                                             currentTeamIndex = 0;
                                             sharing_music_race4.getMediaPlayer().stop();
-                                            MediaPlayer mediaPlayer = team4MusicMediaPlayers.get(currentTeamIndex);
+                                            MediaPlayer mediaPlayer = team7MusicMediaPlayers.get(currentTeamIndex);
                                             mediaPlayer.seek(Duration.ZERO);
                                             sharing_music_race4.setMediaPlayer(mediaPlayer);
+                                            sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team7MusicMediaPlayers));
                                             sharing_music_race4.getMediaPlayer().play();
                                             if (sharing_commentary_race4.getMediaPlayer() != null) {
                                                 sharing_commentary_race4.getMediaPlayer().stop();
@@ -805,9 +820,10 @@ public class EightTeamsController implements ControllerInterface {
                                             increaseTime();
                                             currentTeamIndex = 0;
                                             sharing_music_race4.getMediaPlayer().stop();
-                                            MediaPlayer mediaPlayer = team4MusicMediaPlayers.get(currentTeamIndex);
+                                            MediaPlayer mediaPlayer = team8MusicMediaPlayers.get(currentTeamIndex);
                                             mediaPlayer.seek(Duration.ZERO);
                                             sharing_music_race4.setMediaPlayer(mediaPlayer);
+                                            sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team8MusicMediaPlayers));
                                             sharing_music_race4.getMediaPlayer().play();
                                             if (sharing_commentary_race4.getMediaPlayer() != null) {
                                                 sharing_commentary_race4.getMediaPlayer().stop();
@@ -854,6 +870,7 @@ public class EightTeamsController implements ControllerInterface {
                                     break;
                             }
                         }
+                        LOGGER.debug("While Döngüsünden çıkış yapıldı");
                         return null;
                     }
                 };
@@ -867,13 +884,14 @@ public class EightTeamsController implements ControllerInterface {
         return new Background(backgroundFill);
     }
     private Background grayBackground(){
-        BackgroundFill backgroundFill = new BackgroundFill(Paint.valueOf("#A9A9A9"), CornerRadii.EMPTY, Insets.EMPTY);
+        BackgroundFill backgroundFill = new BackgroundFill(Paint.valueOf("#808080"), CornerRadii.EMPTY, Insets.EMPTY);
         return new Background(backgroundFill);
     }
     public void close() {
         LOGGER.debug("Kapatma isteği");
         this.time=-1;
         threadFlag = false;
+        GiftServer.addCloseMessageBlockingQueue();
         team1Timeline.stop();
         team2Timeline.stop();
         team3Timeline.stop();
@@ -985,27 +1003,70 @@ public class EightTeamsController implements ControllerInterface {
         int team8point = Integer.parseInt(point_team8.getText());
         MediaPlayerUtils mediaPlayerUtils = new MediaPlayerUtils();
         MediaPlayer video;
+        String uri;
         if (team1point > team2point && team1point > team3point && team1point > team4point && team1point > team5point && team1point > team6point && team1point>team7point && team1point>team8point) {
             video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM1);
+            uri=this.WINNING_VIDEO_TEAM1;
         } else if (team2point > team1point && team2point > team3point && team2point > team4point && team2point > team5point && team2point > team6point && team2point>team7point && team2point>team8point) {
             video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM2);
+            uri=this.WINNING_VIDEO_TEAM2;
         } else if (team3point > team4point && team3point > team2point && team3point > team1point && team3point > team5point && team3point > team6point && team3point>team7point && team3point>team8point) {
             video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM3);
+            uri=this.WINNING_VIDEO_TEAM3;
         } else if (team4point > team3point && team4point > team2point && team4point > team1point && team4point > team5point && team4point > team6point && team4point>team7point && team4point>team8point) {
             video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM4);
+            uri=this.WINNING_VIDEO_TEAM4;
         } else if (team5point > team3point && team5point > team2point && team5point > team1point && team5point > team4point && team5point > team6point && team5point>team7point && team5point>team8point) {
             video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM5);
+            uri=this.WINNING_VIDEO_TEAM5;
         } else if (team6point > team3point && team6point > team2point && team6point > team1point && team6point > team4point && team6point > team5point && team6point>team7point && team6point>team8point) {
             video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM6);
+            uri=this.WINNING_VIDEO_TEAM6;
         } else if (team7point > team3point && team7point > team2point && team7point > team1point && team7point > team4point && team7point > team5point && team7point>team6point && team7point>team8point) {
             video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM7);
+            uri=this.WINNING_VIDEO_TEAM7;
         }else {
             video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM8);
+            uri=this.WINNING_VIDEO_TEAM8;
         }
+        video.setOnError(()->setOnErrorWinningVideo(mediaPlayerUtils,uri));
         video.setVolume(100);
         winning_team_video.setMediaPlayer(video);
         grid_pane1.add(winning_team_video, 0, 2, 4, 7);
         winning_team_video.setVisible(true);
         winning_team_video.getMediaPlayer().play();
+    }
+    private void setOnErrorWinningVideo(MediaPlayerUtils mediaPlayerUtils,String videoUri){
+        LOGGER.error("Kazanan Takım Videosunda hata");
+        winning_team_video.getMediaPlayer().stop();
+        winning_team_video.getMediaPlayer().dispose();
+        MediaPlayer video = mediaPlayerUtils.getVideo(videoUri);
+        video.setVolume(100);
+        winning_team_video.setMediaPlayer(video);
+        winning_team_video.getMediaPlayer().setOnError(()->{
+            setOnErrorWinningVideo(mediaPlayerUtils,videoUri);
+        });
+        winning_team_video.setVisible(true);
+        winning_team_video.getMediaPlayer().play();
+    }
+
+    public void setInterval(int interval) {
+        this.interval=interval;
+    }
+    private void setOnErrorMusic(List<MediaPlayer> mediaPlayers) {
+        LOGGER.error("Ses Videosunda hata");
+        sharing_music_race4.getMediaPlayer().stop();
+        sharing_music_race4.getMediaPlayer().dispose();
+        String source = mediaPlayers.get(currentTeamIndex).getMedia().getSource();
+        URI uri = URI.create(source);
+        Path path = Paths.get(uri);
+        Path parent = path.getParent();
+        mediaPlayers=new MediaPlayerUtils().createVolumeFiles(parent.toUri().toString());
+        MediaPlayer mediaPlayer2 = mediaPlayers.get(currentTeamIndex);
+        mediaPlayer2.seek(Duration.ZERO);
+        sharing_music_race4.setMediaPlayer(mediaPlayer2);
+        List<MediaPlayer> finalMediaPlayers = mediaPlayers;
+        sharing_music_race4.getMediaPlayer().setOnError(() -> setOnErrorMusic(finalMediaPlayers));
+        sharing_music_race4.getMediaPlayer().play();
     }
 }

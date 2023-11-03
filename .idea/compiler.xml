@@ -9,5 +9,8 @@
         <module name="TikTokVideoPlayer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="tiktok-api" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>

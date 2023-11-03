@@ -322,29 +322,29 @@ public class ThreeTeamRaceScreenController implements Initializable {
                     @Override
                     public Void call() {
                         while (true) {
-                            ArrayList value = null;
+                            String[] value = null;
                             try {
                                 value = GiftServer.arrayLists.take();
                             } catch (InterruptedException e) {
                                 throw new RuntimeException();
                             }
-                            String messageType = (String) value.get(0);
+                            String messageType= value[0];
                             System.out.println("MessageType : "+messageType);
                             switch (messageType) {
                                 case "Like": {
-                                    ArrayList finalValue = value;
-                                    Platform.runLater(() -> last_like.setText("Son Beğenen : " + ((String) finalValue.get(1))));
+                                    String[] finalValue = value;
+                                    Platform.runLater(() -> last_like.setText("Son Beğenen : " + finalValue[1]));
                                     break;
                                 }
                                 case "Comment": {
-                                    ArrayList finalValue = value;
-                                    Platform.runLater(() -> last_comment.setText("Son Yorum Yapan : " + ((String) finalValue.get(1))));
+                                    String[] finalValue = value;
+                                    Platform.runLater(() -> last_comment.setText("Son Yorum Yapan : " + finalValue[1]));
                                     break;
                                 }
                                 case "Gift", "GiftCombo": {
-                                    ArrayList finalValue = value;
-                                    String name = ((String) finalValue.get(4));
-                                    int hediye_miktari = ((int) finalValue.get(2)) * ((int) finalValue.get(3));
+                                    String[] finalValue = value;
+                                    String name = finalValue[1];
+                                    int hediye_miktari = Integer.parseInt(finalValue[2]);
                                     System.out.println("Gift : "+name +" Gift Toplam Miktari : "+hediye_miktari);
                                     Optional<Gift> gift1 = team1_giftList().stream().filter(gift -> gift.getName().equals(name)).findAny();
                                     Optional<Gift> gift2 = team2_giftList().stream().filter(gift -> gift.getName().equals(name)).findAny();

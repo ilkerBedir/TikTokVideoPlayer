@@ -16,29 +16,34 @@ import java.util.concurrent.BlockingQueue;
 
 public class GiftServer extends WebSocketServer{
     private static final Logger LOGGER= LoggerFactory.getLogger(GiftServer.class);
-    public static BlockingQueue<ArrayList> arrayLists=new ArrayBlockingQueue<>(200);
+    public static BlockingQueue<String[]> arrayLists=new ArrayBlockingQueue<>(200);
     public GiftServer(int port){
         super(new InetSocketAddress(port));
     }
     @Override
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
-        conn.send("Welcome to the server!"); //This method sends a message to the new client
+        //conn.send("Welcome to the server!"); //This method sends a message to the new client
         //broadcast("new connection: " + handshake.getResourceDescriptor()); //This method sends a message to all clients connected
-        LOGGER.debug(conn.getRemoteSocketAddress().getAddress().getHostAddress() + " entered the room!");
+        //LOGGER.debug(conn.getRemoteSocketAddress().getAddress().getHostAddress() + " entered the room!");
     }
 
     @Override
     public void onClose(WebSocket conn, int i, String s, boolean b) {
         //broadcast(conn + " has left the room!");
-        LOGGER.debug(conn + " has left the room!");
+        //LOGGER.debug(conn + " has left the room!");
     }
 
     @Override
     public void onMessage(WebSocket conn, String message) {
+        try {
+            arrayLists.put(message.split("<x>"));
+        } catch (InterruptedException e) {
+
+        }
         //broadcast(message);
         //LOGGER.debug(conn + ": " + message);
     }
-    @Override
+    /*@Override
     public void onMessage(WebSocket conn, ByteBuffer message) {
         ArrayList<?> objects = deserializeByteArray(message.array());
         try {
@@ -47,7 +52,7 @@ public class GiftServer extends WebSocketServer{
             throw new RuntimeException(e);
         }
     }
-
+*/
     @Override
     public void onError(WebSocket conn, Exception exception) {
         LOGGER.error(exception.getMessage(),exception);
@@ -55,13 +60,12 @@ public class GiftServer extends WebSocketServer{
 
     @Override
     public void onStart() {
-        LOGGER.debug("Server started!");
-        setConnectionLostTimeout(100);
+        //LOGGER.debug("Server started!");
+        //setConnectionLostTimeout(100);
     }
 
     public static ArrayList<?> deserializeByteArray(byte[] byteArray) {
         try {
-            LOGGER.debug("Mesaj Deserialize oluyor");
             ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArray);
             ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream);
             ArrayList<?> list = (ArrayList<?>) objectInputStream.readObject();
@@ -71,6 +75,14 @@ public class GiftServer extends WebSocketServer{
             LOGGER.error(e.getMessage(),e);
             return null;
         }
+    }
+    public static void addCloseMessageBlockingQueue(){
+        LOGGER.debug("addCloseMessageBlockingQueue");
+        String[] str={"CLOSE"};
+        if (arrayLists.remainingCapacity()==0){
+            arrayLists.clear();
+        }
+        arrayLists.add(str);
     }
 
 

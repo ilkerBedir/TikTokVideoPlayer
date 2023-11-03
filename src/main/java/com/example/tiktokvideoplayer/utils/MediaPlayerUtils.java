@@ -39,6 +39,15 @@ public class MediaPlayerUtils {
                     MediaPlayer mediaPlayer = new MediaPlayer(media);
                     mediaPlayer.setStartTime(Duration.seconds(2));
                     mediaPlayer.setVolume(100);
+                    mediaPlayer.setOnError(()->{
+                        LOGGER.debug("Ses Videosunda hata");
+                        mediaPlayer.stop();
+                        mediaPlayer.dispose();
+                        MediaPlayer mediaPlayer1 = createVolumeFiles(url).get(0);
+                        mediaPlayer1.setStartTime(Duration.seconds(2));
+                        mediaPlayer1.setVolume(100);
+                        mediaPlayer1.play();
+                    });
                     mediaPlayers.add(mediaPlayer);
                 }
             }
