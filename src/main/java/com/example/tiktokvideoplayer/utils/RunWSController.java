@@ -3,6 +3,7 @@ package com.example.tiktokvideoplayer.utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -21,7 +22,6 @@ public class RunWSController {
         LOGGER.debug("Tiktok ws socket başlatılıyor : yayın ismi {}, port {}",streamName,port);
         List<String> command = List.of("TikTokLiveWs/TikTokLiveDeneme.exe", streamName,port);
         ProcessBuilder processBuilder = new ProcessBuilder(command);
-        processBuilder.redirectErrorStream(true);
         Process process = null;
         try {
             process = processBuilder.start();

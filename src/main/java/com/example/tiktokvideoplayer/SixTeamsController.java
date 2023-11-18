@@ -292,6 +292,7 @@ public class SixTeamsController implements ControllerInterface {
       setOnErrorVideo1(mediaPlayerUtils);
     });
     video_team1.setMediaPlayer(video);
+    video_team1.getMediaPlayer().play();
   }
 
   private void setOnErrorVideo2(MediaPlayerUtils mediaPlayerUtils) {
@@ -303,6 +304,7 @@ public class SixTeamsController implements ControllerInterface {
       setOnErrorVideo2(mediaPlayerUtils);
     });
     video_team2.setMediaPlayer(video);
+    video_team2.getMediaPlayer().play();
   }
 
   private void setOnErrorVideo3(MediaPlayerUtils mediaPlayerUtils) {
@@ -314,6 +316,7 @@ public class SixTeamsController implements ControllerInterface {
       setOnErrorVideo3(mediaPlayerUtils);
     });
     video_team3.setMediaPlayer(video);
+    video_team3.getMediaPlayer().play();
   }
 
   private void setOnErrorVideo4(MediaPlayerUtils mediaPlayerUtils) {
@@ -325,6 +328,7 @@ public class SixTeamsController implements ControllerInterface {
       setOnErrorVideo4(mediaPlayerUtils);
     });
     video_team4.setMediaPlayer(video);
+    video_team4.getMediaPlayer().play();
   }
 
   private void setOnErrorVideo5(MediaPlayerUtils mediaPlayerUtils) {
@@ -336,6 +340,7 @@ public class SixTeamsController implements ControllerInterface {
       setOnErrorVideo5(mediaPlayerUtils);
     });
     video_team5.setMediaPlayer(video);
+    video_team5.getMediaPlayer().play();
   }
 
   private void setOnErrorVideo6(MediaPlayerUtils mediaPlayerUtils) {
@@ -347,6 +352,7 @@ public class SixTeamsController implements ControllerInterface {
       setOnErrorVideo6(mediaPlayerUtils);
     });
     video_team6.setMediaPlayer(video);
+    video_team6.getMediaPlayer().play();
   }
 
   private Timeline createTimelineTeams(List<MediaPlayer> teamCommentaries) {
@@ -383,7 +389,6 @@ public class SixTeamsController implements ControllerInterface {
                 throw new RuntimeException();
               }
               String messageType = value[0];
-              LOGGER.debug("MessageType : " + messageType);
               switch (messageType) {
                 case "CLOSE": {
                   LOGGER.debug("ArrayListe close mesajı geldi");
@@ -698,7 +703,7 @@ public class SixTeamsController implements ControllerInterface {
     URI uri = URI.create(source);
     Path path = Paths.get(uri);
     Path parent = path.getParent();
-    mediaPlayers=new MediaPlayerUtils().createVolumeFiles(parent.toUri().toString());
+    mediaPlayers=new MediaPlayerUtils().createVolumeFiles(parent.toString());
     MediaPlayer mediaPlayer2 = mediaPlayers.get(currentTeamIndex);
     mediaPlayer2.seek(Duration.ZERO);
     sharing_music_race4.setMediaPlayer(mediaPlayer2);

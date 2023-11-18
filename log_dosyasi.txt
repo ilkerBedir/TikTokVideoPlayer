@@ -1,0 +1,1275 @@
+2023-11-07 21:14:37,423 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:14:37,432 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:14:41,760 - my_logger - INFO - Connected
+2023-11-07 21:14:42,769 - my_logger - INFO - Gift<x>Heart 1 1
+2023-11-07 21:14:43,588 - my_logger - INFO - Gift<x>Turkish coffee 1 None
+2023-11-07 21:14:45,966 - my_logger - INFO - Gift<x>Turkish coffee 1 None
+2023-11-07 21:14:49,221 - my_logger - INFO - Gift<x>Turkish coffee 1 1
+2023-11-07 21:14:53,215 - my_logger - INFO - Gift<x>Heart 1 1
+2023-11-07 21:14:53,974 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:14:56,754 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:14:57,722 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:14:58,403 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:15:00,382 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:15:01,334 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:15:02,228 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:15:03,044 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:15:03,864 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:15:04,684 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:15:07,040 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:15:07,041 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:15:07,862 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:15:11,031 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:15:14,309 - my_logger - INFO - Gift<x>Paper Crane 2 None
+2023-11-07 21:15:20,870 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:15:24,958 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:15:44,561 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:15:44,586 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:15:48,609 - my_logger - INFO - Connected
+2023-11-07 21:15:49,636 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:15:50,265 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:15:51,683 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:15:55,689 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:15:57,222 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:15:58,850 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:15:58,850 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-07 21:15:59,979 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-07 21:16:00,693 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:16:01,306 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-07 21:16:02,126 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-07 21:16:02,946 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:16:05,287 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:16:06,123 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:16:06,123 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:16:06,124 - my_logger - INFO - Gift<x>Chestnuts 1 None
+2023-11-07 21:16:06,944 - my_logger - INFO - Gift<x>Chestnuts 1 None
+2023-11-07 21:16:06,944 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-07 21:16:07,721 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:16:07,722 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:16:10,320 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:16:10,321 - my_logger - INFO - Gift<x>Chestnuts 1 1
+2023-11-07 21:16:11,190 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:16:11,803 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-07 21:16:11,804 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-07 21:16:11,805 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:16:14,108 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-07 21:16:14,928 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:17:19,986 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:17:20,007 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:17:24,660 - my_logger - INFO - Connected
+2023-11-07 21:17:25,069 - my_logger - INFO - Gift<x>Nazar 1 None
+2023-11-07 21:17:27,941 - my_logger - INFO - Gift<x>Nazar 1 1
+2023-11-07 21:17:45,944 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-07 21:17:49,972 - my_logger - INFO - Gift<x>Doughnut 1 1
+2023-11-07 21:18:32,452 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:18:32,453 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:18:33,339 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:18:33,339 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:18:36,443 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:18:39,006 - my_logger - INFO - Gift<x>Nazar 1 None
+2023-11-07 21:18:42,280 - my_logger - INFO - Gift<x>Nazar 1 1
+2023-11-07 21:18:45,562 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:18:45,562 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:18:46,275 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:18:46,276 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:18:47,297 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:18:47,810 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:18:47,811 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:18:51,092 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:18:51,092 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 21:18:53,601 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:18:56,802 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-07 21:19:07,880 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:19:07,880 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:19:08,700 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:19:09,621 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:19:09,621 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:19:12,796 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:19:33,889 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:19:37,069 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:19:46,795 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:19:50,783 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:20:03,892 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 21:21:02,977 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 21:21:19,464 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 21:21:34,721 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:21:38,099 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-07 21:22:04,830 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:05,543 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:05,544 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:06,360 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:07,182 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:09,658 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:22:20,524 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:21,170 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:21,824 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:21,824 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:22,590 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:26,124 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:22:26,635 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:29,912 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:22:32,473 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:33,092 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:34,724 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:22:36,453 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:22:36,453 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:22:38,105 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:22:41,442 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:23:16,757 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:23:16,766 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:23:21,218 - my_logger - INFO - Connected
+2023-11-07 21:23:21,622 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-07 21:23:22,051 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:23:25,270 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:23:28,591 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-07 21:23:45,761 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:23:48,868 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-07 21:23:49,582 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:23:52,859 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:23:52,860 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-07 21:23:56,425 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-07 21:24:22,042 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:24:25,319 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 21:24:25,320 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:24:57,163 - my_logger - INFO - Gift<x>Paper Crane 2 None
+2023-11-07 21:25:00,543 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:25:02,281 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:25:02,794 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:25:03,824 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:25:05,415 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:25:05,416 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:25:08,633 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 21:25:08,634 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-07 21:25:10,786 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:25:12,383 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:25:13,444 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:25:14,274 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:25:15,698 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:25:17,338 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-07 21:25:25,423 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:25:26,141 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-07 21:25:26,860 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 21:25:30,447 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-07 21:25:52,253 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:25:56,065 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:26:42,830 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:26:42,843 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:26:47,857 - my_logger - INFO - Connected
+2023-11-07 21:27:04,444 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 21:27:21,035 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:27:24,412 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:27:26,869 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 21:28:00,257 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:28:04,450 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:29:03,433 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:29:06,712 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:29:06,712 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:29:06,712 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:29:07,939 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:29:07,939 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:29:09,270 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:29:09,271 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:29:10,088 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:29:11,216 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:29:57,975 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:30:01,826 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:30:07,328 - my_logger - INFO - Connected
+2023-11-07 21:30:07,370 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:07,371 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:08,457 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:11,836 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:11,836 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:30:13,270 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:13,987 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:17,243 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:30:18,901 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:30:22,073 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:30:32,724 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:33,560 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:33,561 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:35,091 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:35,091 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:35,861 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:35,861 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:37,846 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:37,846 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:37,846 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:37,846 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:39,124 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:39,124 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:39,124 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:41,325 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:41,325 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:41,325 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:41,326 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:42,271 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:42,271 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:43,065 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:46,275 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:30:48,690 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:50,494 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:50,494 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:30:54,331 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:31:08,210 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:31:09,078 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:31:12,446 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:32:32,128 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:32:32,154 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:32:37,546 - my_logger - INFO - Connected
+2023-11-07 21:32:57,414 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:32:58,144 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:32:59,052 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:33:03,252 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:33:14,410 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:33:16,050 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:33:16,870 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:33:20,044 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:34:33,873 - my_logger - INFO - Gift<x>Finger Heart 1 None
+2023-11-07 21:34:37,254 - my_logger - INFO - Gift<x>Finger Heart 1 1
+2023-11-07 21:34:40,327 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:34:43,606 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:34:53,764 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:34:54,558 - my_logger - INFO - Gift<x>Rosa 1 None
+2023-11-07 21:34:57,131 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:34:58,972 - my_logger - INFO - Gift<x>Rosa 1 1
+2023-11-07 21:35:10,633 - my_logger - INFO - Gift<x>Nazar 1 None
+2023-11-07 21:35:14,426 - my_logger - INFO - Gift<x>Nazar 1 1
+2023-11-07 21:35:20,466 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:35:22,005 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 21:35:23,642 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:35:26,813 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:35:33,532 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:35:33,559 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:35:38,310 - my_logger - INFO - Connected
+2023-11-07 21:35:42,075 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:35:42,076 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:35:42,379 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:35:42,380 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:35:46,065 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:35:46,273 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:35:51,800 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:35:52,008 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:35:54,870 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:35:54,955 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:36:03,110 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:03,481 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:05,525 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:36:05,862 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:36:07,163 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:07,366 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:07,985 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:07,986 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:08,491 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:08,491 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:08,903 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:08,961 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:09,620 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:09,620 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:10,334 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:10,364 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:11,463 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:11,769 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:12,202 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:12,322 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:36:15,356 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:36:15,556 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:36:32,254 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:32,255 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:32,452 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:32,452 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:33,067 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:33,462 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:34,912 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:34,953 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:35,631 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:36:35,632 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:35,633 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:36:35,634 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:39,721 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:36:39,784 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:36:52,727 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:53,271 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:55,195 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:55,196 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:55,289 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:55,290 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:36:56,209 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:36:56,210 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:36:58,329 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:36:58,346 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:36:59,178 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:36:59,588 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:37:01,021 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:37:01,022 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:37:04,203 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:37:04,392 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:37:12,286 - my_logger - INFO - Gift<x>Paper Crane 2 None
+2023-11-07 21:37:12,492 - my_logger - INFO - Gift<x>Paper Crane 2 None
+2023-11-07 21:37:37,167 - my_logger - INFO - Gift<x>Money Gun 2 None
+2023-11-07 21:37:37,376 - my_logger - INFO - Gift<x>Money Gun 2 None
+2023-11-07 21:39:36,466 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:36,542 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:37,277 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:37,278 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:37,460 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:37,460 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:38,002 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:38,207 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:38,722 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:39,026 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:40,354 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:40,394 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:43,835 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:39:44,045 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:39:46,805 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:47,422 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:47,577 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:47,581 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:48,446 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:48,756 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:39:51,824 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:39:51,892 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:40:45,582 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:40:45,583 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:40:48,755 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:40:49,165 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:40:51,921 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:40:51,930 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:40:53,571 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:40:53,776 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:40:57,564 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:40:57,768 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:40:58,340 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:40:58,364 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:40:59,203 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:40:59,216 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:41:00,144 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:41:00,145 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:41:00,145 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:41:00,145 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:41:00,745 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:41:00,917 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:41:01,572 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:41:01,865 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:41:02,379 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:41:02,380 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:41:03,158 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:41:03,706 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:41:05,650 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:41:05,752 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:41:44,914 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:41:44,924 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:41:50,296 - my_logger - INFO - Connected
+2023-11-07 21:42:24,601 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:42:24,608 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:42:27,779 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:42:27,844 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:43:52,869 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:43:53,032 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:43:56,758 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:43:56,829 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:44:40,074 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:44:43,865 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:44:54,308 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 21:46:20,015 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:46:20,055 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:46:24,836 - my_logger - INFO - Connected
+2023-11-07 21:46:53,797 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 21:47:43,338 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:47:43,346 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:47:48,181 - my_logger - INFO - Connected
+2023-11-07 21:48:51,975 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 21:48:55,154 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 21:51:01,773 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:51:01,783 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:51:05,707 - my_logger - INFO - Connected
+2023-11-07 21:51:06,238 - my_logger - INFO - Gift<x>Tea 1 None
+2023-11-07 21:51:09,398 - my_logger - INFO - Gift<x>Tea 1 1
+2023-11-07 21:52:02,232 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 21:52:05,406 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 21:58:04,534 - my_logger - INFO - Uygulama acildi
+2023-11-07 21:58:04,555 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-07 21:58:08,307 - my_logger - INFO - Connected
+2023-11-07 22:05:05,015 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 22:05:08,246 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 22:06:19,207 - my_logger - INFO - Gift<x>Nazar 1 None
+2023-11-07 22:06:22,376 - my_logger - INFO - Gift<x>Nazar 1 1
+2023-11-07 22:07:18,495 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 22:07:21,671 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 22:08:16,967 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 22:08:20,138 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-07 22:08:58,167 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 22:08:59,052 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 22:09:00,791 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 22:09:01,602 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 22:09:04,900 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 22:09:29,251 - my_logger - INFO - Gift<x>Rosa 1 None
+2023-11-07 22:09:30,897 - my_logger - INFO - Gift<x>Rosa 1 None
+2023-11-07 22:09:34,174 - my_logger - INFO - Gift<x>Rosa 1 1
+2023-11-07 22:10:37,353 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-07 22:10:51,793 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 22:10:53,539 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-07 22:10:53,539 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 22:12:13,296 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-07 22:12:16,303 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-07 22:13:37,066 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-07 22:13:40,230 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-08 19:20:33,628 - my_logger - INFO - Uygulama acildi
+2023-11-08 19:20:33,646 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-08 19:20:38,608 - my_logger - INFO - Connected
+2023-11-08 19:20:40,194 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:20:40,194 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:20:44,188 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:20:45,033 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:20:56,295 - my_logger - INFO - Gift<x>Little Crown 4 None
+2023-11-08 19:20:58,752 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:20:59,485 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:01,930 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:03,360 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:03,361 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:04,938 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:06,572 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:07,350 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:08,484 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:09,453 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:09,453 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:09,453 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:11,023 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:12,660 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:12,660 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:12,661 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:14,322 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:15,141 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:16,098 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:16,098 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:18,414 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:19,236 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:19,236 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:20,042 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:22,514 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:22,514 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:24,047 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:25,589 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:21:25,590 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:28,795 - my_logger - INFO - Uygulama acildi
+2023-11-08 19:21:28,808 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-08 19:21:33,772 - my_logger - INFO - Connected
+2023-11-08 19:21:34,287 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:34,287 - my_logger - INFO - Gift<x>Little Crown 4 None
+2023-11-08 19:21:43,193 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:46,471 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:50,472 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:51,965 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:53,640 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:54,662 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:55,281 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:21:55,281 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:56,918 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:21:58,451 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:22:04,827 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:22:08,069 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:22:11,359 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:22:11,359 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:22:13,498 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-08 19:22:13,498 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-08 19:22:14,012 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-08 19:22:14,012 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-08 19:22:14,548 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-08 19:22:14,549 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:22:18,626 - my_logger - INFO - Gift<x>Ice Cream Cone 1 1
+2023-11-08 19:22:18,627 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:22:29,075 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:22:32,351 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:22:56,713 - my_logger - INFO - Uygulama acildi
+2023-11-08 19:22:56,728 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-08 19:23:02,244 - my_logger - INFO - Connected
+2023-11-08 19:23:02,496 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:23:02,509 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:23:06,034 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:23:15,970 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:23:19,247 - my_logger - INFO - Gift<x>Heart 1 1
+2023-11-08 19:23:33,786 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:23:37,680 - my_logger - INFO - Gift<x>Heart 1 1
+2023-11-08 19:23:54,938 - my_logger - INFO - Uygulama acildi
+2023-11-08 19:23:55,076 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-08 19:24:00,099 - my_logger - INFO - Connected
+2023-11-08 19:25:00,233 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:25:04,407 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-08 19:25:25,914 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:25:25,914 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:25:26,665 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:25:30,012 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:25:33,181 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:25:36,461 - my_logger - INFO - Gift<x>Heart 1 1
+2023-11-08 19:25:37,937 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:25:41,169 - my_logger - INFO - Gift<x>Heart 1 1
+2023-11-08 19:25:47,619 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:25:51,613 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:25:58,772 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:25:59,588 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:26:02,061 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:26:02,799 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:26:03,601 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:26:05,533 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:26:06,044 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:26:06,044 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:26:09,328 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-08 19:26:14,141 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-08 19:26:17,423 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:26:17,423 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-08 19:26:20,597 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:26:36,262 - my_logger - INFO - Gift<x>Little Crown 4 None
+2023-11-08 19:26:55,611 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:26:58,787 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:27:00,220 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:27:02,577 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:27:03,498 - my_logger - INFO - Gift<x>Make it rain 2 None
+2023-11-08 19:27:05,255 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:27:05,255 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:27:08,822 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:27:08,823 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:27:28,894 - my_logger - INFO - Gift<x>Make it rain 2 None
+2023-11-08 19:27:28,894 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:27:29,640 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:27:30,494 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:27:30,494 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:27:31,351 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:27:31,351 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:27:32,050 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:27:32,051 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:27:32,989 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:27:36,986 - my_logger - INFO - Gift<x>Heart 1 1
+2023-11-08 19:27:43,335 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:27:45,001 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:27:48,139 - my_logger - INFO - Gift<x>Heart 1 1
+2023-11-08 19:27:58,486 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:28:02,690 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:28:05,835 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:28:08,316 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:28:08,317 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:28:09,956 - my_logger - INFO - Gift<x>GG 1 None
+2023-11-08 19:28:09,956 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-08 19:28:12,924 - my_logger - INFO - Gift<x>GG 1 1
+2023-11-08 19:28:23,469 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:28:26,629 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:29:05,676 - my_logger - INFO - Gift<x>Fruit Friends 2 None
+2023-11-08 19:29:17,027 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:29:17,765 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:29:18,668 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:29:18,669 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:29:19,456 - my_logger - INFO - Gift<x>Paper Crane 2 None
+2023-11-08 19:29:19,457 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:29:19,457 - my_logger - INFO - Gift<x>Turkish coffee 1 None
+2023-11-08 19:29:23,475 - my_logger - INFO - Gift<x>Heart 1 1
+2023-11-08 19:29:23,476 - my_logger - INFO - Gift<x>Turkish coffee 1 1
+2023-11-08 19:29:31,266 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:29:32,848 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:29:34,538 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:29:36,072 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:29:36,892 - my_logger - INFO - Gift<x>Turkish coffee 1 None
+2023-11-08 19:29:40,172 - my_logger - INFO - Gift<x>Turkish coffee 1 1
+2023-11-08 19:30:33,772 - my_logger - INFO - Uygulama acildi
+2023-11-08 19:30:33,780 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-08 19:30:39,046 - my_logger - INFO - Connected
+2023-11-08 19:31:21,362 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:31:24,716 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-08 19:31:55,233 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:31:58,511 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:32:00,059 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:32:01,684 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:32:04,140 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:32:04,960 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:32:34,757 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-08 19:32:55,852 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:32:59,068 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:33:03,941 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:05,580 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:06,296 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:09,515 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:33:10,392 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:14,385 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:33:15,311 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:18,510 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:18,510 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:33:21,717 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:33:21,718 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:25,753 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:33:26,573 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:29,500 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:33:30,567 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:30,567 - my_logger - INFO - Gift<x>GG 1 None
+2023-11-08 19:33:32,309 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:33:32,310 - my_logger - INFO - Gift<x>GG 1 1
+2023-11-08 19:33:32,920 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:35,289 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-08 19:33:36,814 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:36,814 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:33:39,377 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:41,626 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:43,385 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:44,288 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:33:57,953 - my_logger - INFO - Uygulama acildi
+2023-11-08 19:33:57,961 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-08 19:34:02,352 - my_logger - INFO - Connected
+2023-11-08 19:34:15,121 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:34:18,384 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:39:21,791 - my_logger - INFO - Uygulama acildi
+2023-11-08 19:39:21,798 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-08 19:39:26,909 - my_logger - INFO - Connected
+2023-11-08 19:39:56,401 - my_logger - INFO - Gift<x>Turkish coffee 1 None
+2023-11-08 19:39:57,777 - my_logger - INFO - Gift<x>Turkish coffee 1 None
+2023-11-08 19:39:58,658 - my_logger - INFO - Gift<x>Turkish coffee 1 None
+2023-11-08 19:40:00,173 - my_logger - INFO - Gift<x>Turkish coffee 1 None
+2023-11-08 19:40:03,468 - my_logger - INFO - Gift<x>Turkish coffee 1 1
+2023-11-08 19:40:09,917 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-08 19:40:13,913 - my_logger - INFO - Gift<x>Turkish coffee 1 None
+2023-11-08 19:40:15,551 - my_logger - INFO - Gift<x>Turkish coffee 1 None
+2023-11-08 19:40:18,827 - my_logger - INFO - Gift<x>Turkish coffee 1 1
+2023-11-08 19:42:21,707 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:42:22,527 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:42:23,247 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:42:24,881 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:42:28,160 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-08 19:42:30,477 - my_logger - INFO - Gift<x>Heart 1 None
+2023-11-08 19:42:33,768 - my_logger - INFO - Gift<x>Heart 1 1
+2023-11-08 19:42:36,964 - my_logger - INFO - Gift<x>Finger Heart 1 None
+2023-11-08 19:42:40,962 - my_logger - INFO - Gift<x>Finger Heart 1 1
+2023-11-08 19:42:45,054 - my_logger - INFO - Gift<x>Rosa 1 None
+2023-11-08 19:42:46,591 - my_logger - INFO - Gift<x>Turkish coffee 1 None
+2023-11-08 19:42:46,591 - my_logger - INFO - Gift<x>Rosa 1 1
+2023-11-08 19:42:49,864 - my_logger - INFO - Gift<x>Turkish coffee 1 1
+2023-11-08 19:43:17,215 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:43:20,487 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:43:31,336 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-08 19:43:39,324 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:43:40,964 - my_logger - INFO - Gift<x>Hand Heart 2 None
+2023-11-08 19:43:41,782 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:43:45,774 - my_logger - INFO - Gift<x>Hand Heart 2 None
+2023-11-08 19:43:47,415 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-08 19:43:48,129 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:43:50,593 - my_logger - INFO - Gift<x>Ice Cream Cone 1 1
+2023-11-08 19:43:50,593 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:43:51,407 - my_logger - INFO - Gift<x>Hand Heart 2 None
+2023-11-08 19:43:53,149 - my_logger - INFO - Gift<x>Chestnuts 1 None
+2023-11-08 19:43:56,323 - my_logger - INFO - Gift<x>Chestnuts 1 1
+2023-11-08 19:44:25,711 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:44:29,648 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:44:34,417 - my_logger - INFO - Gift<x>Fireworks 2 None
+2023-11-08 19:44:42,406 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:44:45,682 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:44:45,682 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:44:45,682 - my_logger - INFO - Gift<x>Fireworks 2 None
+2023-11-08 19:44:46,497 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:44:47,216 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:44:48,037 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:44:50,495 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:44:50,496 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:44:51,209 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:44:53,664 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:45:22,750 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-08 19:48:20,233 - my_logger - INFO - Uygulama acildi
+2023-11-08 19:48:20,242 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-08 19:48:25,014 - my_logger - INFO - Connected
+2023-11-08 19:50:34,451 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:50:36,909 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:50:47,351 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:50:49,699 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:51:00,264 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:51:05,465 - my_logger - INFO - Uygulama acildi
+2023-11-08 19:51:05,471 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-08 19:51:10,798 - my_logger - INFO - Connected
+2023-11-08 19:51:20,223 - my_logger - INFO - Gift<x>Dallah 1 None
+2023-11-08 19:51:24,326 - my_logger - INFO - Gift<x>Dallah 1 1
+2023-11-08 19:51:28,415 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-08 19:51:35,482 - my_logger - INFO - Gift<x>Chestnuts 1 None
+2023-11-08 19:51:37,115 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-08 19:51:39,490 - my_logger - INFO - Gift<x>Chestnuts 1 1
+2023-11-08 19:51:40,398 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-08 19:52:37,539 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-08 19:53:11,119 - my_logger - INFO - Gift<x>Sunglasses 4 None
+2023-11-08 19:53:55,356 - my_logger - INFO - Gift<x>Fruit Friends 2 None
+2023-11-08 19:55:59,778 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:56:00,694 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:56:01,518 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:56:02,229 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:56:05,414 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-08 19:57:02,544 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:04,077 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:04,078 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:04,078 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:04,999 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:04,999 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:05,639 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:06,534 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:06,534 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:07,252 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:07,253 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:08,103 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:08,892 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:08,892 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:09,647 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:10,529 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:10,529 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:11,346 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:11,346 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:12,063 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-08 19:57:15,363 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-17 23:05:16,601 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:05:16,618 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:05:18,780 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-11-17 23:12:38,799 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:12:38,818 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:12:41,382 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-11-17 23:13:11,383 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:13:13,657 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-11-17 23:13:57,879 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:13:57,902 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:14:01,889 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-11-17 23:14:37,230 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:14:37,250 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:14:39,467 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-11-17 23:15:52,671 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:15:52,706 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:15:55,590 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-11-17 23:16:27,682 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:16:27,715 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:16:32,618 - my_logger - INFO - Connected
+2023-11-17 23:19:51,846 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:19:51,866 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:19:57,102 - my_logger - INFO - Connected
+2023-11-17 23:24:10,189 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:24:10,206 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:24:14,940 - my_logger - INFO - Connected
+2023-11-17 23:24:19,410 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:24:19,422 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:24:23,951 - my_logger - INFO - Connected
+2023-11-17 23:24:24,771 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:24:26,517 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:24:27,233 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:24:27,233 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:24:28,064 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:24:28,064 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:24:31,325 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:24:42,595 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:24:45,046 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:24:48,432 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:25:07,473 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:08,384 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:08,384 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:09,125 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:10,647 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:11,471 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:12,224 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:13,106 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:16,282 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-17 23:25:17,050 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-17 23:25:45,261 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:46,795 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:47,537 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:48,437 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:49,953 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:25:53,150 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-17 23:26:02,976 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:26:04,518 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:26:05,894 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:26:06,766 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:26:10,040 - my_logger - INFO - Gift<x>Squirrel 1 1
+2023-11-17 23:26:19,768 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:26:21,365 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:26:21,366 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:26:21,366 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:26:25,397 - my_logger - INFO - Gift<x>Squirrel 1 1
+2023-11-17 23:26:29,393 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:26:32,679 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:26:35,818 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:26:39,029 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:26:50,137 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-17 23:26:56,943 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-17 23:27:08,987 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:27:09,009 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:27:14,241 - my_logger - INFO - Connected
+2023-11-17 23:27:27,904 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:27:27,914 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:27:29,562 - my_logger - INFO - Gift<x>Money Gun 2 None
+2023-11-17 23:27:32,734 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-17 23:27:33,387 - my_logger - INFO - Connected
+2023-11-17 23:27:33,476 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-17 23:27:35,241 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-17 23:27:35,242 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-17 23:27:36,888 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-17 23:27:39,192 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-17 23:28:01,268 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-17 23:28:40,180 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:28:42,495 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:28:45,789 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:28:48,246 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:28:50,602 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:28:52,965 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:28:55,582 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:28:58,698 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:29:01,114 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:29:03,502 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:29:05,767 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:29:08,109 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:29:10,480 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:29:13,023 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:29:15,183 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:29:15,206 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:29:15,351 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:29:17,794 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:29:19,358 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:29:21,012 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:29:22,886 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:29:22,895 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:29:24,190 - my_logger - INFO - Gift<x>Ice Cream Cone 1 1
+2023-11-17 23:31:11,731 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:31:11,752 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:31:18,097 - my_logger - INFO - Connected
+2023-11-17 23:31:38,939 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:31:40,583 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:31:41,503 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:31:44,673 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:31:46,217 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:31:46,217 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:31:48,670 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:31:49,414 - my_logger - INFO - Gift<x>Squirrel 1 1
+2023-11-17 23:31:51,742 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:31:53,389 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:31:56,660 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:31:59,933 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:32:02,219 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:32:03,950 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:32:07,920 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:32:08,735 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:32:11,974 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:32:12,736 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:32:15,813 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:32:30,040 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:32:32,429 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:32:36,179 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:32:41,514 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:32:42,219 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:32:45,712 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:32:45,712 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:32:45,712 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:32:45,712 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:32:49,189 - my_logger - INFO - Gift<x>Ice Cream Cone 1 1
+2023-11-17 23:32:49,197 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:32:50,007 - my_logger - INFO - Gift<x>Finger Heart 1 None
+2023-11-17 23:32:53,279 - my_logger - INFO - Gift<x>Finger Heart 1 1
+2023-11-17 23:33:06,187 - my_logger - INFO - Gift<x>Rosa 1 None
+2023-11-17 23:33:10,169 - my_logger - INFO - Gift<x>Rosa 1 1
+2023-11-17 23:33:11,835 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:33:15,811 - my_logger - INFO - Gift<x>Squirrel 1 1
+2023-11-17 23:33:23,699 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:23,700 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:26,067 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:33:27,785 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:33:33,741 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:33,741 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:33:35,059 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:35,982 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:35,986 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-17 23:33:35,986 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:36,817 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:33:36,817 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:36,817 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:37,415 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:38,235 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:39,249 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:39,249 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:39,879 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:39,879 - my_logger - INFO - Gift<x>Goalkeeper Save 2 None
+2023-11-17 23:33:40,689 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:40,689 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:41,479 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:41,479 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:41,479 - my_logger - INFO - Gift<x>Chestnuts 1 None
+2023-11-17 23:33:42,229 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:42,229 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:43,034 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:43,869 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:43,869 - my_logger - INFO - Gift<x>Nazar 1 None
+2023-11-17 23:33:44,895 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:44,895 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:45,809 - my_logger - INFO - Gift<x>Chestnuts 1 1
+2023-11-17 23:33:45,809 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:33:45,809 - my_logger - INFO - Gift<x>Nazar 1 None
+2023-11-17 23:33:45,809 - my_logger - INFO - Gift<x>Chestnuts 1 None
+2023-11-17 23:33:47,091 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:33:47,091 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:47,091 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:48,039 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:48,039 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:33:48,039 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:48,789 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:48,789 - my_logger - INFO - Gift<x>Nazar 1 1
+2023-11-17 23:33:48,789 - my_logger - INFO - Gift<x>Chestnuts 1 1
+2023-11-17 23:33:49,504 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:49,504 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:33:49,504 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:51,140 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:51,140 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:33:51,140 - my_logger - INFO - Gift<x>Nazar 1 None
+2023-11-17 23:33:51,140 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:51,956 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:53,122 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:53,126 - my_logger - INFO - Gift<x>Nazar 1 None
+2023-11-17 23:33:53,126 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:33:53,126 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:53,597 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:53,597 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:33:55,921 - my_logger - INFO - Gift<x>Nazar 1 1
+2023-11-17 23:33:55,921 - my_logger - INFO - Gift<x>Squirrel 1 1
+2023-11-17 23:33:56,975 - my_logger - INFO - Gift<x>Finger Heart 1 None
+2023-11-17 23:33:57,599 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-17 23:33:57,599 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:33:58,956 - my_logger - INFO - Gift<x>Finger Heart 1 1
+2023-11-17 23:34:03,839 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:34:07,827 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:34:24,708 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:34:26,270 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:34:29,440 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:34:35,899 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:34:39,118 - my_logger - INFO - Gift<x>Squirrel 1 1
+2023-11-17 23:34:47,173 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:34:48,073 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:34:48,888 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:34:48,888 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:34:49,579 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:34:50,390 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:34:53,701 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:34:57,718 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:34:58,453 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:35:00,189 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,189 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,189 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,189 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,189 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,189 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,189 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,189 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,189 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,192 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,192 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,891 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,891 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:00,891 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:01,585 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:02,288 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:03,178 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:03,178 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:04,092 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:04,092 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:04,763 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:04,763 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:05,538 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:07,589 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:07,589 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:07,589 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:08,045 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:08,045 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:08,861 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:35:12,955 - my_logger - INFO - Gift<x>TGIF 1 1
+2023-11-17 23:35:35,382 - my_logger - INFO - Gift<x>Nazar 1 None
+2023-11-17 23:35:36,204 - my_logger - INFO - Gift<x>Nazar 1 None
+2023-11-17 23:35:36,944 - my_logger - INFO - Gift<x>Nazar 1 None
+2023-11-17 23:35:37,834 - my_logger - INFO - Gift<x>Nazar 1 None
+2023-11-17 23:35:38,656 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:39,351 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:39,352 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:40,153 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:41,014 - my_logger - INFO - Gift<x>Nazar 1 1
+2023-11-17 23:35:41,014 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:41,829 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:42,655 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:42,655 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:43,473 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:45,004 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:35:46,437 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:35:47,259 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:35:47,259 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:35:48,053 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:35:50,560 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:50,561 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:35:50,561 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:51,612 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:35:51,612 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:51,612 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:52,175 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:35:52,994 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:53,819 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:35:53,819 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:35:54,529 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:35:56,270 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:35:56,986 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:35:56,986 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:36:00,161 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:36:27,399 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-17 23:37:29,706 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:37:29,733 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:37:34,568 - my_logger - INFO - Connected
+2023-11-17 23:38:02,093 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:38:02,117 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:38:06,106 - my_logger - INFO - Connected
+2023-11-17 23:38:21,338 - my_logger - INFO - Gift<x>Gold Mine 2 None
+2023-11-17 23:38:24,496 - my_logger - INFO - Gift<x>Cool Cat 2 None
+2023-11-17 23:38:31,811 - my_logger - INFO - Gift<x>Travel with You 2 None
+2023-11-17 23:38:32,628 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:38:33,447 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:38:34,884 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:38:35,679 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:38:36,420 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:38:38,061 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:38:38,878 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:38:39,695 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:38:41,223 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:38:42,051 - my_logger - INFO - Gift<x>Corgi 2 None
+2023-11-17 23:38:44,511 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:38:56,591 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:39:00,726 - my_logger - INFO - Gift<x>Squirrel 1 1
+2023-11-17 23:39:05,242 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:39:05,259 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:39:09,094 - my_logger - INFO - Connected
+2023-11-17 23:39:10,111 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:39:10,206 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:39:11,750 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:39:11,808 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:39:15,037 - my_logger - INFO - Gift<x>Squirrel 1 1
+2023-11-17 23:39:34,947 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:39:34,966 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:39:38,793 - my_logger - INFO - Connected
+2023-11-17 23:39:42,542 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:39:42,874 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:39:45,746 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:39:45,760 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:39:47,382 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:39:47,383 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:39:51,490 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:39:51,490 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:39:51,580 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:39:51,580 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:39:54,648 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:39:54,720 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:39:56,972 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:39:57,184 - my_logger - INFO - Gift<x>Perfume 1 None
+2023-11-17 23:40:00,292 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:40:00,339 - my_logger - INFO - Gift<x>Perfume 1 1
+2023-11-17 23:40:39,552 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:40:39,588 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:40:40,424 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:40:40,604 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:40:40,809 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:40:40,851 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:40:42,134 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:40:42,154 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:40:42,778 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:40:42,778 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:40:42,831 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:40:42,832 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:40:43,598 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:40:43,634 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:40:45,969 - my_logger - INFO - Connected
+2023-11-17 23:40:46,750 - my_logger - INFO - Gift<x>Ice Cream Cone 1 1
+2023-11-17 23:40:46,788 - my_logger - INFO - Gift<x>Ice Cream Cone 1 1
+2023-11-17 23:40:46,830 - my_logger - INFO - Gift<x>Ice Cream Cone 1 1
+2023-11-17 23:41:02,131 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-17 23:41:36,741 - my_logger - INFO - Gift<x>Fireworks 2 None
+2023-11-17 23:41:49,340 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-17 23:41:51,078 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-17 23:41:51,079 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-17 23:41:52,616 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-17 23:41:54,932 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:41:58,166 - my_logger - INFO - Gift<x>Fireworks 2 None
+2023-11-17 23:41:58,166 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:42:00,563 - my_logger - INFO - Gift<x>Hand Heart 2 None
+2023-11-17 23:42:02,185 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-17 23:42:03,789 - my_logger - INFO - Gift<x>Goalkeeper Save 2 None
+2023-11-17 23:42:07,868 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:42:08,689 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:11,022 - my_logger - INFO - Gift<x>TGIF 1 1
+2023-11-17 23:42:11,859 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:42:15,069 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-17 23:42:19,953 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-17 23:42:31,767 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:35,046 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:35,046 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:42:37,461 - my_logger - INFO - Gift<x>Football 1 None
+2023-11-17 23:42:37,461 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:42:38,281 - my_logger - INFO - Gift<x>Football 1 None
+2023-11-17 23:42:39,829 - my_logger - INFO - Gift<x>Football 1 None
+2023-11-17 23:42:40,747 - my_logger - INFO - Gift<x>Football 1 None
+2023-11-17 23:42:43,093 - my_logger - INFO - Gift<x>Football 1 None
+2023-11-17 23:42:47,189 - my_logger - INFO - Gift<x>Football 1 1
+2023-11-17 23:42:47,913 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:48,739 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:48,739 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:48,739 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:49,493 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:50,372 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:51,103 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:51,103 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:52,008 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:52,008 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:42:56,084 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:42:58,559 - my_logger - INFO - Gift<x>Cap 4 None
+2023-11-17 23:43:00,984 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:43:00,985 - my_logger - INFO - Gift<x>Cap 4 None
+2023-11-17 23:43:01,795 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:43:01,795 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:43:02,560 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:43:03,385 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:43:03,386 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:43:04,189 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-17 23:43:05,829 - my_logger - INFO - Gift<x>Ice Cream Cone 1 None
+2023-11-17 23:43:06,749 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:43:09,720 - my_logger - INFO - Gift<x>Ice Cream Cone 1 1
+2023-11-17 23:43:12,057 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:43:12,084 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:43:16,067 - my_logger - INFO - Connected
+2023-11-17 23:43:21,837 - my_logger - INFO - Uygulama acildi
+2023-11-17 23:43:21,846 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-17 23:43:26,510 - my_logger - INFO - Connected
+2023-11-17 23:44:17,211 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:44:20,272 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:44:43,818 - my_logger - INFO - Gift<x>TGIF 1 None
+2023-11-17 23:44:46,996 - my_logger - INFO - Gift<x>TGIF 1 1
+2023-11-17 23:44:52,401 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:44:56,520 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:44:56,520 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:44:59,647 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:00,456 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:45:00,456 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:01,331 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:02,968 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:04,509 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:45:06,068 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:45:09,421 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:10,140 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:10,961 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:12,596 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:45:13,416 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:45:14,236 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:45:22,238 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-17 23:45:22,238 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-17 23:45:23,028 - my_logger - INFO - Gift<x>Confetti 2 None
+2023-11-17 23:45:28,679 - my_logger - INFO - Gift<x>Hot Air Balloon 2 None
+2023-11-17 23:45:40,395 - my_logger - INFO - Gift<x>Goalkeeper Save 2 None
+2023-11-17 23:45:45,880 - my_logger - INFO - Gift<x>Hand Heart 2 None
+2023-11-17 23:45:45,880 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-17 23:45:46,695 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-17 23:45:47,514 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-17 23:45:48,336 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-17 23:45:49,074 - my_logger - INFO - Gift<x>Fireworks 2 None
+2023-11-17 23:45:49,074 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-17 23:45:49,878 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:49,878 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-17 23:45:50,706 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:50,707 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:50,707 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-17 23:45:51,509 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-17 23:45:52,413 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:52,413 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:52,414 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:52,414 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-17 23:45:53,150 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:53,150 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-17 23:45:53,967 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:53,967 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-17 23:45:54,788 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:54,788 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:55,826 - my_logger - INFO - Gift<x>Doughnut 1 None
+2023-11-17 23:45:55,826 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:55,827 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:56,635 - my_logger - INFO - Gift<x>Hand Heart 2 None
+2023-11-17 23:45:56,636 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:57,451 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:57,451 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:58,528 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:59,089 - my_logger - INFO - Gift<x>Doughnut 1 1
+2023-11-17 23:45:59,089 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:59,091 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:59,907 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:45:59,907 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:00,426 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:00,426 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:01,236 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:02,000 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:02,000 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:02,808 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:46:02,808 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:02,808 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:03,696 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:03,696 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:03,696 - my_logger - INFO - Gift<x>TikTok 1 None
+2023-11-17 23:46:04,526 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:05,335 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:05,335 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:06,025 - my_logger - INFO - Gift<x>Hat and Mustache 4 None
+2023-11-17 23:46:06,025 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:06,873 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:06,873 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:06,876 - my_logger - INFO - Gift<x>TikTok 1 1
+2023-11-17 23:46:07,673 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:07,673 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:08,479 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:09,296 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:09,296 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:10,248 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:10,918 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:14,242 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:46:47,935 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:46:50,286 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:47:03,075 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:47:04,727 - my_logger - INFO - Gift<x>Football 1 None
+2023-11-17 23:47:04,727 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:47:06,255 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:47:07,600 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:47:08,105 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:47:08,105 - my_logger - INFO - Gift<x>Football 1 1
+2023-11-17 23:47:08,923 - my_logger - INFO - Gift<x>Rose 1 None
+2023-11-17 23:47:12,725 - my_logger - INFO - Gift<x>Rose 1 1
+2023-11-17 23:47:18,349 - my_logger - INFO - Gift<x>Heart Me 4 None
+2023-11-17 23:47:30,634 - my_logger - INFO - Gift<x>Chasing the Dream 2 None
+2023-11-17 23:47:51,325 - my_logger - INFO - Gift<x>Gold Mine 2 None
+2023-11-17 23:48:09,777 - my_logger - INFO - Gift<x>Goalkeeper Save 2 None
+2023-11-17 23:48:18,405 - my_logger - INFO - Gift<x>Money Gun 2 None
+2023-11-17 23:48:38,008 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:38,721 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:39,524 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:40,362 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:42,012 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:42,865 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:45,135 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:45,166 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:46,689 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:48,356 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:48,356 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:48,360 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:50,528 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:51,521 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:52,305 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:53,175 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:54,808 - my_logger - INFO - Gift<x>Squirrel 1 None
+2023-11-17 23:48:58,076 - my_logger - INFO - Gift<x>Squirrel 1 1
+2023-11-18 18:51:07,725 - my_logger - INFO - Uygulama acildi
+2023-11-18 18:51:07,745 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-18 18:51:10,857 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-11-18 18:51:24,746 - my_logger - INFO - Uygulama acildi
+2023-11-18 18:51:24,758 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-18 18:51:30,457 - my_logger - INFO - Uygulama acildi
+2023-11-18 18:51:30,465 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-18 18:51:33,831 - my_logger - INFO - Uygulama acildi
+2023-11-18 18:51:33,839 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-18 18:51:36,154 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-11-18 18:51:41,195 - my_logger - INFO - Uygulama acildi
+2023-11-18 18:51:41,204 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-18 18:51:44,429 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-11-18 18:51:52,505 - my_logger - INFO - Uygulama acildi
+2023-11-18 18:51:52,512 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-18 18:51:55,552 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-11-18 18:52:02,831 - my_logger - INFO - Uygulama acildi
+2023-11-18 18:52:02,838 - my_logger - INFO - Tiktok'a baglaniyor
+2023-11-18 18:52:05,889 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-11-18 18:52:13,848 - my_logger - INFO - Uygulama acildi
+2023-11-18 18:52:13,865 - my_logger - INFO - Tiktok'a baglaniyor

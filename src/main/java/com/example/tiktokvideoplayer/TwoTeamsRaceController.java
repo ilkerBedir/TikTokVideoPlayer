@@ -247,7 +247,6 @@ public class TwoTeamsRaceController implements ControllerInterface {
                 throw new RuntimeException();
               }
               String messageType = value[0];
-              LOGGER.debug("MessageType : " + messageType);
               switch (messageType) {
                 case "CLOSE": {
                   LOGGER.debug("ArrayListe close mesajı geldi");

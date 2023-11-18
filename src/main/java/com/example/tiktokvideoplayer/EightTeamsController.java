@@ -294,6 +294,7 @@ public class EightTeamsController implements ControllerInterface {
             setOnErrorVideo1(mediaPlayerUtils);
         });
         video_team1.setMediaPlayer(video);
+        video_team1.getMediaPlayer().play();
     }
     private void setOnErrorVideo2(MediaPlayerUtils mediaPlayerUtils){
         LOGGER.error("2Videoda hata");
@@ -302,6 +303,7 @@ public class EightTeamsController implements ControllerInterface {
         MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM2);
         video.setOnError(()->setOnErrorVideo2(mediaPlayerUtils));
         video_team2.setMediaPlayer(video);
+        video_team2.getMediaPlayer().play();
     }
     private void setOnErrorVideo3(MediaPlayerUtils mediaPlayerUtils){
         LOGGER.error("3Videoda hata");
@@ -310,6 +312,7 @@ public class EightTeamsController implements ControllerInterface {
         MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM3);
         video.setOnError(()->setOnErrorVideo3(mediaPlayerUtils));
         video_team3.setMediaPlayer(video);
+        video_team3.getMediaPlayer().play();
     }
     private void setOnErrorVideo4(MediaPlayerUtils mediaPlayerUtils){
         LOGGER.error("4Videoda hata");
@@ -318,6 +321,7 @@ public class EightTeamsController implements ControllerInterface {
         MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM4);
         video.setOnError(()->setOnErrorVideo4(mediaPlayerUtils));
         video_team4.setMediaPlayer(video);
+        video_team4.getMediaPlayer().play();
     }
     private void setOnErrorVideo5(MediaPlayerUtils mediaPlayerUtils){
         LOGGER.error("5Videoda hata");
@@ -326,6 +330,7 @@ public class EightTeamsController implements ControllerInterface {
         MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM5);
         video.setOnError(()->setOnErrorVideo5(mediaPlayerUtils));
         video_team5.setMediaPlayer(video);
+        video_team5.getMediaPlayer().play();
     }
     private void setOnErrorVideo6(MediaPlayerUtils mediaPlayerUtils){
         LOGGER.error("6Videoda hata");
@@ -334,6 +339,7 @@ public class EightTeamsController implements ControllerInterface {
         MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM6);
         video.setOnError(()->setOnErrorVideo6(mediaPlayerUtils));
         video_team6.setMediaPlayer(video);
+        video_team6.getMediaPlayer().play();
     }
     private void setOnErrorVideo7(MediaPlayerUtils mediaPlayerUtils){
         LOGGER.error("7Videoda hata");
@@ -342,6 +348,7 @@ public class EightTeamsController implements ControllerInterface {
         MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM7);
         video.setOnError(()->setOnErrorVideo7(mediaPlayerUtils));
         video_team7.setMediaPlayer(video);
+        video_team7.getMediaPlayer().play();
     }
     private void setOnErrorVideo8(MediaPlayerUtils mediaPlayerUtils){
         LOGGER.error("8Videoda hata");
@@ -350,6 +357,7 @@ public class EightTeamsController implements ControllerInterface {
         MediaPlayer video = mediaPlayerUtils.getVideo(this.VIDEO_URL_TEAM8);
         video.setOnError(()->setOnErrorVideo8(mediaPlayerUtils));
         video_team8.setMediaPlayer(video);
+        video_team8.getMediaPlayer().play();
     }
     private void editHBoxes(MediaPlayerUtils mediaPlayerUtils) {
         LOGGER.debug("editHBoxes");
@@ -433,7 +441,6 @@ public class EightTeamsController implements ControllerInterface {
                                 throw new RuntimeException();
                             }
                             String messageType = value[0];
-                            LOGGER.debug("MessageType : " + messageType);
                             switch (messageType) {
                                 case "CLOSE":{
                                     LOGGER.debug("ArrayListe close mesajı geldi");
@@ -1061,9 +1068,9 @@ public class EightTeamsController implements ControllerInterface {
         URI uri = URI.create(source);
         Path path = Paths.get(uri);
         Path parent = path.getParent();
-        mediaPlayers=new MediaPlayerUtils().createVolumeFiles(parent.toUri().toString());
+        mediaPlayers=new MediaPlayerUtils().createVolumeFiles(parent.toString());
         MediaPlayer mediaPlayer2 = mediaPlayers.get(currentTeamIndex);
-        mediaPlayer2.seek(Duration.ZERO);
+        mediaPlayer2.setStartTime(Duration.seconds(10));
         sharing_music_race4.setMediaPlayer(mediaPlayer2);
         List<MediaPlayer> finalMediaPlayers = mediaPlayers;
         sharing_music_race4.getMediaPlayer().setOnError(() -> setOnErrorMusic(finalMediaPlayers));

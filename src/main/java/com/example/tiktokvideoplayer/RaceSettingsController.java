@@ -32,6 +32,8 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
+import static com.example.tiktokvideoplayer.GiftServer.arrayLists;
+
 public class RaceSettingsController implements Initializable {
   private static final Logger LOGGER = LoggerFactory.getLogger(RaceSettingsController.class);
 
@@ -279,6 +281,7 @@ public class RaceSettingsController implements Initializable {
     LOGGER.debug("Yarışma Başladı-startRaceAction");
     saveLastSettings();
     startRaceButton.setDisable(true);
+    arrayLists.clear();
     Integer selectedItem = combobox_team_count.getSelectionModel().getSelectedItem();
     if (selectedItem == 1) {
       LOGGER.debug("Tek Ekranlı seçim yaptınız");
@@ -592,10 +595,16 @@ public class RaceSettingsController implements Initializable {
   private List<String> getComboBoxGifts(HBox tmpHbox) {
     LOGGER.debug("Get ComboBox Gifts");
     List<String> giftList1 = new ArrayList<>();
+    Integer giftCount = combobox_gift_count.getSelectionModel().getSelectedItem();
+    int i=0;
     for (Node child : tmpHbox.getChildren()) {
       if (child instanceof ComboBox<?> && child.isVisible()) {
         String selectedItem1 = ((String) ((ComboBox<?>) child).getSelectionModel().getSelectedItem());
         giftList1.add(selectedItem1);
+        i++;
+      }
+      if (i>=giftCount){
+        break;
       }
     }
     return giftList1;

@@ -22,6 +22,9 @@ public class TikTokRace extends Application {
         LOGGER.debug("Gift Server Başlatılıyor Port {}",args[0]);
         port=args[0];
         GiftServer giftServer=new GiftServer(Integer.parseInt(args[0]));
+        giftServer.setMaxPendingConnections(Integer.MAX_VALUE);
+        giftServer.setReuseAddr(true);
+        giftServer.setTcpNoDelay(true);
         giftServer.start();
         launch(args);
     }

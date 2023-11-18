@@ -202,6 +202,7 @@ public class ThreeTeamsController implements ControllerInterface {
       setOnErrorVideo1(mediaPlayerUtils);
     });
     video_team1.setMediaPlayer(video);
+    video_team1.getMediaPlayer().play();
   }
 
   private void setOnErrorVideo2(MediaPlayerUtils mediaPlayerUtils) {
@@ -213,6 +214,7 @@ public class ThreeTeamsController implements ControllerInterface {
       setOnErrorVideo2(mediaPlayerUtils);
     });
     video_team2.setMediaPlayer(video);
+    video_team2.getMediaPlayer().play();
   }
 
   private void setOnErrorVideo3(MediaPlayerUtils mediaPlayerUtils) {
@@ -224,6 +226,7 @@ public class ThreeTeamsController implements ControllerInterface {
       setOnErrorVideo3(mediaPlayerUtils);
     });
     video_team3.setMediaPlayer(video);
+    video_team3.getMediaPlayer().play();
   }
 
   private void editHBoxes(MediaPlayerUtils mediaPlayerUtils) {
@@ -293,7 +296,6 @@ public class ThreeTeamsController implements ControllerInterface {
                 throw new RuntimeException();
               }
               String messageType = value[0];
-              LOGGER.debug("MessageType : " + messageType);
               switch (messageType) {
                 case "CLOSE": {
                   LOGGER.debug("ArrayListe close mesajı geldi");
@@ -362,7 +364,7 @@ public class ThreeTeamsController implements ControllerInterface {
                     }
                   } else if (gift2.isPresent()) {
                     if ((point2 <= point1 || point2 <= point3) &&
-                        (point2 + hediye_miktari > point1 && point2 + hediye_miktari > point3)) {//TODO yanlış 3 lüde patlıyor
+                        (point2 + hediye_miktari > point1 && point2 + hediye_miktari > point3)) {
                       LOGGER.debug("Takım Değişti Team2");
                       increaseTime();
                       currentTeamIndex = 0;
@@ -454,10 +456,12 @@ public class ThreeTeamsController implements ControllerInterface {
     sharing_music_race4.getMediaPlayer().stop();
     sharing_music_race4.getMediaPlayer().dispose();
     String source = mediaPlayers.get(currentTeamIndex).getMedia().getSource();
+    //Paths.get(URI.create(media.getSource())).getParent().toString() C:\Users\ilker\Desktop\TikTok\TikTokVideoPlayer\takimlar\fb/mars
     URI uri = URI.create(source);
     Path path = Paths.get(uri);
     Path parent = path.getParent();
-    mediaPlayers=new MediaPlayerUtils().createVolumeFiles(parent.toUri().toString());
+    LOGGER.debug("Dosya parent adi : {}",parent.toString());
+    mediaPlayers=new MediaPlayerUtils().createVolumeFiles(parent.toString());
     MediaPlayer mediaPlayer2 = mediaPlayers.get(currentTeamIndex);
     mediaPlayer2.seek(Duration.ZERO);
     sharing_music_race4.setMediaPlayer(mediaPlayer2);

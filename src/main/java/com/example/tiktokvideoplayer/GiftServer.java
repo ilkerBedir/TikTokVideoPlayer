@@ -24,13 +24,13 @@ public class GiftServer extends WebSocketServer{
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
         //conn.send("Welcome to the server!"); //This method sends a message to the new client
         //broadcast("new connection: " + handshake.getResourceDescriptor()); //This method sends a message to all clients connected
-        //LOGGER.debug(conn.getRemoteSocketAddress().getAddress().getHostAddress() + " entered the room!");
+        LOGGER.debug(conn.getRemoteSocketAddress().getAddress().getHostAddress() + " entered the room!");
     }
 
     @Override
     public void onClose(WebSocket conn, int i, String s, boolean b) {
         //broadcast(conn + " has left the room!");
-        //LOGGER.debug(conn + " has left the room!");
+        LOGGER.debug(conn + " has left the room!");
     }
 
     @Override
@@ -43,16 +43,7 @@ public class GiftServer extends WebSocketServer{
         //broadcast(message);
         //LOGGER.debug(conn + ": " + message);
     }
-    /*@Override
-    public void onMessage(WebSocket conn, ByteBuffer message) {
-        ArrayList<?> objects = deserializeByteArray(message.array());
-        try {
-            arrayLists.put(objects);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
-*/
+
     @Override
     public void onError(WebSocket conn, Exception exception) {
         LOGGER.error(exception.getMessage(),exception);
@@ -60,8 +51,7 @@ public class GiftServer extends WebSocketServer{
 
     @Override
     public void onStart() {
-        //LOGGER.debug("Server started!");
-        //setConnectionLostTimeout(100);
+        setConnectionLostTimeout(0);
     }
 
     public static ArrayList<?> deserializeByteArray(byte[] byteArray) {
