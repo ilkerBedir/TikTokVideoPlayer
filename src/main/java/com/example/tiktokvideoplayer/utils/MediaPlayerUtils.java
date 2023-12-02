@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 import javafx.util.Duration;
@@ -118,11 +119,13 @@ public class MediaPlayerUtils {
 
   private VBox createImageBox(Gift gift) {
     VBox vBox = new VBox();
+    vBox.setSpacing(2);
     ImageView imageView = createImageView(gift.image());
     Label label = new Label();
-    label.setText(String.valueOf(gift.getDiamondCost()));
+    label.setText("+"+String.valueOf(gift.getDiamondCost()));
     label.setFont(Font.font(8));
     label.setStyle("-fx-font-weight: bold;");
+    label.setTextFill(Color.WHITE);
     vBox.setAlignment(Pos.CENTER);
     label.setVisible(true);
     vBox.getChildren().addAll(imageView, label);
