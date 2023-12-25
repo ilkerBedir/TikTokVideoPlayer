@@ -1,0 +1,334 @@
+2023-12-23 00:34:36,615- INFO - Uygulama Basliyor, StreamName: batuhanberkeelma Port: 8787
+2023-12-23 00:34:38,590- INFO - HTTP Request: GET https://www.tiktok.com/@batuhanberkeelma/live "HTTP/1.1 200 OK"
+2023-12-23 00:34:40,110- INFO - HTTP Request: GET https://webcast.tiktok.com/webcast/room/info/?aid=1988&app_language=tr-Tr&app_name=tiktok_web&browser_language=tr&browser_name=Mozilla&browser_online=True&browser_platform=Win32&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F102.0.5005.63+Safari%2F537.36&cookie_enabled=True&cursor=&internal_ext=&device_platform=web&focus_state=True&from_page=user&history_len=4&is_fullscreen=False&is_page_visible=True&did_rule=3&fetch_rule=1&last_rtt=0&live_id=12&resp_content_type=protobuf&screen_height=1152&screen_width=2048&tz_name=Europe%2FBerlin&referer=https%3A%2F%2Fwww.tiktok.com%2F&root_referer=https%3A%2F%2Fwww.tiktok.com%2F&msToken=&version_code=180800&webcast_sdk_version=1.3.0&update_version_code=1.3.0&room_id=7315527790888274694 "HTTP/1.1 200 OK"
+2023-12-23 00:34:40,858- INFO - HTTP Request: GET https://webcast.tiktok.com/webcast/gift/list/?aid=1988&app_language=tr-Tr&app_name=tiktok_web&browser_language=tr&browser_name=Mozilla&browser_online=True&browser_platform=Win32&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F102.0.5005.63+Safari%2F537.36&cookie_enabled=True&cursor=&internal_ext=&device_platform=web&focus_state=True&from_page=user&history_len=4&is_fullscreen=False&is_page_visible=True&did_rule=3&fetch_rule=1&last_rtt=0&live_id=12&resp_content_type=protobuf&screen_height=1152&screen_width=2048&tz_name=Europe%2FBerlin&referer=https%3A%2F%2Fwww.tiktok.com%2F&root_referer=https%3A%2F%2Fwww.tiktok.com%2F&msToken=&version_code=180800&webcast_sdk_version=1.3.0&update_version_code=1.3.0&room_id=7315527790888274694 "HTTP/1.1 200 OK"
+2023-12-23 00:34:42,203- INFO - HTTP Request: GET https://tiktok.eulerstream.com/webcast/fetch/?aid=1988&app_language=tr-Tr&app_name=tiktok_web&browser_language=tr&browser_name=Mozilla&browser_online=True&browser_platform=Win32&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F102.0.5005.63+Safari%2F537.36&cookie_enabled=True&cursor=&internal_ext=&device_platform=web&focus_state=True&from_page=user&history_len=4&is_fullscreen=False&is_page_visible=True&did_rule=3&fetch_rule=1&last_rtt=0&live_id=12&resp_content_type=protobuf&screen_height=1152&screen_width=2048&tz_name=Europe%2FBerlin&referer=https%3A%2F%2Fwww.tiktok.com%2F&root_referer=https%3A%2F%2Fwww.tiktok.com%2F&msToken=&version_code=180800&webcast_sdk_version=1.3.0&update_version_code=1.3.0&room_id=7315527790888274694&client=ttlive-python&uuc=1&apiKey= "HTTP/1.1 200 OK"
+2023-12-23 00:34:42,749- INFO - Connected to Room ID:7315527790888274694
+2023-12-23 00:34:53,210- INFO - Gift Bilgileri,UserName: aksa’Nur , Name: Squirrel, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:34:56,419- INFO - Gift Bilgileri,UserName: aksa’Nur , Name: Squirrel, Cost: 1, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:34:58,842- INFO - Gift Bilgileri,UserName: klm , Name: Squirrel, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:34:59,562- INFO - Gift Bilgileri,UserName: klm , Name: Squirrel, Cost: 1, Streakable : True , Count : 2 , Streaking: True
+2023-12-23 00:34:59,562- INFO - Gift Bilgileri,UserName: klm , Name: Squirrel, Cost: 1, Streakable : True , Count : 3 , Streaking: True
+2023-12-23 00:35:00,358- INFO - Gift Bilgileri,UserName: klm , Name: Squirrel, Cost: 1, Streakable : True , Count : 4 , Streaking: True
+2023-12-23 00:35:01,195- INFO - Gift Bilgileri,UserName: klm , Name: Squirrel, Cost: 1, Streakable : True , Count : 5 , Streaking: True
+2023-12-23 00:35:04,405- INFO - Gift Bilgileri,UserName: klm , Name: Squirrel, Cost: 1, Streakable : True , Count : 5 , Streaking: False
+2023-12-23 00:35:12,680- INFO - Gift Bilgileri,UserName: tugcealkya , Name: Heart, Cost: 10, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:35:13,597- INFO - Gift Bilgileri,UserName: tugcealkya , Name: Heart, Cost: 10, Streakable : True , Count : 2 , Streaking: True
+2023-12-23 00:35:14,271- INFO - Gift Bilgileri,UserName: tugcealkya , Name: Heart, Cost: 10, Streakable : True , Count : 3 , Streaking: True
+2023-12-23 00:35:17,511- INFO - Gift Bilgileri,UserName: tugcealkya , Name: Heart, Cost: 10, Streakable : True , Count : 3 , Streaking: False
+2023-12-23 00:35:20,764- INFO - Gift Bilgileri,UserName: Baran Taş , Name: Team Bracelet, Cost: 2, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:35:24,191- INFO - Gift Bilgileri,UserName: Baran Taş , Name: Team Bracelet, Cost: 2, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:35:33,934- INFO - Gift Bilgileri,UserName: hiranurarslan3549 , Name: Heart Me, Cost: 1, Streakable : False , Count : 1 , Streaking: True
+2023-12-23 00:36:16,852- ERROR - Error olustu: [Errno 22] Invalid argument
+2023-12-23 00:37:01,981- INFO - Gift Bilgileri,UserName: Beyzanur , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:37:02,856- INFO - Gift Bilgileri,UserName: Beyzanur , Name: Rose, Cost: 1, Streakable : True , Count : 3 , Streaking: True
+2023-12-23 00:37:02,857- INFO - Gift Bilgileri,UserName: Beyzanur , Name: Rose, Cost: 1, Streakable : True , Count : 6 , Streaking: True
+2023-12-23 00:37:04,494- INFO - Gift Bilgileri,UserName: Beyzanur , Name: Rose, Cost: 1, Streakable : True , Count : 9 , Streaking: True
+2023-12-23 00:37:04,496- INFO - Gift Bilgileri,UserName: Beyzanur , Name: Rose, Cost: 1, Streakable : True , Count : 12 , Streaking: True
+2023-12-23 00:37:04,496- INFO - Gift Bilgileri,UserName: Beyzanur , Name: Rose, Cost: 1, Streakable : True , Count : 14 , Streaking: True
+2023-12-23 00:37:07,771- ERROR - Error olustu: [Errno 22] Invalid argument
+2023-12-23 00:37:08,488- INFO - Gift Bilgileri,UserName: Beyzanur , Name: Rose, Cost: 1, Streakable : True , Count : 14 , Streaking: False
+2023-12-23 00:37:45,748- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:37:46,687- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 2 , Streaking: True
+2023-12-23 00:37:47,377- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 3 , Streaking: True
+2023-12-23 00:37:47,378- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 4 , Streaking: True
+2023-12-23 00:37:48,164- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 6 , Streaking: True
+2023-12-23 00:37:49,263- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 8 , Streaking: True
+2023-12-23 00:37:52,191- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 8 , Streaking: False
+2023-12-23 00:37:55,448- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:37:55,448- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 2 , Streaking: True
+2023-12-23 00:37:55,448- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 3 , Streaking: True
+2023-12-23 00:37:56,244- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 4 , Streaking: True
+2023-12-23 00:37:57,056- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 6 , Streaking: True
+2023-12-23 00:37:57,851- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 7 , Streaking: True
+2023-12-23 00:38:01,121- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 7 , Streaking: False
+2023-12-23 00:38:01,896- ERROR - Error olustu: [Errno 22] Invalid argument
+2023-12-23 00:38:28,577- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:38:31,943- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:38:38,253- INFO - Gift Bilgileri,UserName: Baran Taş , Name: Nazar, Cost: 5, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:38:40,706- INFO - Gift Bilgileri,UserName: Baran Taş , Name: Nazar, Cost: 5, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:38:40,706- INFO - Gift Bilgileri,UserName: Baran Taş , Name: TikTok, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:38:41,567- INFO - Gift Bilgileri,UserName: Baran Taş , Name: TikTok, Cost: 1, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:38:41,567- INFO - Gift Bilgileri,UserName: Baran Taş , Name: Ice Cream Cone, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:38:42,387- INFO - Gift Bilgileri,UserName: Baran Taş , Name: Ice Cream Cone, Cost: 1, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:38:42,387- INFO - Gift Bilgileri,UserName: Baran Taş , Name: Chestnuts, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:38:45,625- INFO - Gift Bilgileri,UserName: Baran Taş , Name: Chestnuts, Cost: 1, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:38:58,453- ERROR - Error olustu: [Errno 22] Invalid argument
+2023-12-23 00:39:15,691- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:39:15,691- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 2 , Streaking: True
+2023-12-23 00:39:16,505- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 3 , Streaking: True
+2023-12-23 00:39:17,335- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 4 , Streaking: True
+2023-12-23 00:39:18,224- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 5 , Streaking: True
+2023-12-23 00:39:18,765- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 6 , Streaking: True
+2023-12-23 00:39:19,582- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 7 , Streaking: True
+2023-12-23 00:39:20,590- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 8 , Streaking: True
+2023-12-23 00:39:20,591- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 9 , Streaking: True
+2023-12-23 00:39:22,015- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 10 , Streaking: True
+2023-12-23 00:39:22,834- INFO - Gift Bilgileri,UserName: damlaa , Name: Squirrel, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:39:25,227- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 10 , Streaking: False
+2023-12-23 00:39:26,109- INFO - Gift Bilgileri,UserName: damlaa , Name: Squirrel, Cost: 1, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:39:26,842- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:39:28,464- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 2 , Streaking: True
+2023-12-23 00:39:29,389- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 3 , Streaking: True
+2023-12-23 00:39:29,389- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 4 , Streaking: True
+2023-12-23 00:39:30,272- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 5 , Streaking: True
+2023-12-23 00:39:31,083- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 6 , Streaking: True
+2023-12-23 00:39:31,083- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 7 , Streaking: True
+2023-12-23 00:39:31,886- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 8 , Streaking: True
+2023-12-23 00:39:31,886- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 9 , Streaking: True
+2023-12-23 00:39:32,665- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 10 , Streaking: True
+2023-12-23 00:39:35,858- INFO - Gift Bilgileri,UserName: BekS38 , Name: Rose, Cost: 1, Streakable : True , Count : 10 , Streaking: False
+2023-12-23 00:39:40,755- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Hat and Mustache, Cost: 99, Streakable : False , Count : 1 , Streaking: True
+2023-12-23 00:39:49,550- INFO - Gift Bilgileri,UserName: 𝓡𝓾𝓶𝓮𝔂𝓼𝓪🫶🏼 , Name: Nazar, Cost: 5, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:39:50,365- ERROR - Error olustu: [Errno 22] Invalid argument
+2023-12-23 00:39:52,837- INFO - Gift Bilgileri,UserName: 𝓡𝓾𝓶𝓮𝔂𝓼𝓪🫶🏼 , Name: Nazar, Cost: 5, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:40:42,489- ERROR - Error olustu: [Errno 22] Invalid argument
+2023-12-23 00:41:24,687- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Cap, Cost: 99, Streakable : False , Count : 1 , Streaking: True
+2023-12-23 00:41:37,590- ERROR - Error olustu: [Errno 22] Invalid argument
+2023-12-23 00:41:39,060- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:41:39,060- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 2 , Streaking: True
+2023-12-23 00:41:39,881- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 5 , Streaking: True
+2023-12-23 00:41:39,882- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 8 , Streaking: True
+2023-12-23 00:41:40,674- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 11 , Streaking: True
+2023-12-23 00:41:41,481- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 13 , Streaking: True
+2023-12-23 00:41:41,481- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 15 , Streaking: True
+2023-12-23 00:41:42,403- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 16 , Streaking: True
+2023-12-23 00:41:42,403- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 18 , Streaking: True
+2023-12-23 00:41:43,119- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 20 , Streaking: True
+2023-12-23 00:41:43,879- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 22 , Streaking: True
+2023-12-23 00:41:44,759- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 23 , Streaking: True
+2023-12-23 00:41:44,760- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 24 , Streaking: True
+2023-12-23 00:41:45,501- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 25 , Streaking: True
+2023-12-23 00:41:48,714- INFO - Gift Bilgileri,UserName: memo_k16 , Name: Rose, Cost: 1, Streakable : True , Count : 25 , Streaking: False
+2023-12-23 00:41:57,659- INFO - Gift Bilgileri,UserName: memo_k16 , Name: TikTok, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:41:58,475- INFO - Gift Bilgileri,UserName: memo_k16 , Name: TikTok, Cost: 1, Streakable : True , Count : 3 , Streaking: True
+2023-12-23 00:41:58,475- INFO - Gift Bilgileri,UserName: memo_k16 , Name: TikTok, Cost: 1, Streakable : True , Count : 6 , Streaking: True
+2023-12-23 00:41:58,476- INFO - Gift Bilgileri,UserName: memo_k16 , Name: TikTok, Cost: 1, Streakable : True , Count : 9 , Streaking: True
+2023-12-23 00:41:59,260- INFO - Gift Bilgileri,UserName: memo_k16 , Name: TikTok, Cost: 1, Streakable : True , Count : 12 , Streaking: True
+2023-12-23 00:42:00,118- INFO - Gift Bilgileri,UserName: memo_k16 , Name: TikTok, Cost: 1, Streakable : True , Count : 13 , Streaking: True
+2023-12-23 00:42:00,119- INFO - Gift Bilgileri,UserName: memo_k16 , Name: TikTok, Cost: 1, Streakable : True , Count : 15 , Streaking: True
+2023-12-23 00:42:03,291- INFO - Gift Bilgileri,UserName: memo_k16 , Name: TikTok, Cost: 1, Streakable : True , Count : 15 , Streaking: False
+2023-12-23 00:42:32,383- ERROR - Error olustu: [Errno 22] Invalid argument
+2023-12-23 00:43:11,208- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:11,208- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:11,208- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:13,668- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:13,668- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:13,668- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:14,457- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:15,278- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:15,278- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:16,035- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:16,036- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:16,036- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:16,917- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:16,917- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:17,620- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:18,555- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:19,248- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:19,248- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:20,910- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:22,486- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:22,487- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:23,290- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:24,185- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:25,006- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:25,736- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:25,737- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:25,737- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:27,360- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:29,002- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:29,002- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:30,577- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:30,577- ERROR - Error olustu: [Errno 22] Invalid argument
+2023-12-23 00:43:30,577- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:31,421- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:33,099- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:33,917- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:33,918- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:34,630- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:43:35,406- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 2 , Streaking: True
+2023-12-23 00:43:35,407- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:36,225- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 4 , Streaking: True
+2023-12-23 00:43:37,011- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:37,012- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:37,012- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:37,909- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 6 , Streaking: True
+2023-12-23 00:43:37,910- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:38,627- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 8 , Streaking: True
+2023-12-23 00:43:38,628- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:38,628- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:38,628- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:39,433- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 10 , Streaking: True
+2023-12-23 00:43:39,434- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:39,434- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:40,245- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 12 , Streaking: True
+2023-12-23 00:43:40,245- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:40,246- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:41,082- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 14 , Streaking: True
+2023-12-23 00:43:41,082- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:41,082- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:41,859- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 16 , Streaking: True
+2023-12-23 00:43:42,728- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 18 , Streaking: True
+2023-12-23 00:43:42,729- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:42,729- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:43,545- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 20 , Streaking: True
+2023-12-23 00:43:43,546- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:43,546- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:43,546- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:44,365- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 22 , Streaking: True
+2023-12-23 00:43:44,365- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:46,005- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 24 , Streaking: True
+2023-12-23 00:43:46,005- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 25 , Streaking: True
+2023-12-23 00:43:46,005- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:47,709- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 27 , Streaking: True
+2023-12-23 00:43:47,709- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:47,709- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:47,709- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:48,508- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 28 , Streaking: True
+2023-12-23 00:43:48,508- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:48,508- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:48,509- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:49,309- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:50,916- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:50,917- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:51,730- INFO - Gift Bilgileri,UserName: mfa996 , Name: Rose, Cost: 1, Streakable : True , Count : 28 , Streaking: False
+2023-12-23 00:43:51,730- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:51,730- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:52,519- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:52,520- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:52,520- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:53,575- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:54,109- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:54,109- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:55,011- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:55,724- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:56,537- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:57,400- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:58,191- INFO - Gift Bilgileri,UserName: Asena , Name: Squirrel, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:43:58,191- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:58,191- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:43:58,937- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:00,564- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:00,564- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:00,564- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:01,354- INFO - Gift Bilgileri,UserName: Asena , Name: Squirrel, Cost: 1, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:44:01,354- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:01,354- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:02,264- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:02,966- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:02,966- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:02,966- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:04,590- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:04,590- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:05,421- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:05,421- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:07,764- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:07,764- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:07,764- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:08,628- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:09,448- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:09,449- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:10,192- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:10,192- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:11,009- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:11,010- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:11,808- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:11,808- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:13,455- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:14,258- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:14,259- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:15,080- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:15,080- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:15,080- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:15,080- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:15,901- INFO - Gift Bilgileri,UserName: Sevgi kaya , Name: Squirrel, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:44:15,901- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:15,901- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:15,902- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:17,425- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:18,273- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:19,087- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:19,993- INFO - Gift Bilgileri,UserName: Sevgi kaya , Name: Squirrel, Cost: 1, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:44:19,994- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:19,994- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:20,740- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:21,632- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:22,335- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:23,272- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:23,272- ERROR - Error olustu: [Errno 22] Invalid argument
+2023-12-23 00:44:23,985- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:23,986- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:23,986- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:23,986- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:24,841- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:25,558- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:26,446- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:27,266- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:28,081- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:28,779- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:29,611- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:29,611- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:30,540- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:30,541- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:32,035- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:32,903- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:32,903- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:33,715- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:34,556- INFO - Gift Bilgileri,UserName: Gizem , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:44:34,556- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:34,556- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:36,069- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:36,069- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:36,872- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:37,763- INFO - Gift Bilgileri,UserName: Gizem , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:44:37,763- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:37,763- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:38,482- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:39,345- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:39,345- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:40,901- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:40,902- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:40,902- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:41,803- INFO - Gift Bilgileri,UserName: Gizem , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:44:42,627- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:42,627- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:42,628- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:43,321- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:44,304- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:44,304- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:45,085- INFO - Gift Bilgileri,UserName: Gizem , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:44:45,085- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:45,877- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:46,677- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:47,483- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:47,483- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:49,176- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:49,936- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:50,801- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:51,519- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:52,355- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:52,356- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:53,171- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:53,982- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:53,982- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:54,767- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:55,607- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:55,607- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:56,401- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:57,216- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:58,083- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:58,818- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:59,634- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:44:59,634- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:45:00,423- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:45:01,236- INFO - Gift Bilgileri,UserName: Gizem , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: True
+2023-12-23 00:45:01,237- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:45:02,646- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:45:03,454- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:45:04,334- INFO - Gift Bilgileri,UserName: Gizem , Name: Rose, Cost: 1, Streakable : True , Count : 1 , Streaking: False
+2023-12-23 00:45:04,335- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:45:04,335- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:45:04,335- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:45:04,335- ERROR - Error olustu: no close frame received or sent
+2023-12-23 00:45:05,150- ERROR - Error olustu: no close frame received or sent

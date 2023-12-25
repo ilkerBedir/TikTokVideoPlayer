@@ -1,0 +1,8 @@
+[2023-12-22T23:56:29,922] [DEBUG] c.e.t.Launcher:9 Uygulama açılıyor
+[2023-12-22T23:56:29,927] [DEBUG] c.e.t.TikTokRace:22 Gift Server Başlatılıyor Port 8787
+[2023-12-22T23:56:30,224] [DEBUG] c.e.t.TikTokRace:34 Options Ekranı yükleniyor
+[2023-12-22T23:56:30,561] [DEBUG] c.e.t.RaceSettingsController:234 RaceSetting initialize
+[2023-12-22T23:56:30,561] [DEBUG] c.e.t.RaceSettingsController:242 EditGiftComboBox
+[2023-12-22T23:56:30,562] [DEBUG] c.e.t.Gift:62 Gift Listesi Parse Ediliyor
+[2023-12-22T23:56:39,109] [DEBUG] c.e.t.GiftServer:27 0:0:0:0:0:0:0:1 entered the room!
+[2023-12-22T23:57:15,783] [DEBUG] c.e.t.GiftServer:33 org.java_websocket.WebSocketImpl@2b2856f0 has left the room!

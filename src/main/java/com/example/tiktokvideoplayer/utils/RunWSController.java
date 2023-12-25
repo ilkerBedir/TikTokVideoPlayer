@@ -1,5 +1,6 @@
 package com.example.tiktokvideoplayer.utils;
 
+import javafx.event.ActionEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,8 +43,24 @@ public class RunWSController {
             } else {
                 LOGGER.error("İşlem sonlandırılamadı. Çıkış Kodu: {}",exitCode);
             }
+            forceStopClient();
         } catch (IOException | InterruptedException e) {
             LOGGER.error(e.getMessage(),e);
+        }
+    }
+
+    public void forceStopClient() {
+        try {
+            String uygulamaAdi = "TikTokLiveDeneme.exe";
+            Process process = Runtime.getRuntime().exec("taskkill /F /IM " + uygulamaAdi);
+            int exitCode = process.waitFor();
+            if (exitCode == 0) {
+                LOGGER.debug(uygulamaAdi + " tüm örnekleri başarıyla kapatıldı.");
+            } else {
+                LOGGER.error(uygulamaAdi + " tüm örnekleri kapatılamadı.");
+            }
+        } catch (Exception e) {
+
         }
     }
 }

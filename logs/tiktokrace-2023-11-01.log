@@ -1,8 +1,0 @@
-[2023-11-01T21:43:35,498] [DEBUG] c.e.t.Launcher:9 Uygulama açılıyor
-[2023-11-01T21:43:35,503] [DEBUG] c.e.t.TikTokRace:22 Gift Server Başlatılıyor Port 8787
-[2023-11-01T21:43:35,652] [DEBUG] c.e.t.GiftServer:58 Server started!
-[2023-11-01T21:43:35,820] [DEBUG] c.e.t.TikTokRace:31 Options Ekranı yükleniyor
-[2023-11-01T21:43:36,120] [DEBUG] c.e.t.RaceSettingsController:230 RaceSetting initialize
-[2023-11-01T21:43:36,121] [DEBUG] c.e.t.RaceSettingsController:238 EditGiftComboBox
-[2023-11-01T21:43:36,121] [DEBUG] c.e.t.Gift:62 Gift Listesi Parse Ediliyor
-[2023-11-01T21:43:39,781] [DEBUG] c.e.t.TikTokRace:43 Uygulamaya kapatma isteği geldi : WINDOW_CLOSE_REQUEST

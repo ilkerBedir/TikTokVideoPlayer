@@ -437,7 +437,7 @@ public class SixTeamsController implements ControllerInterface {
                       MediaPlayer mediaPlayer = team1MusicMediaPlayers.get(currentTeamIndex);
                       mediaPlayer.seek(Duration.ZERO);
                       sharing_music_race4.setMediaPlayer(mediaPlayer);
-                      sharing_music_race4.getMediaPlayer().setOnError(()->{
+                      sharing_music_race4.getMediaPlayer().setOnError(() -> {
                         setOnErrorMusic(team1MusicMediaPlayers);
                       });
                       sharing_music_race4.getMediaPlayer().play();
@@ -480,7 +480,7 @@ public class SixTeamsController implements ControllerInterface {
                       MediaPlayer mediaPlayer = team2MusicMediaPlayers.get(currentTeamIndex);
                       mediaPlayer.seek(Duration.ZERO);
                       sharing_music_race4.setMediaPlayer(mediaPlayer);
-                      sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team2MusicMediaPlayers));
+                      sharing_music_race4.getMediaPlayer().setOnError(() -> setOnErrorMusic(team2MusicMediaPlayers));
                       sharing_music_race4.getMediaPlayer().play();
                       if (sharing_commentary_race4.getMediaPlayer() != null) {
                         sharing_commentary_race4.getMediaPlayer().stop();
@@ -521,7 +521,7 @@ public class SixTeamsController implements ControllerInterface {
                       MediaPlayer mediaPlayer = team3MusicMediaPlayers.get(currentTeamIndex);
                       mediaPlayer.seek(Duration.ZERO);
                       sharing_music_race4.setMediaPlayer(mediaPlayer);
-                      sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team3MusicMediaPlayers));
+                      sharing_music_race4.getMediaPlayer().setOnError(() -> setOnErrorMusic(team3MusicMediaPlayers));
                       sharing_music_race4.getMediaPlayer().play();
                       if (sharing_commentary_race4.getMediaPlayer() != null) {
                         sharing_commentary_race4.getMediaPlayer().stop();
@@ -562,7 +562,7 @@ public class SixTeamsController implements ControllerInterface {
                       MediaPlayer mediaPlayer = team4MusicMediaPlayers.get(currentTeamIndex);
                       mediaPlayer.seek(Duration.ZERO);
                       sharing_music_race4.setMediaPlayer(mediaPlayer);
-                      sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team4MusicMediaPlayers));
+                      sharing_music_race4.getMediaPlayer().setOnError(() -> setOnErrorMusic(team4MusicMediaPlayers));
                       sharing_music_race4.getMediaPlayer().play();
                       if (sharing_commentary_race4.getMediaPlayer() != null) {
                         sharing_commentary_race4.getMediaPlayer().stop();
@@ -603,7 +603,7 @@ public class SixTeamsController implements ControllerInterface {
                       MediaPlayer mediaPlayer = team4MusicMediaPlayers.get(currentTeamIndex);
                       mediaPlayer.seek(Duration.ZERO);
                       sharing_music_race4.setMediaPlayer(mediaPlayer);
-                      sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team5MusicMediaPlayers));
+                      sharing_music_race4.getMediaPlayer().setOnError(() -> setOnErrorMusic(team5MusicMediaPlayers));
                       sharing_music_race4.getMediaPlayer().play();
                       if (sharing_commentary_race4.getMediaPlayer() != null) {
                         sharing_commentary_race4.getMediaPlayer().stop();
@@ -644,7 +644,7 @@ public class SixTeamsController implements ControllerInterface {
                       MediaPlayer mediaPlayer = team4MusicMediaPlayers.get(currentTeamIndex);
                       mediaPlayer.seek(Duration.ZERO);
                       sharing_music_race4.setMediaPlayer(mediaPlayer);
-                      sharing_music_race4.getMediaPlayer().setOnError(()->setOnErrorMusic(team6MusicMediaPlayers));
+                      sharing_music_race4.getMediaPlayer().setOnError(() -> setOnErrorMusic(team6MusicMediaPlayers));
                       sharing_music_race4.getMediaPlayer().play();
                       if (sharing_commentary_race4.getMediaPlayer() != null) {
                         sharing_commentary_race4.getMediaPlayer().stop();
@@ -703,7 +703,7 @@ public class SixTeamsController implements ControllerInterface {
     URI uri = URI.create(source);
     Path path = Paths.get(uri);
     Path parent = path.getParent();
-    mediaPlayers=new MediaPlayerUtils().createVolumeFiles(parent.toString());
+    mediaPlayers = new MediaPlayerUtils().createVolumeFiles(parent.toString());
     MediaPlayer mediaPlayer2 = mediaPlayers.get(currentTeamIndex);
     mediaPlayer2.seek(Duration.ZERO);
     sharing_music_race4.setMediaPlayer(mediaPlayer2);
@@ -803,12 +803,7 @@ public class SixTeamsController implements ControllerInterface {
     double height = stackpane1.getHeight();
     children.removeAll(children);
     timer_label.setVisible(false);
-    team1Timeline.stop();
-    team2Timeline.stop();
-    team3Timeline.stop();
-    team4Timeline.stop();
-    team5Timeline.stop();
-    team6Timeline.stop();
+
     if (sharing_commentary_race4.getMediaPlayer() != null) {
       sharing_commentary_race4.getMediaPlayer().stop();
     }
@@ -818,34 +813,34 @@ public class SixTeamsController implements ControllerInterface {
     winning_team_video.setPreserveRatio(false);
     winning_team_video.setFitWidth(width);
     winning_team_video.setFitHeight(height);
-    int team1point = Integer.parseInt(point_team1.getText());
-    int team2point = Integer.parseInt(point_team2.getText());
-    int team3point = Integer.parseInt(point_team3.getText());
-    int team4point = Integer.parseInt(point_team4.getText());
-    int team5point = Integer.parseInt(point_team5.getText());
-    int team6point = Integer.parseInt(point_team6.getText());
     MediaPlayerUtils mediaPlayerUtils = new MediaPlayerUtils();
     MediaPlayer video;
     String uri;
-    if (team1point > team2point && team1point > team3point && team1point > team4point && team1point > team5point && team1point > team6point) {
+    if (team1Timeline.getStatus().equals(Animation.Status.RUNNING)) {
       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM1);
       uri = this.WINNING_VIDEO_TEAM1;
-    } else if (team2point > team1point && team2point > team3point && team2point > team4point && team2point > team5point && team2point > team6point) {
+    } else if (team2Timeline.getStatus().equals(Animation.Status.RUNNING)) {
       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM2);
       uri = this.WINNING_VIDEO_TEAM2;
-    } else if (team3point > team4point && team3point > team2point && team3point > team1point && team3point > team5point && team3point > team6point) {
+    } else if (team3Timeline.getStatus().equals(Animation.Status.RUNNING)) {
       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM3);
       uri = this.WINNING_VIDEO_TEAM3;
-    } else if (team4point > team3point && team4point > team2point && team4point > team1point && team4point > team5point && team4point > team6point) {
+    } else if (team4Timeline.getStatus().equals(Animation.Status.RUNNING)) {
       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM4);
       uri = this.WINNING_VIDEO_TEAM4;
-    } else if (team5point > team3point && team5point > team2point && team5point > team1point && team5point > team4point && team5point > team6point) {
+    } else if (team5Timeline.getStatus().equals(Animation.Status.RUNNING)) {
       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM5);
       uri = this.WINNING_VIDEO_TEAM5;
     } else {
       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM6);
       uri = this.WINNING_VIDEO_TEAM6;
     }
+    team1Timeline.stop();
+    team2Timeline.stop();
+    team3Timeline.stop();
+    team4Timeline.stop();
+    team5Timeline.stop();
+    team6Timeline.stop();
     video.setOnError(() -> setOnErrorWinningVideo(mediaPlayerUtils, uri));
     video.setVolume(100);
     winning_team_video.setMediaPlayer(video);
@@ -869,6 +864,6 @@ public class SixTeamsController implements ControllerInterface {
   }
 
   public void setInterval(int interval) {
-    this.interval=interval;
+    this.interval = interval;
   }
 }

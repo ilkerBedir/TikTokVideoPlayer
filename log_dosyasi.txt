@@ -1736,3 +1736,9 @@
 2023-11-18 23:15:13,550 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
 2023-11-18 23:15:43,551 - my_logger - INFO - Tiktok'a baglaniyor
 2023-11-18 23:15:45,341 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-12-02 18:26:24,276 - my_logger - INFO - Uygulama acildi
+2023-12-02 18:26:24,303 - my_logger - INFO - Tiktok'a baglaniyor
+2023-12-02 18:26:27,163 - my_logger - ERROR - tiktok'a baglanirken hata tekrar deneniyor
+2023-12-02 18:27:39,247 - my_logger - INFO - Uygulama acildi
+2023-12-02 18:27:39,264 - my_logger - INFO - Tiktok'a baglaniyor
+2023-12-02 18:27:44,479 - my_logger - INFO - Connected

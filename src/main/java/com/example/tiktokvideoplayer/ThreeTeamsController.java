@@ -537,19 +537,8 @@ public class ThreeTeamsController implements ControllerInterface {
     ObservableList<Node> children = stackpane1.getChildren();
     double width = stackpane1.getWidth();
     double height = stackpane1.getHeight();
-        /*List<Node> removedList = new ArrayList<>();
-        VBox tmp = null;
-        for (Node child : children) {
-            if (child instanceof VBox && ((VBox) child).getChildren().size()==3) {
-                removedList.add(child);
-                tmp = (VBox) child;
-            }
-        }*/
     children.removeAll(children);
     timer_label.setVisible(false);
-    team1Timeline.stop();
-    team2Timeline.stop();
-    team3Timeline.stop();
     winning_team_video.setPreserveRatio(false);
     winning_team_video.setFitWidth(width);
     winning_team_video.setFitHeight(height);
@@ -560,22 +549,22 @@ public class ThreeTeamsController implements ControllerInterface {
     if (sharing_music_race4.getMediaPlayer() != null) {
       sharing_music_race4.getMediaPlayer().stop();
     }
-    int team1point = Integer.parseInt(point_team1.getText());
-    int team2point = Integer.parseInt(point_team2.getText());
-    int team3point = Integer.parseInt(point_team3.getText());
     MediaPlayerUtils mediaPlayerUtils = new MediaPlayerUtils();
     MediaPlayer video;
     String uri;
-    if (team1point > team2point && team1point > team3point) {
+    if (team1Timeline.getStatus().equals(Animation.Status.RUNNING)) {
       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM1);
       uri = this.WINNING_VIDEO_TEAM1;
-    } else if (team2point > team1point && team2point > team3point) {
+    } else if (team2Timeline.getStatus().equals(Animation.Status.RUNNING)) {
       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM2);
       uri = this.WINNING_VIDEO_TEAM2;
     } else {
       video = mediaPlayerUtils.getVideo(this.WINNING_VIDEO_TEAM3);
       uri = this.WINNING_VIDEO_TEAM3;
     }
+    team1Timeline.stop();
+    team2Timeline.stop();
+    team3Timeline.stop();
     video.setOnError(() -> setOnErrorWinningVideo(mediaPlayerUtils, uri));
     video.setVolume(100);
     winning_team_video.setMediaPlayer(video);
