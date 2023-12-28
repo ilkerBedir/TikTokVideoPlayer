@@ -48,7 +48,7 @@
                         <VBox fx:id="vbox1" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="465.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-width: 1; -fx-border-color: black;">
                            <children>
                               <HBox fx:id="hbox_team1" alignment="BOTTOM_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="120.0" />
-                              <Label fx:id="point_team1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" style="-fx-label-padding: -50;" text="0" textFill="WHITE">
+                              <Label fx:id="point_team1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" style="-fx-label-padding: -50;" text="10" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="32.0" />
                                  </font>
@@ -59,7 +59,7 @@
                         <VBox fx:id="vbox2" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="465.0" prefWidth="250.0" style="-fx-background-color: gray; -fx-border-width: 1; -fx-border-color: black;">
                            <children>
                               <HBox fx:id="hbox_team2" alignment="BOTTOM_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="120.0" />
-                              <Label fx:id="point_team2" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" style="-fx-label-padding: -50;" text="0" textFill="WHITE">
+                              <Label fx:id="point_team2" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" style="-fx-label-padding: -50;" text="10" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="32.0" />
                                  </font>
@@ -70,7 +70,7 @@
                         <VBox fx:id="vbox3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="120.0" style="-fx-background-color: gray; -fx-border-width: 1; -fx-border-color: black;">
                            <children>
                               <HBox fx:id="hbox_team3" alignment="BOTTOM_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="120.0" />
-                              <Label fx:id="point_team3" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" style="-fx-label-padding: -50;" text="0" textFill="WHITE">
+                              <Label fx:id="point_team3" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" style="-fx-label-padding: -50;" text="10" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="32.0" />
                                  </font>

@@ -35,6 +35,7 @@ public class GiftServer extends WebSocketServer{
 
     @Override
     public void onMessage(WebSocket conn, String message) {
+        LOGGER.debug("Gelen Mesaj : {}",message);
         try {
             arrayLists.put(message.split("<x>"));
         } catch (InterruptedException e) {

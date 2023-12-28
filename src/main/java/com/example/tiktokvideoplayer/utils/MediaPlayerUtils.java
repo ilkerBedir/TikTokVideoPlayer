@@ -35,7 +35,6 @@ public class MediaPlayerUtils {
   }
 
   public List<MediaPlayer> createVolumeFiles(String url) {
-    LOGGER.debug("create volume files");
     List<MediaPlayer> mediaPlayers = new ArrayList<>();
     File folder = new File(url);
     File[] files = folder.listFiles();
@@ -63,7 +62,6 @@ public class MediaPlayerUtils {
   }
 
   public MediaPlayer getVideo(String url) {
-    LOGGER.debug("getVideo");
     List<MediaPlayer> mediaPlayers = new ArrayList<>();
     File folder = new File(url);
     File[] files = folder.listFiles();

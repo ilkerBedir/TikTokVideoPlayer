@@ -97,7 +97,6 @@ public class TwoTeamsRaceController implements ControllerInterface {
 
   public void display(String team1FolderName, String team2FolderName, String neutralMusicPath, List<String> team1GiftNames,
                       List<String> team2GiftNames, int countImage, int time, int extendedTime) {
-    LOGGER.debug("2 takımlı ekran display");
     this.COMMENTARY_URL_TEAM1 = team1FolderName + "/belgesel";
     this.MARS_URL_TEAM1 = team1FolderName + "/mars";
     this.VIDEO_URL_TEAM1 = team1FolderName + "/video";

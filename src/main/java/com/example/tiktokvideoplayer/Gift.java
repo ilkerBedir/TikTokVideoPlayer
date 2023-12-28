@@ -91,7 +91,6 @@ public class Gift {
     }
 
     public Image image(){
-        LOGGER.debug("Linkten Resim");
         String urlString = this.getLink();
         if(urlString.isEmpty())
         {
@@ -100,7 +99,6 @@ public class Gift {
         }
         if (urlString.contains(".webp")){
             InputStream inputStream = null;
-            LOGGER.debug("Okunacak WebP image : {}",urlString);
             try {
                 inputStream = new URL(urlString).openStream();
             } catch (IOException e) {
@@ -113,7 +111,6 @@ public class Gift {
             }
             return new Image(urlString);
         } else if (urlString.contains(".png")) {
-            LOGGER.debug("PNG resim yükleniyor : {}",urlString);
             if (urlString.contains("http")){
                 return new Image(urlString);
             }else {
